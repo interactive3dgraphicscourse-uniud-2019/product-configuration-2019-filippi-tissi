@@ -2,5 +2,5 @@
 
 # 10 maggio 2019
 
-* Creazione gruppo e impostazione di VS Code
+* Creazione gruppo e impostazione di VS Code..
 * Creazione Journal.md
