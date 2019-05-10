@@ -4,3 +4,12 @@
 
 * Creazione gruppo e impostazione di VS Code..
 * Creazione Journal.md
+* Possibili idee di oggetti:
+    * Divano --> modello mappato trovato (.max)
+    * Lampada --> modello mappato trovato (.max)
+    * Casco --> modello mappato trovato (.blend)
+    * Sgabello --> modello mappato trovato (.blend)
+    * Scarpa
+
+* SCELTA: sgabello
+    * scegliere bene il modello
