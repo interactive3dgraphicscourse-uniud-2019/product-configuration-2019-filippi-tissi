@@ -9,7 +9,7 @@
     * Lampada --> modello mappato trovato (.max)
     * Casco --> modello mappato trovato (.blend)
     * Sgabello --> modello mappato trovato (.blend)
-    * Scarpa
+    * Scarpa --> modello blender
 
 * SCELTA: sgabello
     * scegliere bene il modello
