@@ -12,4 +12,4 @@
     * Scarpa --> modello blender
 
 * SCELTA: sgabello
-    * scegliere bene il modello
+    * scegliere bene il modello.
