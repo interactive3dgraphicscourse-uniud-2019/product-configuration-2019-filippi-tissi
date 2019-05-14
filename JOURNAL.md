@@ -28,14 +28,14 @@
 
  * Idee: possiamo fare in modo che l'utente possa scegliere due materiali diversi per la seduta dello sgabello e per la struttura che lo    riveste.
 
- * Analisi individuale di vari siti e decisione di creare due in modo separato. Di seguito verranno presentati entrambi.
+ * Analisi individuale di vari siti e decisione di creare due wireframe in modo separato. Di seguito verranno presentati entrambi.
 
   ![](JrnImages/sito1.jpg)
  
   ![](JrnImages/sito2.jpg)
 
- * Dopo aver concluso le bozze ci siamo confrontati e abbiamo concordato la linea da seguire per la creazione di un sito coerente con   
-  quanto precedentemente deciso. La pagina del sito verrà implementata in HTML e CSS.
+ * Dopo aver concluso, ci siamo confrontati e abbiamo concordato la linea da seguire per la creazione di un wireframe coerente con   
+  quanto precedentemente deciso. 
 
  # 14 maggio 2019
 
