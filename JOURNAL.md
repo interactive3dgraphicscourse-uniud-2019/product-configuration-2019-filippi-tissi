@@ -3,7 +3,9 @@
 # 10 maggio 2019
 
 * Creazione gruppo e impostazione di VS Code.
+
 * Creazione Journal.md
+
 * Possibili idee di oggetti:
     - Divano --> modello mappato trovato (.max)
     - Lampada --> modello mappato trovato (.max)
@@ -30,7 +32,7 @@
   ![](JrnImages/sito2.jpg)
 
 * Dopo aver concluso le bozze ci siamo confrontati e abbiamo concordato la linea da seguire per la creazione di un sito coerente con   
-  quanto precedentemente deciso.
+  quanto precedentemente deciso. La pagina del sito verrà implementata in HTML e CSS.
 
  # 14 maggio 2019
 
