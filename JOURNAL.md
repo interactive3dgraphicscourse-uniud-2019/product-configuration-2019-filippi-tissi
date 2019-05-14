@@ -15,11 +15,13 @@
 
  * Revisione del Journal trascritto la giornata precedente.
 
- * DECISIONE: sgabello.blend
+ * DECISIONE: sgabello.blend :
+   - Il modello dello sgabello è stato scaricato dal web e successivamente modificato nel programma Blender 
+   - La mappatura UV è "unvwrapped"
+   - Mantenuto solo un file .blend e rimozione degli altri non rilevanti ai fini del progetto (ad esempio rimozione di tutte le texture e   del cycle-blend)
+   - Abbiamo deciso di preferire questo agli altri per la maggiore adattabilità alla modifica dei materiali e dei colori.
 
- * Abbiamo deciso di preferire questo agli altri per la maggiore adattabilità alla modifica dei materiali e dei colori. 
-
- * Idee: possiamo spezzare la scelta del materiale dividendo la seduta dello sgabello dalla struttura che lo riveste.
+ * Idee: possiamo fare in modo che l'utente possa scegliere due materiali diversi per la seduta dello sgabello e per la struttura che lo    riveste.
 
  * Analisi individuale di vari siti e decisione di creare due in modo separato. Di seguito verranno presentati entrambi.
 
@@ -27,10 +29,8 @@
  
   ![](JrnImages/sito2.jpg)
 
-* s
-
- 
-
+* Dopo aver concluso le bozze ci siamo confrontati e abbiamo concordato la linea da seguire per la creazione di un sito coerente con   
+  quanto precedentemente deciso.
 
  # 14 maggio 2019
 
