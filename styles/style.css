@@ -1,4 +1,8 @@
-body{background: #eee}
+body{
+  background: #eee;
+  margin: 0;
+  padding: 0;
+}
 
 .header{background: #333}
 .header__logo{color:#fff; float:left; display: block; padding: 15px;}   /* border: 1px solid red;  usati per vedere la grandezza della barra del menu e poi tolta*/
