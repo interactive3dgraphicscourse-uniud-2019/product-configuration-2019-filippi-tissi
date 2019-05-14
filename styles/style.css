@@ -4,13 +4,15 @@ body{
   padding: 0;
 }
 
-.header{background: #333}
-.header__logo{color:#fff; float:left; display: block; padding: 15px;}   /* border: 1px solid red;  usati per vedere la grandezza della barra del menu e poi tolta*/
-.header__menu{float:left; margin:0; padding:0;}
-.header__menu__item{display: inline-block;}
-.header__menu__item a {color :#fff; display: block; padding: 15px;}
-.header__menu__item a:hover{background: #000} /* se la seleziono diventa nero il sotto*/
+.header{
+  background: #333
+}
 
+.right_menu{
+  float: right;
+  margin: 0px;
+  font: Verdana, sans-serif;
+}
 
 .clearfix:after {
     visibility: hidden;
@@ -22,3 +24,34 @@ body{
   }
   * html .clearfix             { zoom: 1; } /* IE6 */
   *:first-child+html .clearfix { zoom: 1; } /* IE7 */
+
+  /* Breadcrumb */
+  ul.breadcrumb {
+    list-style: none;
+    background-color: #eee;
+    padding: 0;
+    margin: 2px;
+  }
+  
+  /* Display list items side by side */
+  ul.breadcrumb li {
+    display: inline;
+    font-size: 14px;
+  }
+  
+  /* Add a slash symbol (/) before/behind each list item */
+  ul.breadcrumb li+li:before {
+    color: black;
+    content: ">\00a0";
+  }
+  
+  /* Add a color to all links inside the list */
+  ul.breadcrumb li a {
+    text-decoration: none;
+  }
+  
+  /* Add a color on mouse-over */
+  ul.breadcrumb li a:hover {
+    color: #E0BB7D;
+    text-decoration: underline;
+  }

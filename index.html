@@ -5,16 +5,33 @@
 	<title>Product Configurator</title>
 	<link rel= "stylesheet" href="styles/style.css">
 	<link rel= "stylesheet" href="styles/w3css.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
-
-	<header class="w3-bar w3-black"> 
-		<a href="#" class="w3-bar-item w3-button">Logo</a> <!--Da cambiare con logo nostro-->
-		<a href="#" class="w3-bar-item w3-button">Personalization</a>
-		<a href="#" class="w3-bar-item w3-button">About Us</a>
-		<a href="#" class="w3-bar-item w3-button">Contacts</a>
+	<header class="w3-bar w3-black">
+		<div class="left_menu">
+			<a href="#" class="w3-bar-item w3-button">Logo</a> <!--Da cambiare con logo nostro-->
+			<a href="#" class="w3-bar-item w3-button">Personalization</a>
+			<a href="#" class="w3-bar-item w3-button">About Us</a>
+			<a href="#" class="w3-bar-item w3-button">Contacts</a>
+		</div>
+		
+		<div class="right_menu">
+			<a href="#" class="w3-bar-item w3-button"><i class="fa fa-search "></i></a><!--Ricerca-->
+			<a href="#" class="w3-bar-item w3-button"><i class="fa fa-user"></i> Login</a>
+			<a href="#" class="w3-bar-item w3-button" style="background-color: #E0BB7D;"><i class="fa fa-shopping-cart"></i> Cart(0)</a>
+		</div>
 	</header>
+
+	<div class="w3-container w3-border w3-large w3-left-align">
+		<ul class="breadcrumb">
+			<li><a href="#">Home</a></li>
+			<li><a href="#">Personalization</a></li>
+			<li>Nome Sgabello</li>
+
+		  </ul>
+	</div>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </body>
