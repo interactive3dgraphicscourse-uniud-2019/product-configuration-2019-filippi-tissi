@@ -6,7 +6,7 @@ body{
 
 .header{background: #333}
 .header__logo{color:#fff; float:left; display: block; padding: 15px;}   /* border: 1px solid red;  usati per vedere la grandezza della barra del menu e poi tolta*/
-.header__menu{float:right; margin:0; padding:0;}
+.header__menu{float:left; margin:0; padding:0;}
 .header__menu__item{display: inline-block;}
 .header__menu__item a {color :#fff; display: block; padding: 15px;}
 .header__menu__item a:hover{background: #000} /* se la seleziono diventa nero il sotto*/
