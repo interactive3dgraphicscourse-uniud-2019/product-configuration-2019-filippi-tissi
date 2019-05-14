@@ -22,8 +22,12 @@
  * Idee: possiamo spezzare la scelta del materiale dividendo la seduta dello sgabello dalla struttura che lo riveste.
 
  * Analisi individuale di vari siti e decisione di creare due in modo separato. Di seguito verranno presentati entrambi.
+
   ![](JrnImages/sito1.jpg)
+ 
   ![](JrnImages/sito2.jpg)
+
+* s
 
  
 
