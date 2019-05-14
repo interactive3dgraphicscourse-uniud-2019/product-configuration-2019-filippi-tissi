@@ -3,16 +3,19 @@
 <head>
 	<meta cahrset="UTF-8">
 	<title>Product Configurator</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+	<link rel= "stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel= "stylesheet" href="styles/style.css">
 	<link rel= "stylesheet" href="styles/w3css.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
-	<header class="w3-bar w3-black">
+	<header class="w3-bar">
 		<div class="left_menu">
-			<a href="#" class="w3-bar-item w3-button">Logo</a> <!--Da cambiare con logo nostro-->
-			<a href="#" class="w3-bar-item w3-button">Personalization</a>
+			<a href="#" class="w3-bar-item">
+				<img style="width: 40px;"src="images/logodef.png" alt="Logo">
+			</a> 
+			<a href="#" class="w3-bar-item w3-button">Models</a>
 			<a href="#" class="w3-bar-item w3-button">About Us</a>
 			<a href="#" class="w3-bar-item w3-button">Contacts</a>
 		</div>
@@ -20,19 +23,43 @@
 		<div class="right_menu">
 			<a href="#" class="w3-bar-item w3-button"><i class="fa fa-search "></i></a><!--Ricerca-->
 			<a href="#" class="w3-bar-item w3-button"><i class="fa fa-user"></i> Login</a>
-			<a href="#" class="w3-bar-item w3-button" style="background-color: #E0BB7D;"><i class="fa fa-shopping-cart"></i> Cart(0)</a>
+			<a href="#" class="w3-bar-item w3-button" style="background-color: #E0BB7D; color:#000000"><i class="fa fa-shopping-cart"></i> Cart (0)</a>
 		</div>
 	</header>
 
-	<div class="w3-container w3-border w3-large w3-left-align">
+	<div class="w3-container w3-large w3-left-align">
 		<ul class="breadcrumb">
 			<li><a href="#">Home</a></li>
+			<li><a href="#">Models</a></li>
 			<li><a href="#">Personalization</a></li>
 			<li>Nome Sgabello</li>
-
 		  </ul>
 	</div>
 
+	<!--ZONA del MODELLO-->
+	<div class="w3-twothird w3-container w3-black">
+
+	</div>
+
+	<!-- ZONA della PERSONALIZZAZIONE-->
+	<div class="w3-onethird w3-container w3-red">
+		
+	</div>
+
+
+	<footer class="w3-container w3-bar">
+			<div class="w3-container w3-large w3-center-align">
+				<ul class="social_link">
+					<a href="#"><i class="fa fa-facebook-f w3-large"></i> </a>
+					<a href="#"><i class="fa fa-instagram w3-large"></i> </a>
+					<a href="#">Logo</a>
+					<a href="#"><i class="fa fa-linkedin w3-large"></i></i> </a>
+					<a href="#"><i class="fa fa-twitter w3-large"></i> </a>
+				</ul>
+			</div>
+			<p>Made by Davide Filippi & Simone Tissi</p>
+	</footer>
+	
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </body>
 </html>

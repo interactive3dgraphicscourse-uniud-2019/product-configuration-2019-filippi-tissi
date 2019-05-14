@@ -4,8 +4,27 @@ body{
   padding: 0;
 }
 
-.header{
-  background: #333
+header{
+  background-color: #0F0505; 
+  color: #FEFEFE;
+}
+
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: white;
+  text-align: center;
+  margin: 0px;
+  background-color: #0F0505; 
+  color: #FEFEFE;
+  font-size:12px;
+}
+
+p{
+  margin:5px;
+  padding:0px;
 }
 
 .right_menu{
@@ -36,7 +55,7 @@ body{
   /* Display list items side by side */
   ul.breadcrumb li {
     display: inline;
-    font-size: 14px;
+    font-size: 13px;
   }
   
   /* Add a slash symbol (/) before/behind each list item */
@@ -55,3 +74,19 @@ body{
     color: #E0BB7D;
     text-decoration: underline;
   }
+
+  ul{
+    margin:0px;
+    padding:0px;
+  }
+  
+  ul.social_link a{
+    text-decoration: none;
+    width: 50px;
+    margin: 5px;
+  }
+
+  ul.social_link a:hover {
+    color: #E0BB7D;
+  }
+
