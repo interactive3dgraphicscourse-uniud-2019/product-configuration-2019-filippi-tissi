@@ -19,7 +19,7 @@
 
  * DECISIONE: sgabello.blend :
 
-   ![](JrnImages/model_stool.jpg)
+   ![](JrnImages/sgabelloiniziale.jpg)
 
    - Il modello dello sgabello è stato scaricato dal web e successivamente modificato nel programma Blender 
    - La mappatura UV è "unvwrapped"
