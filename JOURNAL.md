@@ -18,6 +18,9 @@
  * Revisione del Journal trascritto la giornata precedente.
 
  * DECISIONE: sgabello.blend :
+
+![](JrnImages/model_stool.png)
+
    - Il modello dello sgabello è stato scaricato dal web e successivamente modificato nel programma Blender 
    - La mappatura UV è "unvwrapped"
    - Mantenuto solo un file .blend e rimozione degli altri non rilevanti ai fini del progetto (ad esempio rimozione di tutte le texture e   del cycle-blend)
