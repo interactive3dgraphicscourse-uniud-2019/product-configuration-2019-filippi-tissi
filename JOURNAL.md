@@ -41,4 +41,18 @@
 
  * Revisione del Journal trascritto la giornata precedente.
  
- * Breve discussione sui colori del sito di cui non si era precedentemente parlato.
+ * Breve discussione sui colori del sito e generazione di alcune palette di colori che verranno utilizzate.
+
+ * Creazione della barra seguendo il progetto su carta
+
+ * Generazione del logo usando il programma Adobe Photoshop ed inserimento di quest'ultimo all'interno della barra.
+
+ * Realizzazione della parte inferiore della pagina dove spicca il logo contornato dalle icone dei principali social.
+
+ * Scrittura del _path_ che dalla home ci siamo immaginati l'utente abbia percorso per arrivare nella pagina appena visualizzata.
+
+ * DECISIONE e discussione relativa al termine _personalization_; quest'ultimo è stato sostuito dal termine _model_ all'interno della barra.
+
+ # 15 maggio 2019
+
+ * Revisione del Journal trascritto la giornata precedente.
