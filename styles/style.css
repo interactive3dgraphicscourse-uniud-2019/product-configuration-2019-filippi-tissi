@@ -18,7 +18,7 @@ footer {
 }
 
 p{
-  margin:5px;
+  margin:2px;
   padding:0px;
 }
 
@@ -29,7 +29,7 @@ p{
 
 .left_menu img {
   display: inline-block;
-  width: 60px;
+  width: 70px;
 }
 
 .left_menu ul {
@@ -62,8 +62,17 @@ p{
   color: #FEFEFE;
 }
 
+.w3-button-w{
+  padding: 15px 16px;
+}
+
+.w3-button:hover{
+  background-color: #443939 !important;
+  color: #E0BB7D !important;
+}
+
 .social_link{
-  margin-top: 5px;
+  margin-top: 3px;
   display: inline-flex;
   align-items: center;
 }
@@ -106,7 +115,7 @@ p{
   
   /* Add a color on mouse-over */
   ul.breadcrumb li a:hover {
-    color: #E0BB7D;
+    color: #443939;
     text-decoration: underline;
   }
 
