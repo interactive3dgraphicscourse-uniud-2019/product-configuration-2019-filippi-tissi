@@ -40,3 +40,5 @@
  # 14 maggio 2019
 
  * Revisione del Journal trascritto la giornata precedente.
+ 
+ * Breve discussione sui colori del sito di cui non si era precedentemente parlato.
