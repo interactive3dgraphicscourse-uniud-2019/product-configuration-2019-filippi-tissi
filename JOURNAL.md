@@ -35,7 +35,7 @@
   ![](JrnImages/sito2.jpg)
 
  * Dopo aver concluso, ci siamo confrontati e abbiamo concordato la linea da seguire per la creazione di un wireframe coerente con   
-  quanto precedentemente deciso. 
+  quanto precedentemente deciso.
 
  # 14 maggio 2019
 
@@ -51,8 +51,9 @@
 
  * Scrittura del _path_ che dalla home ci siamo immaginati l'utente abbia percorso per arrivare nella pagina appena visualizzata.
 
- * DECISIONE e discussione relativa al termine _personalization_; quest'ultimo è stato sostuito dal termine _model_ all'interno della barra.
+ * DECISIONE e discussione relativa al termine _personalization_ ; quest'ultimo è stato sostuito dal termine _model_ all'interno della    
+   barra.
 
  # 15 maggio 2019
 
- * Revisione del Journal trascritto la giornata precedente.
+ * Revisione del Journal trascritto la giornata precedente..
