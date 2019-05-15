@@ -58,15 +58,22 @@
 		<div class="w3-third w3-container">
 			<div class="personalization">
 				<div style="background-color: #0F0505; padding:7px;">
-					<h4 style="margin:0px;">Nome Sgabello</h4>
+					<h4>SHELDON'S STOOL</h4>
 				</div>
 				<div class="w3-container">
-					<h5>Seduta</h5>
+					<h5>SITTING</h5>
 					<h6>Material</h6>
-					<input class="w3-radio" type="radio" name="gender" value="male" checked>
-					<label>Pelle</label>
-					<input class="w3-radio" type="radio" name="gender" value="female">
-					<label>Tessuto</label>
+					<div class="w3-container radio_group">
+						<div class="radio">
+							<input class="w3-radio-w" type="radio" name="gender" value="leather" checked>
+							<label>Leather</label>
+						</div>
+						<div class="radio">
+							<input class="w3-radio-w" type="radio" name="gender" value="cloth">
+							<label>Cloth</label>
+						</div>
+					</div>
+					
 					<h6>Color</h6>
 					<div align="center">
 						<button type="button" onclick="changeCol(0,'red')" class="color-button w3-red"></button>
@@ -77,14 +84,22 @@
 				</div>
 				<hr>
 				<div class="w3-container">
-					<h5>Struttura</h5>
+					<h5>STRUCTUR</h5>
 					<h6>Material</h6>
-					<input class="w3-radio" type="radio" name="gender" value="male" checked>
-					<label>Metallo</label>
-					<input class="w3-radio" type="radio" name="gender" value="female">
-					<label>Plastica</label>
-					<input class="w3-radio" type="radio" name="gender" value="female">
-					<label>Legno</label>
+					<div class="w3-container radio_group">
+						<div class="radio">
+							<input class="w3-radio-w" type="radio" name="gender" value="metal" checked>
+							<label>Metal</label>
+						</div>
+						<div class="radio">
+							<input class="w3-radio-w" type="radio" name="gender" value="plastic">
+							<label>Plastic</label>
+						</div>
+						<div class="radio">
+							<input class="w3-radio-w" type="radio" name="gender" value="wood">
+							<label>Wood</label>
+						</div>
+					</div>
 					<h6>Color</h6>
 					<div align="center">
 						<button type="button" onclick="changeCol(0,'red')" class="color-button w3-red"></button>
