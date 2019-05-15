@@ -47,12 +47,18 @@
 			<p>Sed, vel ultricies rutrum, inventore aliquid? Ullam risus id mauris aperiam repellendus minus nullam varius. Nesciunt? Blandit, perferendis sem. Error voluptatum atque mollitia repellat quis? Montes atque imperdiet perspiciatis eros! Necessitatibus officia cum, mi sociosqu. Diamlorem! Aptent primis aut penatibus expedita voluptatibus? Autem augue ligula officiis congue facilisi sapiente aute, repellat molestie numquam quisque consequat nobis laborum ipsam habitant quisquam. Semper libero dis! Eaque vero! Sit ipsa mi curabitur dolorum, nostrud sed? Fringilla sociosqu dignissimos incidunt! Voluptatem, magni officiis quas, malesuada? Tellus! Distinctio aliquip doloribus incidunt, rem, justo laboris tellus! Iure debitis magni incididunt fames primis! Ad varius? Eleifend aut.</p>
 
 			<p>Egestas nonummy delectus nisl. Doloremque mollit maxime suspendisse mus, cupidatat adipiscing augue, feugiat nullam et amet, sociis. Iusto suspendisse lorem explicabo quam nisi. Nisi, voluptas laudantium! Pede unde, earum repellendus cras nesciunt curae mollitia culpa deserunt felis quibusdam id litora id harum commodi tenetur adipisicing rhoncus blanditiis taciti? Nunc sapien. Et nihil eget class, maxime! Corporis, nostrud, fuga! Dui laboris torquent luctus proident lectus eveniet scelerisque quam repudiandae, optio ipsa imperdiet. Nec diam provident eveniet? Facilis proin, adipisicing orci mollitia occaecati odit augue iaculis! Conubia duis semper occaecati! Eleifend quas ratione vel porta fermentum hic enim, aliquet quaerat molestiae incidunt.</p>
+		
+			<p>Voluptatibus cubilia nascetur eu, perspiciatis consectetur provident doloremque corrupti hic cum maiores tempus commodi semper. In euismod ante, dis proin ultricies rutrum incididunt unde deleniti suspendisse? Irure pariatur! Odit quas? Ullam! Tempor. Erat, eius. Praesentium proident semper adipiscing rem nostrum neque doloribus mollitia natoque elementum nostra cupiditate natoque. Ante orci interdum voluptas nunc, curabitur mollis hymenaeos et placerat? Excepturi gravida, tortor nisi, nibh consectetuer aliquam ea! Dolorum anim hic curabitur feugiat nisi. Pharetra omnis commodo laudantium. Quibusdam mollis aliquam similique, ad ducimus blandit ac. Ipsam habitant cupidatat alias? Impedit diam facere imperdiet. Occaecati inceptos! Dui nesciunt, cupidatat, quasi senectus exercitationem.</p>
+			
+			<p>Maecenas mattis. Nostrud diamlorem ipsa! Quisque! Excepteur consequat placeat eum! Tenetur egestas, necessitatibus porro! Error voluptates blandit adipisicing felis hac! Porttitor. Fugit pharetra nam. Vivamus quaerat arcu quia, urna eros quaerat scelerisque molestie sodales, euismod wisi, fames repellendus iaculis facilisi, malesuada elit condimentum sapiente eligendi! Nesciunt aspernatur vehicula, rem officiis facilisi condimentum, ornare eros eius malesuada, ullam cillum delectus vero commodi praesent, eligendi, iusto pharetra sit lorem lorem, pellentesque ullamco? Nam vitae, ratione officiis, primis praesentium iure tempora explicabo placeat hymenaeos feugiat, lacus, facilisi? Laboris! Iure viverra officiis consectetur voluptatibus vel nibh? Aenean dolor accusantium, pulvinar! Voluptatem vulputate doloremque provident.</p>
 		</div>
 
 		<!-- ZONA della PERSONALIZZAZIONE-->
 		<div class="w3-third w3-container">
 			<div class="personalization">
-				<h4>Nome Sgabello</h3>
+				<div style="background-color: #0F0505; padding:7px;">
+					<h4 style="margin:0px;">Nome Sgabello</h4>
+				</div>
 				<div class="w3-container">
 					<h5>Seduta</h5>
 					<h6>Material</h6>
@@ -68,7 +74,7 @@
 						<button type="button" onclick="changeCol(0,'blue')" class="color-button w3-blue"></button>
 					</div>	
 				</div>
-
+				<hr>
 				<div class="w3-container">
 					<h5>Struttura</h5>
 					<h6>Material</h6>
@@ -86,19 +92,32 @@
 						<button type="button" onclick="changeCol(0,'blue')" class="color-button w3-blue"></button>
 					</div>
 				</div>
-
-				<div class="w3-conteiner">
-					<p>Quantit&agrave;</p>
-					<select class="w3-select" name="option">
-						<option value="" disabled selected>Choose your option</option>
-						<option value="1">1</option>
-						<option value="2">2</option>
-						<option value="3">3</option>
-						<option value="4">4</option>
-						<option value="5">5</option>
-					</select>
-
+				<hr>
+				<div class="w3-container w3-row">
+					<div class="w3-container w3-half w3-row" id="qta">
+						<div class="w3-half quantity">Quantit&agrave;</div>
+						<select class="w3-half w3-select quantity" id="options_qta" name="option">
+							<option value="1" selected>1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+							<option value="5">5</option>
+						</select>
+					</div>
+					<div class="w3-container w3-half w3-row" id="price">
+							<div class="w3-half quantity">Totale</div>
+							<div class="w3-half quantity">&euro;&euro;&euro;&euro;&euro;</div>
+						</div>
 				</div>
+
+				<div align="center" style="margin-top:20px;">
+					<button type="button" onclick="changeCol(0,'red')" class="add_button w3-red">
+						<i class="fa fa-shopping-cart"></i>
+						Add to cart
+					</button>
+				</div>
+				
+
 			</div>
 		</div>
 	</div>	

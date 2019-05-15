@@ -16,7 +16,10 @@ footer {
   color: #FEFEFE;
   font-size:12px;
 }
-
+hr{
+  height: 1px;
+  background-color: #0F0505;
+}
 p{
   margin:2px;
   padding:0px;
@@ -77,21 +80,68 @@ p{
   align-items: center;
 }
 
+#qta{
+  display: flex;
+}
+#price{
+  display: flex;
+  height: 33px;
+}
+
+#options_qta{
+  width: 50px;
+  height: 33px;
+  padding: 2px;
+}
+
+.quantity{
+  display: inline-flex;
+  align-items: center;
+}
+
 .personalization{
-  border-style: solid;
-  border-width: 1px;
-  border-color: #443939;
   box-sizing: border-box;
-  padding: 7px;
+  color: #FEFEFE;
+  background-color: #443939;
 }
 
 .color-button {
-	border:none;display:inline-block;padding:8px 16px;vertical-align:middle;overflow:hidden;text-decoration:none;color:inherit;background-color:inherit;text-align:center;cursor:pointer;white-space:nowrap;
+  border:none;
+  display:inline-block;
+  padding:8px 16px;
+  vertical-align:middle;
+  overflow:hidden;
+  text-decoration:none;
+  color:inherit;
+  background-color:inherit;
+  text-align:center;
+  cursor:pointer;
+  white-space:nowrap;
 	width: 35px;
 	height: 35px;
 	margin: 2px;
 }
 .color-button:hover {
+	opacity: .6;
+}
+
+.add_button {
+	border:none;
+  display:inline-block;
+  padding:8px 16px;
+  vertical-align:middle;
+  overflow:hidden;
+  text-decoration:none;
+  color:inherit;
+  background-color:inherit;
+  text-align:center;
+  cursor:pointer;
+  white-space:nowrap;
+	width: 140px;
+	height: 35px;
+	margin: 2px;
+}
+.add_button:hover {
 	opacity: .6;
 }
 
