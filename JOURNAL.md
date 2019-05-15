@@ -56,4 +56,4 @@
 
  # 15 maggio 2019
 
- * Revisione del Journal trascritto la giornata precedente..
+ * Revisione del Journal trascritto la giornata precedente.
