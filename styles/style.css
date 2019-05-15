@@ -99,12 +99,18 @@ p{
   align-items: center;
 }
 
+.model_area{
+  height:650px;
+}
+
 .personalization{
   box-sizing: border-box;
   color: #FEFEFE;
   background-color: #443939;
-  height:500px;
+  height:650px;
 }
+
+
 
 .color-button {
   border:none;
