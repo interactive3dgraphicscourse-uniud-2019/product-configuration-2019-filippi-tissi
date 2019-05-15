@@ -57,3 +57,13 @@
  # 15 maggio 2019
 
  * Revisione del Journal trascritto la giornata precedente.
+
+ * Creazione del menù nel lato destro della schermata e discussione sul colore migliore. Chiaro/scuro
+
+ * Modifica del file in blender e rimappatura del modello. MAPPATURA unwrapped con la tecnica dello srotolamento.
+
+ * Pianificazione del lavoro da svolgere nei giorni seguenti.
+
+ # 16 maggio 2019
+
+ * Revisione del Journal trascritto la giornata precedente.
