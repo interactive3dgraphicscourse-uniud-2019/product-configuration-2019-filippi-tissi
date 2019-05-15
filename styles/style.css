@@ -81,6 +81,8 @@ p{
   border-style: solid;
   border-width: 1px;
   border-color: #443939;
+  box-sizing: border-box;
+  padding: 7px;
 }
 
 .color-button {
