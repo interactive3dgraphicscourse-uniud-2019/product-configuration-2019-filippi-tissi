@@ -1,5 +1,10 @@
 <script 
-src=”https://cdn.rawgit.com/mrdoob/three.js/master/examples/js/loaders/GLTFLoader.js"></script>  //file creato per il caricamento
+src=”https://cdn.rawgit.com/mrdoob/three.js/master/examples/js/loaders/GLTFLoader.js"></script>  
+
+
+//file creato per il caricamento
+
+
 
 var loader = new THREE.GLTFLoader();
 loader.load(
