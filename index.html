@@ -65,21 +65,26 @@
 					<h6>Material</h6>
 					<div class="w3-container radio_group">
 						<div class="radio">
-							<input class="w3-radio-w" type="radio" name="gender" value="leather" checked>
+							<input class="w3-radio-w" type="radio" name="material1" value="leather" checked>
 							<label>Leather</label>
 						</div>
 						<div class="radio">
-							<input class="w3-radio-w" type="radio" name="gender" value="cloth">
+							<input class="w3-radio-w" type="radio" name="material1" value="cloth">
 							<label>Cloth</label>
 						</div>
 					</div>
 					
 					<h6>Color</h6>
 					<div align="center">
-						<button type="button" onclick="changeCol(0,'red')" class="color-button w3-red"></button>
-						<button type="button" onclick="changeCol(0,'green')" class="color-button w3-green"></button>
-						<button type="button" onclick="changeCol(0,'blue')" class="color-button w3-blue"></button>
-						<button type="button" onclick="changeCol(0,'blue')" class="color-button w3-blue"></button>
+						<!--onclick="changeCol(0,'red')" -->
+						<div class="radio_color">
+							<input class="w3-radio-wc" type="radio" name="color1" value="leather" id="red" checked>
+						</div>
+						<div class="radio_color">
+							<input class="w3-radio-wc" type="radio" name="color1" value="leather" id="blue">
+						</div>
+						<button type="button" class="color-button w3-blue" name="color1"></button>
+						<button type="button" class="color-button w3-blue" name="color1"></button>
 					</div>	
 				</div>
 				<hr>
@@ -88,24 +93,25 @@
 					<h6>Material</h6>
 					<div class="w3-container radio_group">
 						<div class="radio">
-							<input class="w3-radio-w" type="radio" name="gender" value="metal" checked>
+							<input class="w3-radio-w" type="radio" name="material2" value="metal" checked>
 							<label>Metal</label>
 						</div>
 						<div class="radio">
-							<input class="w3-radio-w" type="radio" name="gender" value="plastic">
+							<input class="w3-radio-w" type="radio" name="material2" value="plastic">
 							<label>Plastic</label>
 						</div>
 						<div class="radio">
-							<input class="w3-radio-w" type="radio" name="gender" value="wood">
+							<input class="w3-radio-w" type="radio" name="material2" value="wood">
 							<label>Wood</label>
 						</div>
 					</div>
 					<h6>Color</h6>
 					<div align="center">
-						<button type="button" onclick="changeCol(0,'red')" class="color-button w3-red"></button>
-						<button type="button" onclick="changeCol(0,'green')" class="color-button w3-green"></button>
-						<button type="button" onclick="changeCol(0,'blue')" class="color-button w3-blue"></button>
-						<button type="button" onclick="changeCol(0,'blue')" class="color-button w3-blue"></button>
+						<!--onclick="changeCol(0,'red')" -->
+						<button type="button" class="color-button w3-red" name="color2"></button>
+						<button type="button" class="color-button w3-green" name="color2"></button>
+						<button type="button" class="color-button w3-blue" name="color2"></button>
+						<button type="button" class="color-button w3-blue" name="color2"></button>
 					</div>
 				</div>
 				<hr>
@@ -127,7 +133,8 @@
 				</div>
 
 				<div align="center" style="margin-top:20px;">
-					<button type="button" onclick="changeCol(0,'red')" class="add_button w3-red">
+					<!--onclick="changeCol(0,'red')"-->
+					<button type="button" class="add_button w3-red">
 						<i class="fa fa-shopping-cart"></i>
 						Add to cart
 					</button>

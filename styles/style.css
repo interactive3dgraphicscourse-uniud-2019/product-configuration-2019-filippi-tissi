@@ -10,13 +10,13 @@ h4,h5,h6{
 h4{
   margin:0px;
 }
-input[type="radio"] {
+.radio_group .radio input[type="radio"] {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
 }
 
-input[type='radio']:after {
+.radio_group .radio input[type='radio']:after {
   width: 15px;
   height: 15px;
   border-radius: 15px;
@@ -32,12 +32,66 @@ input[type='radio']:after {
   display: inline-flex;
   align-items: center;
 }
+.radio_color{
+  display: inline-flex;
+  align-items: center;
+  margin: 5px;
+}
+.w3-radio-wc{
+  width: 18px;
+  height: 18px;
+  position: relative;
+}
+.w3-radio-wc:focus{
+  outline: none;
+}
+.radio_color input[type="radio"] {
+  width: 30px;
+  height: 30px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+.radio_color input[type='radio']:after {
+  width: 30px;
+  height: 30px;
+  border-radius: 30px;
+  position: relative;
+  content: '';
+  display: inline-block;
+  visibility: visible;
+}
+
+.radio_color input[type='radio']:checked:after {
+  width: 30px;
+  height: 30px;
+  border-radius: 30px;
+  position: relative;
+  content: '';
+  display: inline-block;
+  visibility: visible;
+  border: 2px solid #E0BB7D;
+}
+.radio_color #red:after {
+  background-color: red;
+}
+.radio_color #red:checked:after {
+  background-color: red;
+}
+.radio_color #blue:after {
+  background-color: blue;
+}
+.radio_color #blue:checked:after {
+  background-color: blue;
+}
+/*FINIRE GLI ALTRI COLORI*/
 
 .radio_group{
   text-align: center;
 }
 
-input[type='radio']:checked:after {
+
+.radio_group .radio input[type='radio']:checked:after {
   width: 15px;
   height: 15px;
   border-radius: 15px;
@@ -160,6 +214,9 @@ p{
   height: 18px;
   position: relative;
 }
+.w3-radio-w:focus{
+  outline: none;
+}
 
 .color-button {
   border:none;
@@ -175,11 +232,16 @@ p{
   white-space:nowrap;
 	width: 35px;
 	height: 35px;
-	margin: 2px;
+  margin: 2px;
+  border-radius: 50%;
 }
 .color-button:hover {
 	opacity: .6;
 }
+.color-button:focus {
+  outline: none;
+}
+.color-button:se
 
 .add_button {
 	border:none;
