@@ -1,5 +1,5 @@
 body{
-  background: #eee;
+  background: #EAEAEA;
   margin: 0;
   padding: 0;
   min-height:100%;
@@ -138,6 +138,8 @@ h4, h5{
 hr{
   height: 1px;
   background-color: #0F0505;
+  border:0px;
+  margin: 10px;
 }
 p{
   margin:2px;
@@ -295,7 +297,7 @@ p{
   /* Breadcrumb */
   ul.breadcrumb {
     list-style: none;
-    background-color: #eee;
+    background-color: inherit;
     padding: 0;
     margin: 2px;
   }
@@ -308,7 +310,7 @@ p{
   
   /* Add a slash symbol (/) before/behind each list item */
   ul.breadcrumb li+li:before {
-    color: black;
+    color: #0F0505;
     content: ">\00a0";
   }
   
