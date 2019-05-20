@@ -7,7 +7,7 @@ body{
 }
 main{
   padding:10px;
-  padding-bottom: 100px;
+  padding-bottom: 95px;
 }
 h4,h5,h6{
   color: #E0BB7D;
@@ -126,7 +126,7 @@ h4, h5{
   position: absolute;
   left: 0;
   bottom: 0;
-  height: 80px;
+  height: 75px;
   width: 100%;
   color: white;
   text-align: center;
@@ -226,7 +226,7 @@ p{
   box-sizing: border-box;
   color: #FEFEFE;
   background-color: #443939;
-  height:650px;
+
 }
 
 .w3-radio-w {
@@ -261,23 +261,21 @@ p{
 .color-button:focus {
   outline: none;
 }
-.color-button:se
 
 .add_button {
 	border:none;
   display:inline-block;
-  padding:8px 16px;
   vertical-align:middle;
   overflow:hidden;
   text-decoration:none;
-  color:inherit;
-  background-color:inherit;
+  color: #0F0505;
+  background-color:#E0BB7D;
   text-align:center;
   cursor:pointer;
   white-space:nowrap;
 	width: 140px;
 	height: 35px;
-	margin: 2px;
+  margin: 0px 0px 10px 0px;
 }
 .add_button:hover {
 	opacity: .6;
@@ -321,7 +319,7 @@ p{
   
   /* Add a color on mouse-over */
   ul.breadcrumb li a:hover {
-    color: #443939;
+    color: #e0bb7d;
     text-decoration: underline;
   }
 
