@@ -72,6 +72,7 @@ h4{
   visibility: visible;
   border: 2px solid #E0BB7D;
 }
+
 .radio_color .red:after {
   background-color: red;
 }
@@ -85,10 +86,10 @@ h4{
   background-color: blue;
 }
 .radio_color .yellow:after {
-  background-color: yellow;
+  background-color: black;
 }
 .radio_color .yellow:checked:after {
-  background-color: yellow;
+  background-color: black;
 }
 .radio_color .green:after {
   background-color: green;
