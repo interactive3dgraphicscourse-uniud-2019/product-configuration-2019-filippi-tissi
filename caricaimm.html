@@ -107,15 +107,24 @@
 				metalness: 1,
 			});
 
-			var loader = new THREE.OBJLoader();
-				loader.load( "models/SgabelloStruttura.obj", function ( group ) {
+/*			var loader = new THREE.OBJLoader();
+				loader.load( "models/SgabelloCompleto.obj", function ( group ) {
 					geometry = group.children[ 0 ].geometry;
 					geometry.center();
 					mesh = new THREE.Mesh( geometry, ourMaterial );
 					mesh.scale.multiplyScalar( 0.1 );
 					scene.add( mesh );
 				} );
+*/
 
+				var loader = new THREE.OBJLoader();
+				loader.load( "models/SgabelloCompleto.obj", function ( group ) {
+					geometry = group.children[ 0 ].geometry;
+					geometry.center();
+					mesh = new THREE.Mesh( geometry, ourMaterial );
+					mesh.scale.multiplyScalar( 0.1 );
+					scene.add( mesh );
+				} );
 
 				var loader = new THREE.OBJLoader();
 				loader.load( "models/SgabelloLegno.obj", function ( group ) {
@@ -155,6 +164,7 @@
 					} )
 					return texture;
 			}
+			
 
 			function init() {
 
