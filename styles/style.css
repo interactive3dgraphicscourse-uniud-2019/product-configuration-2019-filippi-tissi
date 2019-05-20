@@ -3,11 +3,14 @@ body{
   margin: 0;
   padding: 0;
 }
+html{
+  height: 100%;
+}
 h4,h5,h6{
   color: #E0BB7D;
   text-align: center;
 }
-h4{
+h4, h5{
   margin:0px;
 }
 .radio_group .radio input[type="radio"] {
@@ -116,7 +119,7 @@ h4{
   border: 2px solid #FEFEFE;
 }
 
-footer {
+.footer {
   position: fixed;
   left: 0;
   bottom: 0;
