@@ -72,17 +72,29 @@ h4{
   visibility: visible;
   border: 2px solid #E0BB7D;
 }
-.radio_color #red:after {
+.radio_color .red:after {
   background-color: red;
 }
-.radio_color #red:checked:after {
+.radio_color .red:checked:after {
   background-color: red;
 }
-.radio_color #blue:after {
+.radio_color .blue:after {
   background-color: blue;
 }
-.radio_color #blue:checked:after {
+.radio_color .blue:checked:after {
   background-color: blue;
+}
+.radio_color .yellow:after {
+  background-color: yellow;
+}
+.radio_color .yellow:checked:after {
+  background-color: yellow;
+}
+.radio_color .green:after {
+  background-color: green;
+}
+.radio_color .green:checked:after {
+  background-color: green;
 }
 /*FINIRE GLI ALTRI COLORI*/
 
