@@ -7,6 +7,7 @@
 	<link rel= "stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel= "stylesheet" href="styles/w3css.css">
 	<link rel= "stylesheet" href="styles/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Playfair+Display|Source+Sans+Pro&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -24,7 +25,10 @@
 		</div>
 		
 		<div class="right_menu">
-			<a href="#" class="w3-button w3-button-w"><i class="fa fa-search "></i></a><!--Ricerca-->
+			<div class="form-group has-search">
+				<span class="fa fa-search form-control-feedback"></span>
+				<input type="text" placeholder="Search stools, chairs, ..." class="form-control" name="search">
+			</div>
 			<a href="#" class="w3-button w3-button-w"><i class="fa fa-user"></i> Login</a>
 			<a href="#" class="w3-button w3-button-w" style="background-color: #E0BB7D; color:#000000"><i class="fa fa-shopping-cart"></i> Cart (0)</a>
 		</div>
@@ -42,12 +46,12 @@
 		<div class="w3-row">
 			<!--ZONA del MODELLO-->
 			
-			<div class="w3-twothird w3-container">
+			<div class="w3-threequarter w3-container">
 				
 			</div>
 
 			<!-- ZONA della PERSONALIZZAZIONE-->
-			<div class="w3-third w3-container">
+			<div class="w3-quarter w3-container">
 				<div class="personalization">
 					<div style="background-color: #0F0505; padding:7px;">
 						<h4>SHELDON'S STOOL</h4>
@@ -123,9 +127,9 @@
 						</div>	
 					</div>
 					<hr>
-					<div class="w3-container w3-row">
+					<div class="qtaprice w3-container w3-row">
 						<div class="w3-container w3-half w3-row" id="qta">
-							<div class="w3-half quantity">Quantit&agrave;</div>
+							<div class="w3-half quantity" style="font-size: 12px;">Q.t&agrave;</div>
 							<select class="w3-half w3-select quantity" id="options_qta" name="option">
 								<option value="1" selected>1</option>
 								<option value="2">2</option>
@@ -134,10 +138,10 @@
 								<option value="5">5</option>
 							</select>
 						</div>
-						<div class="w3-container w3-half w3-row" id="price">
-								<div class="w3-half quantity">Totale</div>
-								<div class="w3-half quantity">&euro;&euro;&euro;&euro;&euro;</div>
-							</div>
+						<div class="w3-container w3-half w3-row" style="font-size: 14px; font-weight: bold;" id="price">
+							<div class="w3-half quantity">Totale:</div>
+							<div class="w3-half quantity">&euro;&euro;&euro;&euro;&euro;</div>
+						</div>
 					</div>
 
 					<div align="center" style="margin-top:20px;">

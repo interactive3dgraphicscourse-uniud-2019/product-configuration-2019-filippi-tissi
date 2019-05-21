@@ -1,14 +1,33 @@
+html{
+  font-family: 'Source Sans Pro', sans-serif;;
+}
 body{
   background: #EAEAEA;
   margin: 0;
   padding: 0;
   min-height:100%;
   position:relative;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+header{
+  font-size:14px;
 }
 main{
   padding:10px;
   padding-bottom: 95px;
   min-height: calc(100vh - 52px);
+}
+label{
+  font-size:12px;
+}
+h1,h2,h3,h4,h5,h6{
+  font-family: 'Playfair Display', serif;
+}
+h5{
+  font-size:15px;
+}
+h6{
+  font-size:14px;
 }
 h4,h5,h6{
   color: #E0BB7D;
@@ -23,6 +42,24 @@ h4, h5{
   appearance: none;
 }
 
+.has-search{
+  display:flex;
+  align-items: center;
+}
+.has-search .form-control {
+  padding-left: 2.375rem;
+}
+.has-search .form-control-feedback {
+  position: absolute;
+  z-index: 2;
+  display: block;
+  width: 2.375rem;
+  height: 2.375rem;
+  line-height: 2.375rem;
+  text-align: center;
+  pointer-events: none;
+  color: #aaa;
+}
 .radio_group .radio input[type='radio']:after {
   width: 15px;
   height: 15px;
@@ -38,6 +75,7 @@ h4, h5{
 .radio{
   display: inline-flex;
   align-items: center;
+  padding: 0px 10px;
 }
 .radio_color{
   display: inline-flex;
@@ -104,12 +142,10 @@ h4, h5{
 .radio_color .green:checked:after {
   background-color: green;
 }
-/*FINIRE GLI ALTRI COLORI*/
 
 .radio_group{
   text-align: center;
 }
-
 
 .radio_group .radio input[type='radio']:checked:after {
   width: 15px;
@@ -188,7 +224,7 @@ p{
 }
 
 .w3-button-w{
-  padding: 15px 16px;
+  padding: 17px 16px;
 }
 
 .w3-button:hover{
@@ -209,11 +245,17 @@ p{
   display: flex;
   height: 33px;
 }
+.qtaprice{
+  display: flex;
+  align-items: center;
+}
 
 #options_qta{
-  width: 50px;
-  height: 33px;
+  width: 40px;
+  height: 25px;
   padding: 2px;
+  border: 0px;
+  background-color: #E0BB7D;
 }
 
 .quantity{
@@ -279,6 +321,7 @@ p{
 	width: 140px;
 	height: 35px;
   margin: 0px 0px 10px 0px;
+  font-size: 14px;
 }
 .add_button:hover {
 	opacity: .6;
