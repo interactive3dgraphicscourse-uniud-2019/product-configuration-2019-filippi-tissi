@@ -86,4 +86,4 @@
 
 * Revisione del Journal trascritto la giornata precedente.
 
-* dd
+* d
