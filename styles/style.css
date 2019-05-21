@@ -160,6 +160,7 @@ input::placeholder{
 
 .radio_group{
   text-align: center;
+  padding-bottom: 10px;
 }
 
 .radio_group .radio input[type='radio']:checked:after {
@@ -263,6 +264,7 @@ p{
 .qtaprice{
   display: flex;
   align-items: center;
+  padding-top: 6px;
 }
 
 #options_qta{
