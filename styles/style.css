@@ -47,21 +47,33 @@ h5, h6{
 .has-search{
   display:flex;
   align-items: center;
+  margin-right: 10px;
 }
 .has-search .form-control {
-  padding-left: 2.375rem;
+  padding: 3px 4px;
+  outline-color: #E0BB7D;
+  background: #EAEAEA;
+  border: none;
+  color: #0F0505;
 }
-.has-search .form-control-feedback {
-  position: absolute;
-  z-index: 2;
-  display: block;
-  width: 2.375rem;
-  height: 2.375rem;
-  line-height: 2.375rem;
-  text-align: center;
-  pointer-events: none;
-  color: #aaa;
+.search_b {
+  float: right;
+  padding: 3px 9px;
+  border: none;
+  cursor: pointer;
+  background-color: #E0BB7D;
+  outline-color: #E0BB7D;
+  color: #0F0505;
 }
+.search_b:hover {
+  background-color: #443939 !important;
+  color: #E0BB7D !important;
+}
+input::placeholder{
+  color: #0F0505;
+  font-style: italic;
+}
+
 .radio_group .radio input[type='radio']:after {
   width: 15px;
   height: 15px;
