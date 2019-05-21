@@ -82,71 +82,44 @@
 				enabled: true,
 				saturation: 0.0,
 			}
-			var saturationEffect;
+			var saturationEffect; 
+
+
+			// ------------------- CARICAMENTO DELLA CUBEMAP -------------------
+
+			var loader = new THREE.CubeTextureLoader();
+			loader.setPath( 'textures/cubemap/' );
 			
+			var textureCube;
+			textureCube = loader.load([
+					'px.png', 'nx.png',
+					'py.png', 'ny.png',
+					'pz.png', 'nz.png'
+					] );
 
-			var normalMap = loadTexture( "textures/normal.jpg" );
-			var loader = new THREE.CubeTextureLoader();               // THREE.ImageUtils.loadTexture( 'models/interno.jpg' ); perchè non va bene?
-				loader.setPath( 'textures/cubemap/' );
-
-				var textureCube = loader.load( [
-					'posx.png', 'negx.png',
-					'posy.png', 'negy.png',
-					'posz.png', 'negz.png'
-				] );
-
-			scene.background = textureCube;
+			//scene.background = textureCube;     se lo si decommenta aggiungo il background alla scena ma a noi non serve
 			textureCube.minFilter = THREE.LinearMipMapLinearFilter;
 
-			var ourMaterial = new THREE.MeshStandardMaterial({
-			 	envMap: textureCube,
-			  roughness: 0.5,
-				normalMap: normalMap,
-			  normalScale: new THREE.Vector2(1,1),
-				color: new THREE.Color(0.8,0.8,0.8),
-				metalness: 1,
-			});
+			// ------------------- CARICAMENTO DEL MODELLO OBJ DELLO SGABELLO -------------------
 
-/*			var loader = new THREE.OBJLoader();
-				loader.load( "models/SgabelloCompleto.obj", function ( group ) {
-					geometry = group.children[ 0 ].geometry;
-					geometry.center();
-					mesh = new THREE.Mesh( geometry, ourMaterial );
-					mesh.scale.multiplyScalar( 0.1 );
-					scene.add( mesh );
-				} );
-*/
+			var loader = new THREE.OBJLoader();
+				loader.load( "models/SgabelloCompleto1.obj", function ( obj ) {
+					sgabello = obj;
+					
+					obj.position.z = 0;
+					obj.position.y = 0;
 
-				var loader = new THREE.OBJLoader();
-				loader.load( "models/SgabelloCompleto.obj", function ( group ) {
-					geometry = group.children[ 0 ].geometry;
-					geometry.center();
-					mesh = new THREE.Mesh( geometry, ourMaterial );
-					mesh.scale.multiplyScalar( 0.1 );
-					scene.add( mesh );
-				} );
-
-				var loader = new THREE.OBJLoader();
-				loader.load( "models/SgabelloLegno.obj", function ( group ) {
-					geometry = group.children[ 0 ].geometry;
-					geometry.center();
-					mesh = new THREE.Mesh( geometry, ourMaterial );
-					mesh.scale.multiplyScalar( 0.1 );
-					mesh.position.y = 0.14;
-					scene.add( mesh );
-				} );
-
-
-
-				var loader = new THREE.OBJLoader();
-				loader.load( "models/SgabelloSeduta.obj", function ( group ) {
-					geometry = group.children[ 0 ].geometry;
-					geometry.center();
-					mesh = new THREE.Mesh( geometry, ourMaterial );
-					mesh.scale.multiplyScalar( 0.1 );
-					mesh.position.y = 0.16;
-					scene.add( mesh );
-				} );
+					obj.traverse(
+						function (child){
+							if (child instanceof THREE.Mesh) {
+								if (child.name === "Seduta") seduta.push(child);
+								if (child.name === "Sottocuscino") sottocuscino.push(child);
+								if (child.name === "Struttura") struttura.push(child);
+							}
+						}
+					);
+					scene.add(sgabello);
+				});
 
 
 			var gui;
