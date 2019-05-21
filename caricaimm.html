@@ -107,46 +107,41 @@
 				metalness: 1,
 			});
 
-/*			var loader = new THREE.OBJLoader();
-				loader.load( "models/SgabelloCompleto.obj", function ( group ) {
-					geometry = group.children[ 0 ].geometry;
-					geometry.center();
-					mesh = new THREE.Mesh( geometry, ourMaterial );
-					mesh.scale.multiplyScalar( 0.1 );
-					scene.add( mesh );
-				} );
-*/
-
-				var loader = new THREE.OBJLoader();
-				loader.load( "models/SgabelloCompleto.obj", function ( group ) {
-					geometry = group.children[ 0 ].geometry;
-					geometry.center();
-					mesh = new THREE.Mesh( geometry, ourMaterial );
-					mesh.scale.multiplyScalar( 0.1 );
-					scene.add( mesh );
-				} );
-
-				var loader = new THREE.OBJLoader();
-				loader.load( "models/SgabelloLegno.obj", function ( group ) {
-					geometry = group.children[ 0 ].geometry;
-					geometry.center();
-					mesh = new THREE.Mesh( geometry, ourMaterial );
-					mesh.scale.multiplyScalar( 0.1 );
-					mesh.position.y = 0.14;
-					scene.add( mesh );
-				} );
 
 
+			var loader = new THREE.OBJLoader();
+				loader.load( "models/SgabelloCompleto.obj", function ( obj ) {
+					sgabello = obj;
 
-				var loader = new THREE.OBJLoader();
-				loader.load( "models/SgabelloSeduta.obj", function ( group ) {
-					geometry = group.children[ 0 ].geometry;
-					geometry.center();
-					mesh = new THREE.Mesh( geometry, ourMaterial );
-					mesh.scale.multiplyScalar( 0.1 );
-					mesh.position.y = 0.16;
-					scene.add( mesh );
-				} );
+					console.log("obj loaded");
+					
+				/*	obj.scale.x = .5;
+					obj.scale.y = .5;
+					obj.scale.z = .5;
+					
+					obj.position.z = -30;
+					
+					obj.rotation.y = 90*Math.PI/180;
+					obj.rotation.z = 0*Math.PI/180;
+					obj.rotation.x = 0*Math.PI/180;
+					
+					console.log("obj loaded");
+				*/	
+					obj.traverse(
+						function (child){
+							if (child instanceof THREE.Mesh) {
+								if (child.name === "Seduta") seduta.push(child);
+								if (child.name === "Sottocuscino") sottocuscino.push(child);
+								if (child.name === "Struttura") struttura.push(child);
+							}
+						}
+					);
+					done = true;
+				});
+
+
+
+
 
 
 			var gui;
