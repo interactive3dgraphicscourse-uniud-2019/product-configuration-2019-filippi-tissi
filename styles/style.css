@@ -15,26 +15,28 @@ header{
 main{
   padding:10px;
   padding-bottom: 95px;
-  min-height: calc(100vh - 52px);
+  min-height: calc(100vh - 55px);
 }
 label{
-  font-size:12px;
+  font-size:14px;
 }
 h1,h2,h3,h4,h5,h6{
   font-family: 'Playfair Display', serif;
 }
-h5{
-  font-size:15px;
-}
-h6{
-  font-size:14px;
-}
+
 h4,h5,h6{
   color: #E0BB7D;
   text-align: center;
 }
-h4, h5{
+h5, h6{
   margin:0px;
+}
+.subtitle{
+  text-align: center;
+  font-family: 'Playfair Display', serif;
+  color: #E0BB7D;
+  font-size: 15px;
+  margin: 5px 0px;
 }
 .radio_group .radio input[type="radio"] {
   -webkit-appearance: none;
@@ -354,13 +356,14 @@ p{
   
   /* Add a slash symbol (/) before/behind each list item */
   ul.breadcrumb li+li:before {
-    color: #0F0505;
+    color: #443939;
     content: ">\00a0";
   }
   
   /* Add a color to all links inside the list */
   ul.breadcrumb li a {
     text-decoration: none;
+    color: #443939;
   }
   
   /* Add a color on mouse-over */
