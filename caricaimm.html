@@ -86,7 +86,7 @@
 			
 
 			var normalMap = loadTexture( "textures/normal.jpg" );
-			var loader = new THREE.CubeTextureLoader();               // THREE.ImageUtils.loadTexture( 'models/interno.jpg' ); perchè non va bene?
+			var loader = new THREE.CubeTextureLoader();
 				loader.setPath( 'textures/cubemap/' );
 
 				var textureCube = loader.load( [
@@ -112,7 +112,9 @@
 			var loader = new THREE.OBJLoader();
 				loader.load( "models/SgabelloCompleto.obj", function ( obj ) {
 					sgabello = obj;
-					obj.position.z = -25;
+					
+					obj.position.z = -15;
+					obj.position.y = -5;
 
 					obj.traverse(
 						function (child){
