@@ -83,38 +83,31 @@
 				saturation: 0.0,
 			}
 			var saturationEffect; 
-			
 
-			var normalMap = loadTexture( "textures/normal.jpg" );
+
+			// ------------------- CARICAMENTO DELLA CUBEMAP -------------------
+
 			var loader = new THREE.CubeTextureLoader();
-				loader.setPath( 'textures/cubemap/' );
+			loader.setPath( 'textures/cubemap/' );
+			
+			var textureCube;
+			textureCube = loader.load([
+					'px.png', 'nx.png',
+					'py.png', 'ny.png',
+					'pz.png', 'nz.png'
+					] );
 
-				var textureCube = loader.load( [
-					'posx.png', 'negx.png',
-					'posy.png', 'negy.png',
-					'posz.png', 'negz.png'
-				] );
-
-			scene.background = textureCube;
+			//scene.background = textureCube;     se lo si decommenta aggiungo il background alla scena ma a noi non serve
 			textureCube.minFilter = THREE.LinearMipMapLinearFilter;
 
-			var ourMaterial = new THREE.MeshStandardMaterial({
-			 	envMap: textureCube,
-			  roughness: 0.5,
-				normalMap: normalMap,
-			  normalScale: new THREE.Vector2(1,1),
-				color: new THREE.Color(0.8,0.8,0.8),
-				metalness: 1,
-			});
-
-
+			// ------------------- CARICAMENTO DEL MODELLO OBJ DELLO SGABELLO -------------------
 
 			var loader = new THREE.OBJLoader();
-				loader.load( "models/SgabelloCompleto.obj", function ( obj ) {
+				loader.load( "models/SgabelloCompleto1.obj", function ( obj ) {
 					sgabello = obj;
 					
-					obj.position.z = -15;
-					obj.position.y = -5;
+					obj.position.z = 0;
+					obj.position.y = 0;
 
 					obj.traverse(
 						function (child){
