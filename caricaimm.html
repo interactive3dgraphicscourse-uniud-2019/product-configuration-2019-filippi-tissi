@@ -112,6 +112,7 @@
 			var loader = new THREE.OBJLoader();
 				loader.load( "models/SgabelloCompleto.obj", function ( obj ) {
 					sgabello = obj;
+					obj.position.z = -25;
 
 					obj.traverse(
 						function (child){
