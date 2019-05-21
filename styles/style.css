@@ -1,5 +1,5 @@
 html{
-  font-family: 'Source Sans Pro', sans-serif;;
+  font-family: 'Poppins', sans-serif;
 }
 body{
   background: #EAEAEA;
@@ -7,10 +7,11 @@ body{
   padding: 0;
   min-height:100%;
   position:relative;
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 header{
   font-size:14px;
+  font-weight: 300;
 }
 main{
   padding:10px;
@@ -19,9 +20,10 @@ main{
 }
 label{
   font-size:14px;
+  font-weight: 300;
 }
 h1,h2,h3,h4,h5,h6{
-  font-family: 'Playfair Display', serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 h4,h5,h6{
@@ -30,13 +32,18 @@ h4,h5,h6{
 }
 h5, h6{
   margin:0px;
+  font-weight: 700;
+}
+h6{
+  font-weight:500;
 }
 .subtitle{
   text-align: center;
-  font-family: 'Playfair Display', serif;
+  font-family: 'Poppins', sans-serif;
   color: #E0BB7D;
   font-size: 15px;
   margin: 5px 0px;
+  font-weight: 500;
 }
 .radio_group .radio input[type="radio"] {
   -webkit-appearance: none;
@@ -54,7 +61,7 @@ h5, h6{
   outline-color: #E0BB7D;
   background: #EAEAEA;
   border: none;
-  color: #0F0505;
+  color: #050505;
   width: 200px;
 }
 .search_b {
@@ -64,14 +71,16 @@ h5, h6{
   cursor: pointer;
   background-color: #E0BB7D;
   outline-color: #E0BB7D;
-  color: #0F0505;
+  color: #050505;
 }
 .search_b:hover {
-  background-color: #443939 !important;
+  background-color: #7A7A7A !important;
   color: #E0BB7D !important;
+  padding: 2px 8px;
+  border: 1px solid #E0BB7D;
 }
 input::placeholder{
-  color: #0F0505;
+  color: #050505;
   font-style: italic;
 }
 
@@ -184,13 +193,13 @@ input::placeholder{
   color: white;
   text-align: center;
   margin: 0px;
-  background-color: #0F0505; 
+  background-color: #050505; 
   color: #FEFEFE;
   font-size:12px;
 }
 hr{
   height: 1px;
-  background-color: #0F0505;
+  background-color: #050505;
   border:0px;
   margin: 10px;
 }
@@ -232,7 +241,7 @@ p{
 
 .w3-bar-w{
   width: 100%;
-  background-color: #0F0505;
+  background-color: #050505;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -244,7 +253,7 @@ p{
 }
 
 .w3-button:hover{
-  background-color: #443939 !important;
+  background-color: #7A7A7A !important;
   color: #E0BB7D !important;
 }
 
@@ -273,6 +282,11 @@ p{
   padding: 2px;
   border: 0px;
   background-color: #E0BB7D;
+  outline: #E0BB7D;
+}
+select.quantity option:hover{
+  background-color: #050505 !important; 
+  color: #E0BB7D !important;
 }
 
 .quantity{
@@ -287,7 +301,7 @@ p{
 .personalization{
   box-sizing: border-box;
   color: #FEFEFE;
-  background-color: #443939;
+  background-color: #474448;
 
 }
 
@@ -330,7 +344,7 @@ p{
   vertical-align:middle;
   overflow:hidden;
   text-decoration:none;
-  color: #0F0505;
+  color: #050505;
   background-color:#E0BB7D;
   text-align:center;
   cursor:pointer;
@@ -339,9 +353,13 @@ p{
 	height: 35px;
   margin: 0px 0px 10px 0px;
   font-size: 14px;
+  font-weight: 400;
+  outline-color: #E0BB7D
 }
 .add_button:hover {
-	opacity: .6;
+  background-color: #7A7A7A !important;
+  color: #E0BB7D !important;
+  border: 1px solid #E0BB7D;
 }
 
 .clearfix:after {
@@ -367,18 +385,19 @@ p{
   ul.breadcrumb li {
     display: inline;
     font-size: 13px;
+    font-weight: 200;
   }
   
   /* Add a slash symbol (/) before/behind each list item */
   ul.breadcrumb li+li:before {
-    color: #443939;
+    color: #474448;
     content: ">\00a0";
   }
   
   /* Add a color to all links inside the list */
   ul.breadcrumb li a {
     text-decoration: none;
-    color: #443939;
+    color: #474448;
   }
   
   /* Add a color on mouse-over */
