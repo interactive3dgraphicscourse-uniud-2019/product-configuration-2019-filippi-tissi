@@ -82,7 +82,7 @@
 				enabled: true,
 				saturation: 0.0,
 			}
-			var saturationEffect;
+			var saturationEffect; 
 			
 
 			var normalMap = loadTexture( "textures/normal.jpg" );
@@ -113,20 +113,6 @@
 				loader.load( "models/SgabelloCompleto.obj", function ( obj ) {
 					sgabello = obj;
 
-					console.log("obj loaded");
-					
-				/*	obj.scale.x = .5;
-					obj.scale.y = .5;
-					obj.scale.z = .5;
-					
-					obj.position.z = -30;
-					
-					obj.rotation.y = 90*Math.PI/180;
-					obj.rotation.z = 0*Math.PI/180;
-					obj.rotation.x = 0*Math.PI/180;
-					
-					console.log("obj loaded");
-				*/	
 					obj.traverse(
 						function (child){
 							if (child instanceof THREE.Mesh) {
@@ -136,12 +122,8 @@
 							}
 						}
 					);
-					done = true;
+					scene.add(sgabello);
 				});
-
-
-
-
 
 
 			var gui;
