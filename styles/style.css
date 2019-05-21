@@ -55,6 +55,7 @@ h5, h6{
   background: #EAEAEA;
   border: none;
   color: #0F0505;
+  width: 100%;
 }
 .search_b {
   float: right;
