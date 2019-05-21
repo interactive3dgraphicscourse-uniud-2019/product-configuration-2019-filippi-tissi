@@ -64,8 +64,26 @@
 
  * Pianificazione del lavoro da svolgere nei giorni seguenti.
 
- # 16 maggio 2019
+ # 16 - 21 maggio 2019
 
  * Revisione del Journal trascritto la giornata precedente.
 
-  spiegare problemi con importazione dei file e uso della funzione TRAVERSE
+ * Esportazione del progetto in OBJ e problematiche relative alla divisione dei livelli della struttura.
+
+ * Risoluzione dei problemi mediante l'uso della funzione _traverse_.
+
+ * Generazione della palette dei colori presentata nella figura successiva.
+
+   ![](JrnImages/palette.png)
+
+ * Costruzione di un documento parallelo dove viene visualizzato il modello 3D dello sgabello.
+
+ * Continuazione dello sviluppo del sito seguendo i principi definiti nella figura iniziale. Di seguito si riporta quanto svolto fino ad oggi.
+
+  ![](JrnImages/sitomed.jpg)
+
+# 22 maggio 2019
+
+* Revisione del Journal trascritto la giornata precedente.
+
+* dd
