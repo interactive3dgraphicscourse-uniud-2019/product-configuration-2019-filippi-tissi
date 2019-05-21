@@ -8,6 +8,7 @@ body{
 main{
   padding:10px;
   padding-bottom: 95px;
+  min-height: calc(100vh - 52px);
 }
 h4,h5,h6{
   color: #E0BB7D;
@@ -123,7 +124,7 @@ h4, h5{
 }
 
 .footer {
-  position: relative;
+  position: absolute;
   left: 0;
   bottom: 0;
   height: 75px;
