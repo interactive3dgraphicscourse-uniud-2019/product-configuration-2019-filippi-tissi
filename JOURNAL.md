@@ -86,4 +86,8 @@
 
 * Revisione del Journal trascritto la giornata precedente.
 
-* d
+* d   siti usati
+
+https://hdrihaven.com/hdri/?c=artificial%20light&h=royal_esplanade
+
+https://matheowis.github.io/HDRI-to-CubeMap/
