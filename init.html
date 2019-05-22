@@ -122,6 +122,102 @@
 			var gui;
 			var stats = new Stats();
 
+	/*		//---------- DEFINIZIONE DEI MATERIALI CHE VERRANNO COINVOLTI ------------
+
+				//esempio 
+				
+				uniforms_plastic = {
+					metalnessMap:	{ type: "t", value: loadTexture("textures/materials/plastic_met.jpg") },
+					diffuseMap:		{ type: "t", value: loadTexture("textures/materials/Plastic04_col.jpg") },
+					roughnessMap:	{ type: "t", value: loadTexture("textures/materials/Plastic04_rgh.jpg") },
+					normalMap:		{ type: "t", value: loadTexture("textures/materials/Plastic04_nrm.jpg") },
+					aoMap:			{ type: "t", value: loadTexture("textures/materials/Plastic04_disp.jpg") },
+					normalScale:	{ type: "v2", value: new THREE.Vector2(0.5, 0.5) },
+					textureRepeat:	{ type: "v2", value: new THREE.Vector2(4.0, 4.0) }
+				};
+
+
+			
+			// --------- UNIFORM DELLE VARIE 3 PARTI DELLO SGABELLO ---------
+
+			seduta_uniforms = {
+				surfCdiff: { type: "v3", value: new THREE.Vector3(0.0, 0.0, 0.0) }
+			}
+
+			Object.assign(seduta_uniforms, uniforms_shared);
+			Object.assign(seduta_uniforms, uniforms_plastic);
+
+			materialExtensions = {
+				derivatives: true, // set to use derivatives
+				shaderTextureLOD: true // set to use shader texture LOD
+			};
+
+
+			// --------- GESTIIONE DELLE LUCI DELLA SCENA ---------
+
+
+
+			//---------FUNZIONE PER IL CARICAMENTO DELLA TEXTURE
+
+			function loadTexture(file) {
+				var tex = new THREE.TextureLoader().load( file , function ( tex ) {
+					tex.minFilter = THREE.LinearMipMapLinearFilter;
+					tex.anisotropy = renderer.capabilities.getMaxAnisotropy();
+					tex.wrapS = tex.wrapT = THREE.RepeatWrapping;
+					tex.offset.set( 0, 0 );
+					tex.needsUpdate = true;
+					Render();
+				} );
+				return tex;
+			}
+
+
+
+
+
+			//-------- FUNZIONE DI PRECARICAMENTO
+
+			function FirstUpdate() {
+
+			stats.update();
+			controls.update();
+
+			if (done && loaded_shaders) {    //DONE è UNA FUNZIONE CHE LEI HA IMPLEMENTATO A PARTE PER EVITAE L'EFFETTO DEL MODELLO NERO E POI HA INSERITO ALL'INTERNO
+
+				seduta_vs = generic_vs;
+				seduta_fs = generic_fs;
+				seduta_material = new THREE.ShaderMaterial({ 
+					uniforms: seduta_uniforms, vertexShader: seduta_vs, 
+					fragmentShader: seduta_fs, extensions: materialExtensions });
+
+
+					seduta_material.needsUpdate = true;
+
+					seduta.forEach(function(el){
+						el.material = seduta_material;
+					});
+							
+
+
+
+
+
+
+
+	*/
+
+
+
+
+
+
+
+
+
+
+
+
+
 			function loadTexture(file) {
 					var texture = new THREE.TextureLoader().load( file , function ( texture ) {
 
