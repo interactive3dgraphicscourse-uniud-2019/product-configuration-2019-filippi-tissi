@@ -86,8 +86,9 @@
 
 * Revisione del Journal trascritto la giornata precedente.
 
-* d   siti usati
+* Per la cubemap abbiamo utilizzato il seguente sito per acquisire il file in 4k. ( https://hdrihaven.com/hdri/?c=artificial%20light&h=royal_esplanade )
 
-https://hdrihaven.com/hdri/?c=artificial%20light&h=royal_esplanade
+Dopodichè servendoci del sito ( https://matheowis.github.io/HDRI-to-CubeMap/ ) abbiamo trasformato l'immagine nella cubemap finale.
 
-https://matheowis.github.io/HDRI-to-CubeMap/
+
+
