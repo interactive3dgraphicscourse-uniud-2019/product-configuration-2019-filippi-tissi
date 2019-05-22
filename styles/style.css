@@ -10,7 +10,7 @@ body{
   font-family: 'Poppins', sans-serif;
 }
 #product_canvas{
-  height: 650px;
+  height: 640px;
   width: 100%;
   border: 1px solid #7A7A7A;
 }
@@ -430,7 +430,7 @@ select.quantity option:hover{
 
 #canvas_wrap { 
     position:relative; 
-    height: 650px; 
+    height: 640px; 
     width: 75%;
 } /* Make this a positioned parent */
 #measure{ 
