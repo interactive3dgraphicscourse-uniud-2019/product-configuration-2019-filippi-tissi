@@ -306,7 +306,7 @@ select.quantity option:hover{
   box-sizing: border-box;
   color: #FEFEFE;
   background-color: #474448;
-
+  height: 560px;
 }
 
 .w3-radio-w {
@@ -355,7 +355,6 @@ select.quantity option:hover{
   white-space:nowrap;
 	width: 140px;
 	height: 35px;
-  margin: 0px 0px 20px 0px;
   font-size: 14px;
   font-weight: 400;
   outline-color: #E0BB7D
