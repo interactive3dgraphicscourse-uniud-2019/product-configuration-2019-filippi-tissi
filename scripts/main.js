@@ -47,7 +47,7 @@ function init(){
         obj.position.y = -2;
         obj.position.x = 2;
 
-        obj.traverse(
+        obj.traverse( 
             function (child){
                 if (child instanceof THREE.Mesh) {
                     if (child.name === "Seduta") seduta.push(child);
