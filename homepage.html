@@ -9,6 +9,7 @@
 	<link rel= "stylesheet" href="styles/style.css">
 	<link href="https://fonts.googleapis.com/css?family=Playfair+Display|Source+Sans+Pro&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800&display=swap" rel="stylesheet">
+	<script type="text/javascript" src="scripts/main.js"></script>
 </head>
 
 <body>
@@ -31,7 +32,7 @@
 				<button type="submit" class="search_b"><i class="fa fa-search"></i></button>
 			</div>
 			<a href="#" class="w3-button w3-button-w"><i class="fa fa-user"></i> Login</a>
-			<a href="#" class="w3-button w3-button-w" style="background-color: #E0BB7D; color:#050505"><i class="fa fa-shopping-cart"></i> Cart (0)</a>
+			<a href="#" class="w3-button w3-button-w" style="background-color: #E0BB7D; color:#010400"><i class="fa fa-shopping-cart"></i> Cart (0)</a>
 		</div>
 	</header>
 	<main>
@@ -50,19 +51,29 @@
 			<div class="w3-threequarter w3-container" id="canvas_wrap">
 				<canvas id="product_canvas" style="margin-bottom:-6px"></canvas>
 				<div id="measure">
-					<h6 style="background-color:#050505; font-weight: 700; text-align: left; padding:5px;">MISURE</h6>
+					<h6 style="background-color:#010400; font-weight: 700; text-align: left; padding:5px;">MISURE</h6>
 					<div id="info">
 						<p>Altezza: 100cm</p>
 						<p>Larghezza: 50cm</p>
 						<p>Profondit&agrave;: 50cm</p>
 					</div>
 				</div>
+				<div class="popup" onclick="showDesc()">
+					<i class="fa fa-info" id="info_icon"></i>
+					<span class="popuptext" id="myPopup">
+						Tristique eum quas accusamus quod a occaecati eu, explicabo praesentium! 
+						Itaque? Exercitation reprehenderit elit quasi aenean mauris mi, ultrices duis 
+						animi hac sequi quis repellat urna occaecat quod, vehicula pede, recusandae 
+						impedit aut senectus litora voluptates! Tortor hendrerit ullamco laudantium 
+						tenetur dis hendrerit repellendus curae quisquam exercitationem viverra?
+					</span>
+				</div>
 			</div>
 
 			<!-- ZONA della PERSONALIZZAZIONE-->
 			<div class="w3-quarter w3-container">
 				<div class="personalization">
-					<div style="background-color: #050505; padding: 10px 15px;">
+					<div style="background-color: #010400; padding: 10px 15px;">
 						<h5>SHELDON'S STOOL</h5>
 					</div>
 					<div class="w3-container" style="padding: 0px;">
