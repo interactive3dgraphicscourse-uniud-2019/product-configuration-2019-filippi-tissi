@@ -26,7 +26,9 @@ function init(){
     scene = new THREE.Scene();
     canvas = document.getElementById("canvas_model");
     camera = new THREE.PerspectiveCamera( 30, canvas.clientWidth / canvas.clientHeight, 0.1, 1000 );
-    camera.position.z = 10;
+    camera.position.z = 4;
+    camera.position.y = 3;
+    camera.position.x = -6;
     renderer = new THREE.WebGLRenderer({canvas:canvas, antialias:true});
     renderer.setPixelRatio( canvas.devicePixelRatio );
     renderer.setSize( canvas.clientWidth, canvas.clientHeight );
@@ -45,7 +47,6 @@ function init(){
         obj.position.z = 0;
         obj.position.y = -1.5;
         obj.position.x = 0;
-
         obj.traverse( 
             function (child){
                 if (child instanceof THREE.Mesh) {
