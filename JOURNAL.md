@@ -74,7 +74,7 @@
 
  * Generazione della palette dei colori presentata nella figura successiva.
 
-   ![](JrnImages/palette.png)
+   ![](JrnImages/palettecolors.png)
 
  * Costruzione di un documento parallelo dove viene visualizzato il modello 3D dello sgabello.
 
@@ -86,8 +86,16 @@
 
 * Revisione del Journal trascritto la giornata precedente.
 
-* d   siti usati
+* Realizzazione della cubemap definitiva. Per la cubemap abbiamo utilizzato il seguente sito per acquisire il file in 4k. ( https://hdrihaven.com/hdri/?c=artificial%20light&h=royal_esplanade ). 
+Dopodichè servendoci del sito ( https://matheowis.github.io/HDRI-to-CubeMap/ ) abbiamo trasformato l'immagine nella cubemap finale e la abbiamo inserita.
 
-https://hdrihaven.com/hdri/?c=artificial%20light&h=royal_esplanade
+# 23 maggio 2019
 
-https://matheowis.github.io/HDRI-to-CubeMap/
+* Revisione del Journal trascritto la giornata precedente.
+
+* Completamento della grafica del sito con l'introduzione del pulsante di informazioni e delle misure relative all'altezza alla largehzza e alla profondità dello sgabello.
+
+* DECISIONE: scelta dei colori coerenti alla palette scelta precedentemente
+
+
+
