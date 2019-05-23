@@ -44,8 +44,8 @@ function init(){
         sgabello = obj;
         
         obj.position.z = 0;
-        obj.position.y = -2;
-        obj.position.x = 2;
+        obj.position.y = 
+        obj.position.x = 0;
 
         obj.traverse( 
             function (child){
@@ -58,6 +58,7 @@ function init(){
         );
         scene.add(sgabello);
     });
+    Coordinates.drawAllAxes(); //disegna gli assi
     controls = new THREE.OrbitControls( camera, renderer.domElement );
     controls.minDistance = 1;
     controls.maxDistance = 100;

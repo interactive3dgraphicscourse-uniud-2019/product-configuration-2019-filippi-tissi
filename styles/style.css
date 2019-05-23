@@ -449,10 +449,12 @@ select.quantity option:hover{
 
 /*POPUP*/
 #info_icon{
-  font-size: 35px;
+  font-size: 20px;
   color: #E0BB7D;
   background-color: #010400;
-  padding: 4px 16px;
+  padding: 3px 9px;
+  border-radius: 50%;
+  text-align: center;
 }
 /* Popup container - can be anything you want */
 .popup {
@@ -479,8 +481,8 @@ select.quantity option:hover{
   padding: 8px;
   position: absolute;
   z-index: 1;
-  top: 55px;
-  left: 79px;
+  top: 36px;
+  left: 69px;
   margin-left: -80px;
 }
 
