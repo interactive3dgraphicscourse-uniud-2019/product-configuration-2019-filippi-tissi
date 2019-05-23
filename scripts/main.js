@@ -44,8 +44,8 @@ function init(){
         sgabello = obj;
         
         obj.position.z = 0;
-        obj.position.y = 0;
-        obj.position.x = 0;
+        obj.position.y = -2;
+        obj.position.x = 2;
 
         obj.traverse(
             function (child){
