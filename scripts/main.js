@@ -1,17 +1,42 @@
+var canvas, container;
+var controls;
+
 function showDesc() {
     let popup = document.getElementById("myPopup");
     popup.classList.toggle("show");
 }
+function onResize() {
+    renderer.setSize( canvas.clientWidth, canvas.clientHeight );
+    camera.aspect = ( canvas.clientWidth / canvas.clientHeight );
+    camera.updateProjectionMatrix();
+}
+
+function update() {
+    requestAnimationFrame( update );
+    //stats.update();
+    render();
+}
+
+function render() {
+    //updateUniforms();
+    renderer.render( scene, camera );
+}
 
 function init(){
     scene = new THREE.Scene();
-    camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
-    camera.position.z = 5;
-    renderer = new THREE.WebGLRenderer();
-    renderer.setSize( window.innerWidth, window.innerHeight );
-    renderer.setClearColor( 0xf0f0f0 );
-    document.body.appendChild( renderer.domElement );
-    let canvas = document.getElementById("canvas_model");
+    canvas = document.getElementById("canvas_model");
+    camera = new THREE.PerspectiveCamera( 30, canvas.clientWidth / canvas.clientHeight, 0.1, 1000 );
+    camera.position.z = 10;
+    camera.position.y = 8;
+    renderer = new THREE.WebGLRenderer({canvas:canvas, antialias:true});
+    renderer.setPixelRatio( canvas.devicePixelRatio );
+    renderer.setSize( canvas.clientWidth, canvas.clientHeight );
+
+    
+    canvas.addEventListener( 'resize', onResize, false );
+    renderer.setClearColor( 0xd8d8d8 );
+    //document.body.appendChild( renderer.domElement );
+    
     // ------------------- CARICAMENTO DEL MODELLO OBJ DELLO SGABELLO -------------------
 
     var loader = new THREE.OBJLoader();
@@ -20,6 +45,7 @@ function init(){
         
         obj.position.z = 0;
         obj.position.y = 0;
+        obj.position.x = 0;
 
         obj.traverse(
             function (child){
@@ -32,5 +58,11 @@ function init(){
         );
         scene.add(sgabello);
     });
-
+    controls = new THREE.OrbitControls( camera, renderer.domElement );
+    controls.minDistance = 1;
+    controls.maxDistance = 100;
+    controls.enablePan = false;
+    controls.update();
+    update();
+	render();
 }
