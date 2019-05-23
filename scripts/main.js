@@ -27,7 +27,6 @@ function init(){
     canvas = document.getElementById("canvas_model");
     camera = new THREE.PerspectiveCamera( 30, canvas.clientWidth / canvas.clientHeight, 0.1, 1000 );
     camera.position.z = 10;
-    camera.position.y = 8;
     renderer = new THREE.WebGLRenderer({canvas:canvas, antialias:true});
     renderer.setPixelRatio( canvas.devicePixelRatio );
     renderer.setSize( canvas.clientWidth, canvas.clientHeight );
@@ -44,7 +43,7 @@ function init(){
         sgabello = obj;
         
         obj.position.z = 0;
-        obj.position.y = 
+        obj.position.y = -1.5;
         obj.position.x = 0;
 
         obj.traverse( 
@@ -58,7 +57,7 @@ function init(){
         );
         scene.add(sgabello);
     });
-    Coordinates.drawAllAxes(); //disegna gli assi
+    //Coordinates.drawAllAxes(); //disegna gli assi
     controls = new THREE.OrbitControls( camera, renderer.domElement );
     controls.minDistance = 1;
     controls.maxDistance = 100;
