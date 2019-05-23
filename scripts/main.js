@@ -60,8 +60,8 @@ function init(){
     });
     //Coordinates.drawAllAxes(); //disegna gli assi
     controls = new THREE.OrbitControls( camera, renderer.domElement );
-    controls.minDistance = 1;
-    controls.maxDistance = 100;
+    controls.minDistance = 4;
+    controls.maxDistance = 11;
     controls.enablePan = false;
     controls.update();
     update();

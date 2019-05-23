@@ -97,5 +97,7 @@ Dopodichè servendoci del sito ( https://matheowis.github.io/HDRI-to-CubeMap/ ) 
 
 * DECISIONE: scelta dei colori coerenti alla palette scelta precedentemente
 
+* Posizionato il modello nella scena
 
+* RICORDARE: possibilità di scelta per l'utente immagine di sfondo o bianco
 
