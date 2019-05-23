@@ -10,9 +10,19 @@
 	<link href="https://fonts.googleapis.com/css?family=Playfair+Display|Source+Sans+Pro&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800&display=swap" rel="stylesheet">
 	<script type="text/javascript" src="scripts/main.js"></script>
+	<script src="lib/three.min.js"></script>
+	<script src="lib/stats.min.js"></script>
+	<script src="lib/OrbitControls.js"></script>
+	<script src='lib/dat.gui.min.js'></script>
+	<script src='lib/OBJLoader.js'></script>
+	<script src="lib/EffectComposer.js"></script>
+	<script src="lib/CopyShader.js"></script>
+	<script src="lib/ShaderPass.js"></script>
+	<script src="lib/RenderPass.js"></script>
+	<script src="lib/GammaCorrectionShader.js"></script>
 </head>
 
-<body>
+<body onload="init();">
 	<header class="w3-bar w3-bar-w">
 		<div class="left_menu">
 			<a href="#" class="w3-bar-item">
@@ -49,7 +59,7 @@
 			<!--ZONA del MODELLO-->
 			
 			<div class="w3-threequarter w3-container" id="canvas_wrap">
-				<canvas id="product_canvas" style="margin-bottom:-6px"></canvas>
+				<canvas id="canvas_model" style="margin-bottom:-6px"></canvas>
 				<div id="measure">
 					<h6 style="background-color:#010400; font-weight: 700; text-align: left; padding:5px;">MISURE</h6>
 					<div id="info">

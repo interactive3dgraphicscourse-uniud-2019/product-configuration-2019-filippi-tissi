@@ -9,7 +9,7 @@ body{
   position:relative;
   font-family: 'Poppins', sans-serif;
 }
-#product_canvas{
+#canvas_model{
   height: 640px;
   width: 100%;
   border: 1px solid #7A7A7A;
