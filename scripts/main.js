@@ -3,6 +3,8 @@ var controls;
 var sitting = new Array();
 var und_sit = new Array();
 var structure = new Array();
+var simple_vertex, simple_fragment;
+var vs, fs;
 
 function showDesc() {
     let popup = document.getElementById("myPopup");
@@ -23,6 +25,19 @@ function update() {
 function render() {
     //updateUniforms();
     renderer.render( scene, camera );
+}
+
+function loadTexture(file) {
+    var texture = new THREE.TextureLoader().load( file , function ( texture ) {
+
+        texture.minFilter = THREE.LinearMipMapLinearFilter;
+        texture.anisotropy = renderer.getMaxAnisotropy();
+        texture.wrapS = texture.wrapT = THREE.RepeatWrapping;
+        texture.offset.set( 0, 0 );
+        texture.needsUpdate = true;
+        render();
+    } )
+    return texture;
 }
 
 function init(){
@@ -60,6 +75,40 @@ function init(){
             }
         );
         scene.add(sgabello);
+    });
+
+
+    var uniforms_cloth={
+        diffuseMap:		{ type: "t", value: loadTexture("textures/cloth/Carpet_Diffuse.jpg") },
+        roughnessMap:	{ type: "t", value: loadTexture("textures/cloth/Carpet_Roughness.jpg") },
+        normalMap:		{ type: "t", value: loadTexture("textures/cloth/Carpet_Normal.jpg") },
+        normalScale:	{ type: "v2", value: new THREE.Vector2(0.5, 0.5) },
+        textureRepeat:	{ type: "v2", value: new THREE.Vector2(4.0, 4.0) }
+    }
+
+    var sitting_uniforms = {
+        surfCdiff: { type: "v3", value: new THREE.Vector3(1.0, 1.0, 1.0) }
+    }
+
+    var lightParameters = {
+        red: 1.0,
+        green: 1.0,
+        blue: 1.0,
+        intensity: 1.0,
+        pos: [0,10,0]
+    };
+    var lightMesh1 = new THREE.Mesh( new THREE.SphereGeometry( 1, 16, 16), new THREE.MeshBasicMaterial ({color: 0xffff00, wireframe:true}));
+     lightMesh1.position.set( lightParameters.pos[0], lightParameters.pos[1], lightParameters.pos[2] );
+    //scene.add(lightMesh1);
+    var lightPos1 = new THREE.Vector3(lightMesh1.position.x, lightMesh1.position.y, lightMesh1.position.z);
+    Object.assign(sitting_uniforms, uniforms_cloth);
+
+
+    vs = document.getElementById("vertex").textContent;
+    fs = document.getElementById("fragment").textContent;
+    var sitting_material=new THREE.ShaderMaterial({uniforms: sitting_uniforms, vertexShader: vs, fragmentShader: fs});
+    sitting.forEach(function(el){
+        el.material = sitting_material;
     });
     //Coordinates.drawAllAxes(); //disegna gli assi
     controls = new THREE.OrbitControls( camera, renderer.domElement );
