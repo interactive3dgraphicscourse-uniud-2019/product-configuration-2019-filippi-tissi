@@ -1,5 +1,8 @@
 var canvas, container;
 var controls;
+var sitting = new Array();
+var und_sit = new Array();
+var structure = new Array();
 
 function showDesc() {
     let popup = document.getElementById("myPopup");
@@ -50,9 +53,9 @@ function init(){
         obj.traverse( 
             function (child){
                 if (child instanceof THREE.Mesh) {
-                    if (child.name === "Seduta") seduta.push(child);
-                    if (child.name === "Sottocuscino") sottocuscino.push(child);
-                    if (child.name === "Struttura") struttura.push(child);
+                    if (child.name === "Seduta") sitting.push(child);
+                    if (child.name === "Sottocuscino") und_sit.push(child);
+                    if (child.name === "Struttura") stucture.push(child);
                 }
             }
         );
