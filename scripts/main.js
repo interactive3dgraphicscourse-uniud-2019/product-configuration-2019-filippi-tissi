@@ -82,8 +82,8 @@ function init(){
         diffuseMap:		{ type: "t", value: loadTexture("textures/cloth/Carpet_Diffuse.jpg") },
         roughnessMap:	{ type: "t", value: loadTexture("textures/cloth/Carpet_Roughness.jpg") },
         normalMap:		{ type: "t", value: loadTexture("textures/cloth/Carpet_Normal.jpg") },
-        normalScale:	{ type: "v2", value: new THREE.Vector2(0.5, 0.5) },
-        textureRepeat:	{ type: "v2", value: new THREE.Vector2(4.0, 4.0) }
+        normalScale:	{ type: "v2", value: new THREE.Vector2(0.5, 0.5) },     //valori da modificare
+        textureRepeat:	{ type: "v2", value: new THREE.Vector2(4.0, 4.0) }      //valori da modificare
     }
 
     var sitting_uniforms = {
@@ -97,10 +97,26 @@ function init(){
         intensity: 1.0,
         pos: [0,10,0]
     };
-    var lightMesh1 = new THREE.Mesh( new THREE.SphereGeometry( 1, 16, 16), new THREE.MeshBasicMaterial ({color: 0xffff00, wireframe:true}));
-     lightMesh1.position.set( lightParameters.pos[0], lightParameters.pos[1], lightParameters.pos[2] );
-    //scene.add(lightMesh1);
-    var lightPos1 = new THREE.Vector3(lightMesh1.position.x, lightMesh1.position.y, lightMesh1.position.z);
+
+    var param_luce1 = { red: 1.0, green: 1.0, blue: 1.0,    intensity: 0.5,    pos: [0, 40, 0] };
+    var param_luce2 = { red: .2, green: .2, blue: .2,    intensity: 0.4,    pos: [20, -30, 0] };
+
+    if (param_luce1.intensity > 0) {
+        var sole1 = new THREE.Mesh( new THREE.SphereGeometry( 1, 16, 16), new THREE.MeshBasicMaterial ({color: 0xffff00, wireframe:true}));
+        sole1.position.set( param_luce1.pos[0], param_luce1.pos[1], param_luce1.pos[2] );
+        //scene.add(lightMesh1);
+        var raggio1 = new THREE.Vector3(lightMesh1.position.x, lightMesh1.position.y, lightMesh1.position.z);
+    } else { var lightPos1 = new THREE.Vector3(0,0,0); }
+    
+    if (lightParams2.intensity > 0) {
+        var lightMesh2 = new THREE.Mesh( new THREE.SphereGeometry( 1, 16, 16), new THREE.MeshBasicMaterial ({color: 0xffff00, wireframe:true}));
+        lightMesh2.position.set( lightParams2.pos[0], lightParams2.pos[1], lightParams2.pos[2] );
+        //scene.add(lightMesh2);
+        var lightPos2 = new THREE.Vector3(lightMesh2.position.x, lightMesh2.position.y, lightMesh2.position.z);
+
+
+    
+    var lightPos1 = new THREE.Vector3(10,10,10);
     Object.assign(sitting_uniforms, uniforms_cloth);
 
 
@@ -111,6 +127,52 @@ function init(){
         el.material = sitting_material;
     });
     //Coordinates.drawAllAxes(); //disegna gli assi
+
+
+    var unif_condivisi = {
+        pointLightPositions: {
+            type: "v3[]",
+            value: new Array(lightPos1, lightPos2)
+        },
+        clights: {
+            type: "v3[]",
+            value: new Array(
+                new THREE.Vector3(
+                    lightParams1.red * lightParams1.intensity,
+                    lightParams1.green * lightParams1.intensity,
+                    lightParams1.blue * lightParams1.intensity),
+                new THREE.Vector3(
+                    lightParams2.red * lightParams2.intensity,
+                    lightParams2.green * lightParams2.intensity,
+                    lightParams2.blue * lightParams2.intensity)
+            )
+        },
+        ambientLight: {
+            type: "v3",
+            value: new THREE.Vector3(
+                ambientLightParams.red * ambientLightParams.intensity,
+                ambientLightParams.green * ambientLightParams.intensity,
+                ambientLightParams.blue * ambientLightParams.intensity)
+        },
+        // envMap:	{ type: "t", value: textureCube}   DA INSERIRE
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     controls = new THREE.OrbitControls( camera, renderer.domElement );
     controls.minDistance = 4;
     controls.maxDistance = 11;
