@@ -60,18 +60,9 @@
 		vec3 cdiff;
 		float roughness;
 		const float PI = 3.14159;
-		vec3 outRadiances;
+		vec3 outRadiance;
 
-		cdiff = texture2D( diffuseMap, uVv*textureRepeat ).rgb;
-		cdiff = (cdiff*cdiffChange)*1.0;
-		// texture in sRGB, linearize
-		cdiff = pow( cdiff, vec3(2.2));
-		cspec = texture2D( specularMap, uVv*textureRepeat ).rgb;
-		// texture in sRGB, linearize
-		cspec = pow( cspec, vec3(2.2));
-		roughness = texture2D( roughnessMap, uVv*textureRepeat).r; // no need to linearize roughness map
-
-
+		
 		vec3 FSchlick(float lDoth) {
 			return (cspec + (vec3(1.0)-cspec)*pow(1.0 - lDoth,5.0));
 		}
@@ -103,6 +94,14 @@
 			float nDoth = max(dot( n, h ),0.000001);
 			float vDoth = max(dot( v, h ),0.000001);
 			float nDotv = max(dot( n, v ),0.000001);
+			cdiff = texture2D( diffuseMap, uVv*textureRepeat ).rgb;
+			cdiff = (cdiff*cdiffChange)*1.0;
+			// texture in sRGB, linearize
+			cdiff = pow( cdiff, vec3(2.2));
+			cspec = texture2D( specularMap, uVv*textureRepeat ).rgb;
+			// texture in sRGB, linearize
+			cspec = pow( cspec, vec3(2.2));
+			roughness = texture2D( roughnessMap, uVv*textureRepeat).r; // no need to linearize roughness map
 			vec3 fresnel = FSchlick(lDoth);
 			vec3 BRDF = (vec3(1.0)-fresnel)*cdiff/PI + fresnel*GSmith(nDotv,nDotl)*DGGX(nDoth,roughness*roughness)/
 				(4.0*nDotl*nDotv);
