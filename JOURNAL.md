@@ -126,7 +126,7 @@ Struttura: 3 materiali (plastica, metallo e legno)
 -> legno (marrone chiaro, marrone scuro)  DISABILITO I PRIMI DUE
 
 
-TEXTURE CHE ABBIAMO:
+TEXTURE CHE ABBIAMO PRONTE:
 - cloth nero
 
  
