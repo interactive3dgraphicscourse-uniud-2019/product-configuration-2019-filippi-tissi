@@ -107,5 +107,14 @@ Dopodichè servendoci del sito ( https://matheowis.github.io/HDRI-to-CubeMap/ ) 
 
 * Codice del vertex shader e del fragment shader e decisione sui materiali da utilizzare.
 
+* TO DO:
+- scegliere tutte le texture
+- mettere le texture a tutti gli elementi
+- gestione dell'ambient light
+- gestione e aggiunta di nuove luci
+
+- implementare l'interattività al click
+ 
+
 
 
