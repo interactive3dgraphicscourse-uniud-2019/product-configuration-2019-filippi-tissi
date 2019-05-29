@@ -101,3 +101,11 @@ Dopodichè servendoci del sito ( https://matheowis.github.io/HDRI-to-CubeMap/ ) 
 
 * RICORDARE: possibilità di scelta per l'utente immagine di sfondo o bianco
 
+# 28 maggio 2019
+
+* Revisione del Journal trascritto la giornata precedente.
+
+* Codice del vertex shader e del fragment shader e decisione sui materiali da utilizzare.
+
+
+
