@@ -68,9 +68,9 @@ function init(){
         obj.traverse( 
             function (child){
                 if (child instanceof THREE.Mesh) {
-                    if (child.name === "Seduta") sitting.push(child);
-                    if (child.name === "Sottocuscino") und_sit.push(child);
-                    if (child.name === "Struttura") stucture.push(child);
+                    if (child.name === "Seduta_Plane.001") sitting.push(child);
+                    if (child.name === "Struttura_Plane.002") und_sit.push(child);
+                    if (child.name === "Sottocuscino_Plane") structure.push(child);
                 }
             }
         );
@@ -102,7 +102,7 @@ function init(){
         roughnessMap:	{ type: "t", value: loadTexture("textures/cloth/Carpet_Roughness.jpg") },
         normalMap:		{ type: "t", value: loadTexture("textures/cloth/Carpet_Normal.jpg") },
         aoMap:	    	{ type: "t", value: loadTexture("textures/cloth/Carpet_AO.jpg") },
-        textureRepeat:	{ type: "v2", value: new THREE.Vector2(4.0, 4.0) }      //valori da modificare
+        textureRepeat:	{ type: "v2", value: new THREE.Vector2(1.0, 1.0) }      //valori da modificare
     }
 
     var sitting_uniforms = {
@@ -110,21 +110,21 @@ function init(){
     }
 
     var param_luce1 = { red: 1.0, green: 1.0, blue: 1.0,    intensity: 0.5,    pos: [0, 10, 0] };
-    var param_luce2 = { red: .2, green: .2, blue: .2,    intensity: 0.4,    pos: [10, -10, 0] };
+    var param_luce2 = { red: .2, green: .2, blue: .2,    intensity: 0.4,    pos: [10, 0, 0] };
 
-    var ambientLightParams = { red: 0.1, green: 0.05, blue: 0.05, intensity: 0.1, }
+    var ambientLightParams = { red: 0.1, green: 0.05, blue: 0.05, intensity: 0.5};
 
     if (param_luce1.intensity > 0) {
         var sole1 = new THREE.Mesh( new THREE.SphereGeometry( 1, 16, 16), new THREE.MeshBasicMaterial ({color: 0xffff00, wireframe:true}));
         sole1.position.set( param_luce1.pos[0], param_luce1.pos[1], param_luce1.pos[2] );
-        //scene.add(sole1);
+        scene.add(sole1);
         var raggio1 = new THREE.Vector3(sole1.position.x, sole1.position.y, sole1.position.z);
     } else { var raggio1 = new THREE.Vector3(0,0,0); }
     
     if (param_luce2.intensity > 0) {
         var sole2 = new THREE.Mesh( new THREE.SphereGeometry( 1, 16, 16), new THREE.MeshBasicMaterial ({color: 0xffff00, wireframe:true}));
         sole2.position.set( param_luce2.pos[0], param_luce2.pos[1], param_luce2.pos[2] );
-        //scene.add(sole2);
+        scene.add(sole2);
         var raggio2 = new THREE.Vector3(sole2.position.x, sole2.position.y, sole2.position.z)
     }else { var raggio2 = new THREE.Vector3(0,0,0); }
 
@@ -166,6 +166,7 @@ function init(){
     sitting.needsUpdate = true;
     sitting.forEach(function(el){
         el.material = sitting_material;
+        console.log(el.material);
     });
     requestAnimationFrame(update);
     
