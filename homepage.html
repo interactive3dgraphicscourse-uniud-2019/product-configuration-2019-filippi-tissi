@@ -45,15 +45,14 @@
 		uniform vec3 pointLightPosition; // in world space
 		uniform vec3 clight;
 		uniform vec3 ambientlight;
-		uniform sampler2D metalnessMap;
+		uniform sampler2D specularMap;
 		uniform sampler2D diffuseMap;
 		uniform sampler2D roughnessMap;
 		uniform sampler2D normalMap;
 		uniform sampler2D aoMap;
 
-		uniform vec2 normalScale;
 		uniform vec2 textureRepeat;
-		uniform vec3 surfCdiff;
+		uniform vec3 cdiffChange;
 
 		vec3 cspec;
 		vec3 cdiff;
@@ -61,6 +60,7 @@
 		const float PI = 3.14159;
 
 		cdiff = texture2D( diffuseMap, uVv*textureRepeat ).rgb;
+		cdiff = (cdiff*cdiffChange)*1.0;
 		// texture in sRGB, linearize
 		cdiff = pow( cdiff, vec3(2.2));
 		cspec = texture2D( specularMap, uVv*textureRepeat ).rgb;
