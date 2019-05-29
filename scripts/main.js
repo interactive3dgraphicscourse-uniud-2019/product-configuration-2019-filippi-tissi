@@ -109,18 +109,18 @@ function init(){
     }
 
     sitting_uniforms = {
-        cdiffChange: { type: "v3", value: new THREE.Vector3(1.0, 1.0, 1.0) }
+        cdiffChange: { type: "v3", value: new THREE.Vector3(1.0, 0, 0) }
     }
 
-    var param_luce1 = { red: 1.0, green: 1.0, blue: 1.0,    intensity: 0.5,    pos: [0, 10, 0] };
+    var param_luce1 = { red: 1.0, green: 1.0, blue: 1.0,    intensity: 1,    pos: [3, 4, 0] };
     var param_luce2 = { red: .2, green: .2, blue: .2,    intensity: 0.4,    pos: [10, -10, 0] };
 
-    var ambientLightParams = { red: 0.1, green: 0.05, blue: 0.05, intensity: 0.1, }
+    var ambientLightParams = { red: 0.5, green: 0.5, blue: 0.5, intensity: 1 }
 
     if (param_luce1.intensity > 0) {
         var sole1 = new THREE.Mesh( new THREE.SphereGeometry( 1, 16, 16), new THREE.MeshBasicMaterial ({color: 0xffff00, wireframe:true}));
         sole1.position.set( param_luce1.pos[0], param_luce1.pos[1], param_luce1.pos[2] );
-        //scene.add(sole1);
+        scene.add(sole1);
         var raggio1 = new THREE.Vector3(sole1.position.x, sole1.position.y, sole1.position.z);
     } else { var raggio1 = new THREE.Vector3(0,0,0); }
     /*
@@ -153,15 +153,15 @@ function init(){
         }
     }
 
-    Object.assign(sitting_uniforms, unif_condivisi);
-    Object.assign(sitting_uniforms, uniforms_cloth);
+    //Object.assign(sitting_uniforms, unif_condivisi);
+    //Object.assign(sitting_uniforms, uniforms_cloth);
 
     materialExtensions = {
         derivatives: true, // set to use derivatives
         shaderTextureLOD: true // set to use shader texture LOD
     };
 
-    Coordinates.drawAllAxes(); //disegna gli assi
+    //Coordinates.drawAllAxes(); //disegna gli assi
 
     controls = new THREE.OrbitControls( camera, renderer.domElement );
     controls.minDistance = 4;
