@@ -114,6 +114,17 @@ Dopodichè servendoci del sito ( https://matheowis.github.io/HDRI-to-CubeMap/ ) 
 - gestione e aggiunta di nuove luci
 
 - implementare l'interattività al click
+
+
+Sitting: 2 materiali (cloth e pelle) -> 4 colori uguali oper entrambi, (rosso, nero, marrone, verde)
+
+Sottocuscino è fisso di materiale LEGNO colore da noi deciso (vedi tex)
+
+Struttura: 3 materiali (plastica, metallo e legno) 
+-> metallo (colore non modificabile, meteriale riflettente abb)
+->plastica (nera, grigia)
+-> legno 
+
  
 
 
