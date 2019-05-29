@@ -77,6 +77,24 @@ function init(){
         scene.add(sgabello);
     });
 
+    // ------------------- CARICAMENTO DELLA CUBEMAP -------------------
+
+			var loader = new THREE.CubeTextureLoader();
+			loader.setPath( 'textures/cubemapDEF/' );
+			
+			var textureCube;
+			textureCube = loader.load([
+					'px.png', 'nx.png',
+					'py.png', 'ny.png',
+					'pz.png', 'nz.png'
+
+					] );
+
+			scene.background = textureCube;    //se lo si decommenta aggiungo il background alla scena ma a noi non serve
+            textureCube.minFilter = THREE.LinearMipMapLinearFilter;
+            
+    // ----------------------------------------------------------------------------      
+
 
     var uniforms_cloth={
         diffuseMap:		{ type: "t", value: loadTexture("textures/cloth/Carpet_Diffuse.jpg") },
@@ -142,7 +160,7 @@ function init(){
                     ambientLightParams.green * ambientLightParams.intensity,
                     ambientLightParams.blue * ambientLightParams.intensity)
             },
-            // envMap:	{ type: "t", value: textureCube}   DA INSERIRE
+             envMap:	{ type: "t", value: textureCube} 
         }
 
 
