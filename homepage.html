@@ -29,11 +29,13 @@
 	<script type="text/x-glsl" id="vertex">
 		varying vec3 vNormal;
 		varying vec3 vPosition;
+		varying vec2 uVv;
 
 		void main() {
 			vec4 vPos = modelViewMatrix * vec4( position, 1.0 );
 			vPosition = vPos.xyz;
 			vNormal = normalMatrix * normal;
+			uVv = uv;
 			gl_Position = projectionMatrix * vPos;
 		}
 	</script>
@@ -58,6 +60,7 @@
 		vec3 cdiff;
 		float roughness;
 		const float PI = 3.14159;
+		vec3 outRadiances;
 
 		cdiff = texture2D( diffuseMap, uVv*textureRepeat ).rgb;
 		cdiff = (cdiff*cdiffChange)*1.0;
@@ -103,7 +106,7 @@
 			vec3 fresnel = FSchlick(lDoth);
 			vec3 BRDF = (vec3(1.0)-fresnel)*cdiff/PI + fresnel*GSmith(nDotv,nDotl)*DGGX(nDoth,roughness*roughness)/
 				(4.0*nDotl*nDotv);
-			vec3 outRadiance = PI* clights * nDotl * BRDF;
+			outRadiance = PI* clights * nDotl * BRDF;
 			// gamma encode the final value
 			gl_FragColor = vec4(pow( outRadiance, vec3(1.0/2.2)), 1.0);
 		}

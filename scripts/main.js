@@ -6,6 +6,7 @@ var structure = new Array();
 var simple_vertex, simple_fragment;
 var vs, fs;
 var upload = false;
+var sgabello;
 
 function showDesc() {
     let popup = document.getElementById("myPopup");
@@ -70,9 +71,9 @@ function init(){
         obj.traverse( 
             function (child){
                 if (child instanceof THREE.Mesh) {
-                    if (child.name === "Seduta") sitting.push(child);
-                    if (child.name === "Sottocuscino") und_sit.push(child);
-                    if (child.name === "Struttura") stucture.push(child);
+                    if (child.name === "Seduta_Plane.001") sitting.push(child);
+                    if (child.name === "Sottocuscino_Plane") und_sit.push(child);
+                    if (child.name === "Struttura_Plane.002") structure.push(child);
                 }
             }
         );
@@ -131,7 +132,7 @@ function init(){
     }else { var raggio2 = new THREE.Vector3(0,0,0); }
 
 
-    var unif_condivisi = {  
+    unif_condivisi = {  
         pointLightPositions: {
             type: "v3[]",
             value: new Array(raggio1, raggio2)
@@ -161,6 +162,11 @@ function init(){
     Object.assign(sitting_uniforms, unif_condivisi);
     Object.assign(sitting_uniforms, uniforms_cloth);
 
+    materialExtensions = {
+        derivatives: true, // set to use derivatives
+        shaderTextureLOD: true // set to use shader texture LOD
+    };
+
     Coordinates.drawAllAxes(); //disegna gli assi
 
     controls = new THREE.OrbitControls( camera, renderer.domElement );
@@ -175,14 +181,17 @@ function firstStart(){
     if(upload){
         vs = document.getElementById("vertex").textContent;
         fs = document.getElementById("fragment").textContent;
-        var sitting_material=new THREE.ShaderMaterial({uniforms: sitting_uniforms, vertexShader: vs, fragmentShader: fs});
+        var sitting_material=new THREE.ShaderMaterial({uniforms: sitting_uniforms, vertexShader: vs, fragmentShader: fs, extensions: materialExtensions});
         sitting.needsUpdate = true;
+        
         sitting.forEach(function(el){
             el.material = sitting_material;
         });
         upload=false;
         scene.add(sgabello);
         requestAnimationFrame(update);
+        Object.assign(sitting_uniforms, unif_condivisi);
+        Object.assign(sitting_uniforms, uniforms_cloth);
     }else{
         requestAnimationFrame(firstStart);   
     }
