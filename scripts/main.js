@@ -160,7 +160,7 @@ function init(){
                     ambientLightParams.green * ambientLightParams.intensity,
                     ambientLightParams.blue * ambientLightParams.intensity)
             },
-             envMap:	{ type: "t", value: textureCube}   DA INSERIRE
+             envMap:	{ type: "t", value: textureCube} 
         }
 
 
