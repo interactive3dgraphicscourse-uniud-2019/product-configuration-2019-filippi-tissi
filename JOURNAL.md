@@ -116,14 +116,18 @@ Dopodichè servendoci del sito ( https://matheowis.github.io/HDRI-to-CubeMap/ ) 
 - implementare l'interattività al click
 
 
-Sitting: 2 materiali (cloth e pelle) -> 4 colori uguali oper entrambi, (rosso, nero, marrone, verde)
+Sitting: 2 materiali (tessuto e pelle) -> 4 colori uguali per entrambi (rosso, nero, marrone, verde)
 
-Sottocuscino è fisso di materiale LEGNO colore da noi deciso (vedi tex)
+Sottocuscino è fisso NON MODIFICABILE di materiale LEGNO colore da noi deciso (vedi tex)
 
 Struttura: 3 materiali (plastica, metallo e legno) 
--> metallo (colore non modificabile, meteriale riflettente abb)
-->plastica (nera, grigia)
--> legno 
+-> metallo (colore non modificabile, meteriale riflettente abb) DISABILITO TUTTI I COLORI
+-> plastica (rosso, nero, marrone chiaro, marrone scuro)
+-> legno (marrone chiaro, marrone scuro)  DISABILITO I PRIMI DUE
+
+
+TEXTURE CHE ABBIAMO:
+- cloth nero
 
  
 
