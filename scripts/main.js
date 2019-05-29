@@ -104,15 +104,46 @@ function init(){
     if (param_luce1.intensity > 0) {
         var sole1 = new THREE.Mesh( new THREE.SphereGeometry( 1, 16, 16), new THREE.MeshBasicMaterial ({color: 0xffff00, wireframe:true}));
         sole1.position.set( param_luce1.pos[0], param_luce1.pos[1], param_luce1.pos[2] );
-        //scene.add(lightMesh1);
-        var raggio1 = new THREE.Vector3(lightMesh1.position.x, lightMesh1.position.y, lightMesh1.position.z);
+        //scene.add(sole1);
+        var raggio1 = new THREE.Vector3(sole1.position.x, sole1.position.y, sole1.position.z);
     } else { var lightPos1 = new THREE.Vector3(0,0,0); }
     
-    if (lightParams2.intensity > 0) {
-        var lightMesh2 = new THREE.Mesh( new THREE.SphereGeometry( 1, 16, 16), new THREE.MeshBasicMaterial ({color: 0xffff00, wireframe:true}));
-        lightMesh2.position.set( lightParams2.pos[0], lightParams2.pos[1], lightParams2.pos[2] );
-        //scene.add(lightMesh2);
-        var lightPos2 = new THREE.Vector3(lightMesh2.position.x, lightMesh2.position.y, lightMesh2.position.z);
+    if (param_luce2.intensity > 0) {
+        var sole2 = new THREE.Mesh( new THREE.SphereGeometry( 1, 16, 16), new THREE.MeshBasicMaterial ({color: 0xffff00, wireframe:true}));
+        sole2.position.set( param_luce2.pos[0], param_luce2.pos[1], param_luce2.pos[2] );
+        //scene.add(sole2);
+        var raggio2 = new THREE.Vector3(sole2.position.x, sole2.position.y, sole2.position.z)
+    }
+
+
+
+        var unif_condivisi = {
+            pointLightPositions: {
+                type: "v3[]",
+                value: new Array(param_luce1, param_luce2)
+            },
+            clights: {
+                type: "v3[]",
+                value: new Array(
+                    new THREE.Vector3(
+                        param_luce1.red * param_luce1.intensity,
+                        param_luce1.green * param_luce1.intensity,
+                        param_luce1.blue * param_luce1.intensity),
+                    new THREE.Vector3(
+                        param_luce2.red * param_luce2.intensity,
+                        param_luce2.green * param_luce2.intensity,
+                        param_luce2.blue * param_luce2.intensity)
+                )
+            },
+            ambientLight: {
+                type: "v3",
+                value: new THREE.Vector3(
+                    ambientLightParams.red * ambientLightParams.intensity,
+                    ambientLightParams.green * ambientLightParams.intensity,
+                    ambientLightParams.blue * ambientLightParams.intensity)
+            },
+            // envMap:	{ type: "t", value: textureCube}   DA INSERIRE
+        }
 
 
     
@@ -129,33 +160,7 @@ function init(){
     //Coordinates.drawAllAxes(); //disegna gli assi
 
 
-    var unif_condivisi = {
-        pointLightPositions: {
-            type: "v3[]",
-            value: new Array(lightPos1, lightPos2)
-        },
-        clights: {
-            type: "v3[]",
-            value: new Array(
-                new THREE.Vector3(
-                    lightParams1.red * lightParams1.intensity,
-                    lightParams1.green * lightParams1.intensity,
-                    lightParams1.blue * lightParams1.intensity),
-                new THREE.Vector3(
-                    lightParams2.red * lightParams2.intensity,
-                    lightParams2.green * lightParams2.intensity,
-                    lightParams2.blue * lightParams2.intensity)
-            )
-        },
-        ambientLight: {
-            type: "v3",
-            value: new THREE.Vector3(
-                ambientLightParams.red * ambientLightParams.intensity,
-                ambientLightParams.green * ambientLightParams.intensity,
-                ambientLightParams.blue * ambientLightParams.intensity)
-        },
-        // envMap:	{ type: "t", value: textureCube}   DA INSERIRE
-    }
+
 
 
 
