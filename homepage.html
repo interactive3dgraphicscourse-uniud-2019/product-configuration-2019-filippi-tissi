@@ -54,10 +54,10 @@
 		uniform sampler2D aoMap;
 
 		uniform vec2 textureRepeat;
-		uniform vec3 cdiffChange;
 
 		vec3 cspec;
 		vec3 cdiff;
+		vec3 cdiff2;
 		float roughness;
 		const float PI = 3.14159;
 		vec3 outRadiance;
@@ -95,7 +95,6 @@
 			float vDoth = max(dot( v, h ),0.000001);
 			float nDotv = max(dot( n, v ),0.000001);
 			cdiff = texture2D( diffuseMap, uVv*textureRepeat ).rgb;
-			cdiff = (cdiff*cdiffChange)*1.0;
 			// texture in sRGB, linearize
 			cdiff = pow( cdiff, vec3(2.2));
 			cspec = texture2D( specularMap, uVv*textureRepeat ).rgb;
@@ -106,6 +105,7 @@
 			vec3 BRDF = (vec3(1.0)-fresnel)*cdiff/PI + fresnel*GSmith(nDotv,nDotl)*DGGX(nDoth,roughness*roughness)/
 				(4.0*nDotl*nDotv);
 			outRadiance = PI* clights * nDotl * BRDF;
+			//+ ambientLight*cdiff*texture2D( aoMap, uUv ).xyz;
 			// gamma encode the final value
 			gl_FragColor = vec4(pow( outRadiance, vec3(1.0/2.2)), 1.0);
 		}
