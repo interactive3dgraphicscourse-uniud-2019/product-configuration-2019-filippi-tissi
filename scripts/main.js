@@ -98,7 +98,7 @@ function init(){
             
     // ----------------------------------------------------------------------------      
 
-
+    // MATERIAL UNIFORMS
     uniforms_cloth={
         specularMap:    { type: "t", value: loadTexture("textures/cloth/Carpet_Specular.jpg") },
         diffuseMap:  { type: "t", value: loadTexture("textures/cloth/Carpet_Diffuse.jpg") },
