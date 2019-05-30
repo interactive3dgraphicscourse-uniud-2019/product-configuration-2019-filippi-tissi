@@ -329,6 +329,13 @@ function firstStart(){
         und_sit.forEach(function(el){
             el.material = sottocuscino_material;
         });
+
+        var structure_material=new THREE.ShaderMaterial({uniforms: uniform_structure, vertexShader: vs, fragmentShader: fs, extensions: materialExtensions});
+        structure.needsUpdate = true;
+        
+        structure.forEach(function(el){
+            el.material = structure_material;
+        });
         upload=false;
         scene.add(sgabello);
         requestAnimationFrame(update);
@@ -337,6 +344,9 @@ function firstStart(){
 
         Object.assign(uniform_sottocuscino, sottocuscino_uniforms_wood.wood_fixed);
         Object.assign(uniform_sottocuscino, unif_condivisi);
+
+        Object.assign(uniform_structure, structure_uniforms_metal.metal_fixed);
+        Object.assign(uniform_structure, unif_condivisi);
     }else{
         requestAnimationFrame(firstStart);   
     }
