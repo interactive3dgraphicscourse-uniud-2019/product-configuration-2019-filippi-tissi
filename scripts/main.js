@@ -255,7 +255,7 @@ function init(){
     var param_luce1 = { red: 1.0, green: 1.0, blue: 1.0,    intensity: 1,    pos: [5, 1, 0] };
     var param_luce2 = { red: .2, green: .2, blue: .2,    intensity: 0.4,    pos: [10, -10, 0] };
 
-    var ambientLightParams = { red: 0.5, green: 0.5, blue: 0.5, intensity: 0.1 }
+    var ambientLightParams = { red: 0.2, green: 0.2, blue: 0.2, intensity: 1}
 
     if (param_luce1.intensity > 0) {
         var sole1 = new THREE.Mesh( new THREE.SphereGeometry( 1, 16, 16), new THREE.MeshBasicMaterial ({color: 0xffff00, wireframe:true}));
@@ -289,9 +289,9 @@ function init(){
         ambientLight: {
             type: "v3",
             value: new THREE.Vector3(
-                ambientLightParams.red * ambientLightParams.intensity,
-                ambientLightParams.green * ambientLightParams.intensity,
-                ambientLightParams.blue * ambientLightParams.intensity)
+                ambientLightParams.red,
+                ambientLightParams.green,
+                ambientLightParams.blue)
         }
     }
     materialExtensions = {
