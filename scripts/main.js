@@ -72,7 +72,7 @@ function init(){
             function (child){
                 if (child instanceof THREE.Mesh) {
                     if (child.name === "Seduta_Plane.001") sitting.push(child);
-                    if (child.name === "Sottocuscino_Plane") und_sit.push(child);
+                    if (child.name === "Sottocuscino_Plane.003") und_sit.push(child);
                     if (child.name === "Struttura_Plane.002") structure.push(child);
                 }
             }
@@ -413,4 +413,11 @@ function changeTexture(stoolPart){
             }
         }
     }
+}
+
+var sitting_price, structure_price;
+function calcPrice(){
+    var option_qta = document.getElementById('options_qta');
+	var quantity= option_qta.options[selector.selectedIndex].text;
+	document.getElementById("total_price").innerHTML = Math.round(((sitting_price+structure_price)*quantity)*100)/100 + " €";
 }
