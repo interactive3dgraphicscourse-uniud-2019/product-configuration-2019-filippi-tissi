@@ -132,7 +132,7 @@ function init(){
             roughnessMap: { type: "t", value: loadTexture(path+"Cloth/Carpet_Roughness.jpg") },
             normalMap:  { type: "t", value: loadTexture(path+"Cloth/Carpet_Normal.jpg") },
             aoMap:      { type: "t", value: loadTexture(path+"Cloth/Carpet_AO.jpg") },
-            textureRepeat: { type: "v2", value: new THREE.Vector2(4.0, 4.0) } 
+            textureRepeat: { type: "v2", value: new THREE.Vector2(3.0, 3.0) } 
         }
     }
 
@@ -143,7 +143,7 @@ function init(){
             roughnessMap: { type: "t", value: loadTexture(path+"Leather/Leather_Roughness.jpg") },
             normalMap:  { type: "t", value: loadTexture(path+"Leather/Leather_Normal.jpg") },
             aoMap:      { type: "t", value: loadTexture(path+"Leather/Leather_AO.jpg") },
-            textureRepeat: { type: "v2", value: new THREE.Vector2(4.0, 4.0) } 
+            textureRepeat: { type: "v2", value: new THREE.Vector2(3.0, 3.0) } 
         },
         leather_brown: {
             specularMap:    { type: "t", value: loadTexture(path+"Leather/Leather_Specular.jpg") },
@@ -151,7 +151,7 @@ function init(){
             roughnessMap: { type: "t", value: loadTexture(path+"Leather/Leather_Roughness.jpg") },
             normalMap:  { type: "t", value: loadTexture(path+"Leather/Leather_Normal.jpg") },
             aoMap:      { type: "t", value: loadTexture(path+"Leather/Leather_AO.jpg") },
-            textureRepeat: { type: "v2", value: new THREE.Vector2(4.0, 4.0) } 
+            textureRepeat: { type: "v2", value: new THREE.Vector2(3.0, 3.0) } 
         },
         leather_green: {
             specularMap:    { type: "t", value: loadTexture(path+"Leather/Leather_Specular.jpg") },
@@ -159,7 +159,7 @@ function init(){
             roughnessMap: { type: "t", value: loadTexture(path+"Leather/Leather_Roughness.jpg") },
             normalMap:  { type: "t", value: loadTexture(path+"Leather/Leather_Normal.jpg") },
             aoMap:      { type: "t", value: loadTexture(path+"Leather/Leather_AO.jpg") },
-            textureRepeat: { type: "v2", value: new THREE.Vector2(4.0, 4.0) } 
+            textureRepeat: { type: "v2", value: new THREE.Vector2(3.0, 3.0) } 
         },
         leather_red: {
             specularMap:    { type: "t", value: loadTexture(path+"Leather/Leather_Specular.jpg") },
@@ -167,7 +167,7 @@ function init(){
             roughnessMap: { type: "t", value: loadTexture(path+"Leather/Leather_Roughness.jpg") },
             normalMap:  { type: "t", value: loadTexture(path+"Leather/Leather_Normal.jpg") },
             aoMap:      { type: "t", value: loadTexture(path+"Leather/Leather_AO.jpg") },
-            textureRepeat: { type: "v2", value: new THREE.Vector2(4.0, 4.0) }  
+            textureRepeat: { type: "v2", value: new THREE.Vector2(3.0, 3.0) }  
         }
     }
 
@@ -180,7 +180,7 @@ function init(){
             roughnessMap: { type: "t", value: loadTexture(path2+"Metal/Metal_Roughness.jpg") },
             normalMap:  { type: "t", value: loadTexture(path2+"Metal/Metal_Normal.jpg") },
             aoMap:      { type: "t", value: loadTexture(path2+"Metal/Metal_AO.jpg") },
-            textureRepeat: { type: "v2", value: new THREE.Vector2(4.0, 4.0) } 
+            textureRepeat: { type: "v2", value: new THREE.Vector2(10.0, 10.0) } 
         }
     }
 
@@ -226,7 +226,7 @@ function init(){
             roughnessMap: { type: "t", value: loadTexture(path2+"Wood/Wood_Roughness.jpg") },
             normalMap:  { type: "t", value: loadTexture(path2+"Wood/Wood_Normal.jpg") },
             aoMap:      { type: "t", value: loadTexture(path2+"Wood/Wood_AO.jpg") },
-            textureRepeat: { type: "v2", value: new THREE.Vector2(4.0, 4.0) } 
+            textureRepeat: { type: "v2", value: new THREE.Vector2(10.0, 8.0) } 
         },
         wood_brownS: {
             specularMap:    { type: "t", value: loadTexture(path2+"Wood/Wood_Specular.jpg") },
@@ -234,7 +234,7 @@ function init(){
             roughnessMap: { type: "t", value: loadTexture(path2+"Wood/Wood_Roughness.jpg") },
             normalMap:  { type: "t", value: loadTexture(path2+"Wood/Wood_Normal.jpg") },
             aoMap:      { type: "t", value: loadTexture(path2+"Wood/Wood_AO.jpg") },
-            textureRepeat: { type: "v2", value: new THREE.Vector2(4.0, 4.0) } 
+            textureRepeat: { type: "v2", value: new THREE.Vector2(10.0, 8.0) } 
         }
     }
 
@@ -252,7 +252,7 @@ function init(){
     }
 
     /************************** GESTIONE LUCI ****************************************/
-    var param_luce1 = { red: 1.0, green: 1.0, blue: 1.0,    intensity: 1,    pos: [5, 1, 0] };
+    var param_luce1 = { red: 1.0, green: 1.0, blue: 1.0,    intensity: 1,    pos: [-5, 1, 0] };
     var param_luce2 = { red: .2, green: .2, blue: .2,    intensity: 0.4,    pos: [10, -10, 0] };
 
     var ambientLightParams = { red: 0.2, green: 0.2, blue: 0.2, intensity: 1}
@@ -345,7 +345,7 @@ function firstStart(){
         Object.assign(uniform_sottocuscino, sottocuscino_uniforms_wood.wood_fixed);
         Object.assign(uniform_sottocuscino, unif_condivisi);
 
-        Object.assign(uniform_structure, structure_uniforms_metal.metal_fixed);
+        Object.assign(uniform_structure, structure_uniforms_platic.plastic_red);
         Object.assign(uniform_structure, unif_condivisi);
     }else{
         requestAnimationFrame(firstStart);   
@@ -377,8 +377,18 @@ function changeTexture(stoolPart){
         }
     }else if (stoolPart==2){
         if(document.getElementById("metal").checked){
+            document.getElementById("redStruc").style.display = 'none';
+            document.getElementById("blackStruc").style.display = 'none';
+            document.getElementById("brownSStruc").style.display = 'none';
+            document.getElementById("brownCStruc").style.display = 'none';
+            document.getElementById("color_av").style.display = 'block';
             Object.assign(uniform_structure, structure_uniforms_metal.metal_fixed);
         }else if(document.getElementById("plastic").checked){
+            document.getElementById("redStruc").style.display = 'block';
+            document.getElementById("blackStruc").style.display = 'block';
+            document.getElementById("brownSStruc").style.display = 'block';
+            document.getElementById("brownCStruc").style.display = 'block';
+            document.getElementById("color_av").style.display = 'none';
             if(document.getElementById("redStruc").checked){
                 Object.assign(uniform_structure, structure_uniforms_platic.plastic_red);
             }else if(document.getElementById("blackStruc").checked){
@@ -389,7 +399,13 @@ function changeTexture(stoolPart){
                 Object.assign(uniform_structure, structure_uniforms_platic.plastic_brownS);
             }
         }else if(document.getElementById("wood").checked){
-            //document.getElementById("brownCStruc").checked = true;
+            document.getElementById("redStruc").style.display = 'none';
+            document.getElementById("blackStruc").style.display = 'none';
+            document.getElementById("brownSStruc").style.display = 'block';
+            document.getElementById("brownCStruc").style.display = 'block';
+            document.getElementById("color_av").style.display = 'none';
+            Object.assign(uniform_structure, structure_uniforms_wood.wood_brownC);
+
             if(document.getElementById("brownCStruc").checked){
                 Object.assign(uniform_structure, structure_uniforms_wood.wood_brownC);
             }else if(document.getElementById("brownSStruc").checked){
