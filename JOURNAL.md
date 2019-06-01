@@ -131,6 +131,12 @@ Struttura: 3 materiali (plastica, metallo e legno)
 TEXTURE CHE ABBIAMO PRONTE:
 - cloth nero
 
+
+# 1 giugno 2019
+
+* Modello funzionante con texture inserite, migliorare resa estetica e inserimento delle luci
+
+* Rimappatura del modello e 
  
 
 
