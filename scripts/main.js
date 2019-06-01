@@ -1,4 +1,4 @@
-var canvas, container, scene, renderer;
+ var canvas, container, scene, renderer;
 var controls;
 var sitting = new Array();
 var und_sit = new Array();
@@ -72,7 +72,7 @@ function init(){
             function (child){
                 if (child instanceof THREE.Mesh) {
                     if (child.name === "Seduta_Plane.001") sitting.push(child);
-                    if (child.name === "Sottocuscino_Plane") und_sit.push(child);
+                    if (child.name === "Sottocuscino_Plane.003") und_sit.push(child);
                     if (child.name === "Struttura_Plane.002") structure.push(child);
                 }
             }
