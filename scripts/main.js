@@ -74,9 +74,9 @@ function init(){
         obj.traverse( 
             function (child){
                 if (child instanceof THREE.Mesh) {
-                    if (child.name === "Seduta_Plane.001") sitting.push(child);
-                    if (child.name === "Sottocuscino_Plane.000") und_sit.push(child);
-                    if (child.name === "Struttura_Plane.002") structure.push(child);
+                    if (child.name === "Seduta_Plane") sitting.push(child);
+                    if (child.name === "Sottocuscino_Plane.002") und_sit.push(child);
+                    if (child.name === "Struttura_Plane.001") structure.push(child);
                 }
             }
         );
