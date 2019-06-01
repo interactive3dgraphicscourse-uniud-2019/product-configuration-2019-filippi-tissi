@@ -428,7 +428,7 @@ function changeTexture(stoolPart){
 
 function calcPrice(){
     var option_qta = document.getElementById('options_qta');
-    var quantity= option_qta.options[option_qta.selectedIndex].text;
+    var quantity= option_qta.options[option_qta.selectedIndex].value;
     var n = ((sitting_price+structure_price)*quantity).toFixed(2);
 	document.getElementById("total_price").innerHTML = n + " &euro;";
 }
