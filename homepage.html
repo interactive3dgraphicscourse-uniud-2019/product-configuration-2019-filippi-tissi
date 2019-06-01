@@ -181,11 +181,11 @@
 						<div class="subtitle">Material</div>
 						<div class="w3-container radio_group">
 							<div class="radio">
-								<input class="w3-radio-w" type="radio" name="material1" value="leather" checked>
+								<input class="w3-radio-w" type="radio" name="material1" onclick="changeTexture(1)" value="1" id="leather" checked>
 								<label>Leather</label>
 							</div>
 							<div class="radio">
-								<input class="w3-radio-w" type="radio" name="material1" value="cloth">
+								<input class="w3-radio-w" type="radio" name="material1" onclick="changeTexture(1)" value="2" id="cloth">
 								<label>Cloth</label>
 							</div>
 						</div>
@@ -194,16 +194,16 @@
 						<div align="center">
 							<!--onclick="changeCol(0,'red')" -->
 							<div class="radio_color">
-								<input class="w3-radio-wc red" type="radio" name="color1" value="red" checked>
+								<input class="w3-radio-wc red" type="radio" name="color1" onclick="changeTexture(1)" value="red" id="redSit" checked>
 							</div>
 							<div class="radio_color">
-								<input class="w3-radio-wc blue" type="radio" name="color1" value="blue">
+								<input class="w3-radio-wc black" type="radio" name="color1" onclick="changeTexture(1)" value="black" id="blackSit">
 							</div>
 							<div class="radio_color">
-								<input class="w3-radio-wc yellow" type="radio" name="color1" value="yellow">
+								<input class="w3-radio-wc brown" type="radio" name="color1" onclick="changeTexture(1)" value="brown" id="brownSit">
 							</div>
 							<div class="radio_color">
-								<input class="w3-radio-wc green" type="radio" name="color1" value="green">
+								<input class="w3-radio-wc green" type="radio" name="color1" onclick="changeTexture(1)" value="green" id="greenSit">
 							</div>
 						</div>	
 					</div>
@@ -215,15 +215,15 @@
 						<div class="subtitle">Material</div>
 						<div class="w3-container radio_group">
 							<div class="radio">
-								<input class="w3-radio-w" type="radio" name="material2" value="metal" checked>
+								<input class="w3-radio-w" type="radio" name="material2" value="3" checked>
 								<label>Metal</label>
 							</div>
 							<div class="radio">
-								<input class="w3-radio-w" type="radio" name="material2" value="plastic">
+								<input class="w3-radio-w" type="radio" name="material2" value="4">
 								<label>Plastic</label>
 							</div>
 							<div class="radio">
-								<input class="w3-radio-w" type="radio" name="material2" value="wood">
+								<input class="w3-radio-w" type="radio" name="material2" value="5">
 								<label>Wood</label>
 							</div>
 						</div>

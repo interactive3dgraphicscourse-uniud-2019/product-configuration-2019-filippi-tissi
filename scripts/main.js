@@ -339,7 +339,7 @@ function firstStart(){
         upload=false;
         scene.add(sgabello);
         requestAnimationFrame(update);
-        Object.assign(uniform_sitting, sitting_uniforms_cloth.cloth_black);
+        Object.assign(uniform_sitting, sitting_uniforms_leather.leather_red);
         Object.assign(uniform_sitting, unif_condivisi);
 
         Object.assign(uniform_sottocuscino, sottocuscino_uniforms_wood.wood_fixed);
@@ -349,5 +349,33 @@ function firstStart(){
         Object.assign(uniform_structure, unif_condivisi);
     }else{
         requestAnimationFrame(firstStart);   
+    }
+}
+
+function changeTexture(stoolPart){
+    if(stoolPart==1){
+        if(document.getElementById("leather").checked){
+            if(document.getElementById("redSit").checked){
+                Object.assign(uniform_sitting, sitting_uniforms_leather.leather_red);
+            }else if(document.getElementById("blackSit").checked){
+                Object.assign(uniform_sitting, sitting_uniforms_leather.leather_black);
+            }else if(document.getElementById("brownSit").checked){
+                Object.assign(uniform_sitting, sitting_uniforms_leather.leather_brown);
+            }else if(document.getElementById("greenSit").checked){
+                Object.assign(uniform_sitting, sitting_uniforms_leather.leather_green);
+            }
+        }else if(document.getElementById("cloth").checked){
+            if(document.getElementById("redSit").checked){
+                Object.assign(uniform_sitting, sitting_uniforms_cloth.cloth_red);
+            }else if(document.getElementById("blackSit").checked){
+                Object.assign(uniform_sitting, sitting_uniforms_cloth.cloth_black);
+            }else if(document.getElementById("brownSit").checked){
+                Object.assign(uniform_sitting, sitting_uniforms_cloth.cloth_brown);
+            }else if(document.getElementById("greenSit").checked){
+                Object.assign(uniform_sitting, sitting_uniforms_cloth.cloth_green);
+            }
+        }
+    }else if (stoolPart==2){
+        //
     }
 }

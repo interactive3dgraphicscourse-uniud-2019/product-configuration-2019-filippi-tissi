@@ -156,16 +156,16 @@ input::placeholder{
 .radio_color .red:checked:after {
   background-color: red;
 }
-.radio_color .blue:after {
-  background-color: blue;
+.radio_color .brown:after {
+  background-color: brown;
 }
-.radio_color .blue:checked:after {
-  background-color: blue;
+.radio_color .brown:checked:after {
+  background-color: brown;
 }
-.radio_color .yellow:after {
+.radio_color .black:after {
   background-color: black;
 }
-.radio_color .yellow:checked:after {
+.radio_color .black:checked:after {
   background-color: black;
 }
 .radio_color .green:after {
