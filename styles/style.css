@@ -174,6 +174,18 @@ input::placeholder{
 .radio_color .green:checked:after {
   background-color: green;
 }
+.radio_color .brownC:after {
+  background-color: orange;
+}
+.radio_color .brownC:checked:after {
+  background-color: orange;
+}
+.radio_color .brownS:after {
+  background-color: brown;
+}
+.radio_color .brownS:checked:after {
+  background-color: brown;
+}
 
 .radio_group{
   text-align: center;

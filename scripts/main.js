@@ -228,7 +228,7 @@ function init(){
             aoMap:      { type: "t", value: loadTexture(path2+"Wood/Wood_AO.jpg") },
             textureRepeat: { type: "v2", value: new THREE.Vector2(4.0, 4.0) } 
         },
-        wood__brownS: {
+        wood_brownS: {
             specularMap:    { type: "t", value: loadTexture(path2+"Wood/Wood_Specular.jpg") },
             diffuseMap:  { type: "t", value: loadTexture(path2+"Wood/diffuse/Wood_diffuse_brownS.jpg") },
             roughnessMap: { type: "t", value: loadTexture(path2+"Wood/Wood_Roughness.jpg") },
@@ -376,6 +376,25 @@ function changeTexture(stoolPart){
             }
         }
     }else if (stoolPart==2){
-        //
+        if(document.getElementById("metal").checked){
+            Object.assign(uniform_structure, structure_uniforms_metal.metal_fixed);
+        }else if(document.getElementById("plastic").checked){
+            if(document.getElementById("redStruc").checked){
+                Object.assign(uniform_structure, structure_uniforms_platic.plastic_red);
+            }else if(document.getElementById("blackStruc").checked){
+                Object.assign(uniform_structure, structure_uniforms_platic.plastic_black);
+            }else if(document.getElementById("brownCStruc").checked){
+                Object.assign(uniform_structure, structure_uniforms_platic.plastic_brownC);
+            }else if(document.getElementById("brownSStruc").checked){
+                Object.assign(uniform_structure, structure_uniforms_platic.plastic_brownS);
+            }
+        }else if(document.getElementById("wood").checked){
+            //document.getElementById("brownCStruc").checked = true;
+            if(document.getElementById("brownCStruc").checked){
+                Object.assign(uniform_structure, structure_uniforms_wood.wood_brownC);
+            }else if(document.getElementById("brownSStruc").checked){
+                Object.assign(uniform_structure, structure_uniforms_wood.wood_brownS);
+            }
+        }
     }
 }
