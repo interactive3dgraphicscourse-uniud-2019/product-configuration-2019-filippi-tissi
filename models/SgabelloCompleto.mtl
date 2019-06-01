@@ -1,0 +1,27 @@
+# Blender MTL File: 'SgabelloSeparato.blend'
+# Material Count: 2
+
+newmtl BLACK
+Ns 17.647059
+Ka 1.000000 1.000000 1.000000
+Kd 0.018262 0.018262 0.018262
+Ks 0.020000 0.020000 0.020000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/col.png
+map_Bump Bar_Chair_N.jpg
+
+newmtl silver_reflection_2
+Ns 96.078431
+Ka 1.000000 1.000000 1.000000
+Kd 0.640000 0.640000 0.640000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/col.png
+map_Bump Bar_Chair_N.jpg
+refl Ref.jpg

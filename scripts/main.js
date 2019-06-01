@@ -81,7 +81,7 @@ function init(){
         upload = true;
     });
 
-    // ------------------- CARICAMENTO DELLA CUBEMAP -------------------
+    // ------------------- CARICAMENTO DELLA CUBEMAP --------------------
 
     var loader = new THREE.CubeTextureLoader();
     loader.setPath( 'textures/cubemapDEF/' );
