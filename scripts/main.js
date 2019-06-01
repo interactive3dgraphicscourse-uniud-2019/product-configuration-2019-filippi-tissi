@@ -350,6 +350,7 @@ function firstStart(){
 
         Object.assign(uniform_structure, structure_uniforms_platic.plastic_red);
         Object.assign(uniform_structure, unif_condivisi);
+        calcPrice();
     }else{
         requestAnimationFrame(firstStart);   
     }
@@ -421,15 +422,13 @@ function changeTexture(stoolPart){
             structure_price = 130;
         }
     }
-    console.log(structure_price);
-    console.log(sitting_price);
     calcPrice();
 }
 
 
 function calcPrice(){
-    console.log(sitting_price);
     var option_qta = document.getElementById('options_qta');
-	var quantity= option_qta.options[option_qta.selectedIndex].text;
-	document.getElementById("total_price").innerHTML = Math.round(((sitting_price+structure_price)*quantity)*100)/100 + " €";
+    var quantity= option_qta.options[option_qta.selectedIndex].text;
+    var n = ((sitting_price+structure_price)*quantity).toFixed(2);
+	document.getElementById("total_price").innerHTML = n + " &euro;";
 }
