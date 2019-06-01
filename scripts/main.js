@@ -1,4 +1,4 @@
- var canvas, container, scene, renderer;
+var canvas, container, scene, renderer;
 var controls;
 var sitting = new Array();
 var und_sit = new Array();
@@ -7,6 +7,8 @@ var simple_vertex, simple_fragment;
 var vs, fs;
 var upload = false;
 var sgabello;
+var structure_price = 80;
+var sitting_price = 50;
 
 function showDesc() {
     let popup = document.getElementById("myPopup");
@@ -348,10 +350,12 @@ function firstStart(){
 
         Object.assign(uniform_structure, structure_uniforms_platic.plastic_red);
         Object.assign(uniform_structure, unif_condivisi);
+        calcPrice();
     }else{
         requestAnimationFrame(firstStart);   
     }
 }
+
 
 function changeTexture(stoolPart){
     if(stoolPart==1){
@@ -365,6 +369,7 @@ function changeTexture(stoolPart){
             }else if(document.getElementById("greenSit").checked){
                 Object.assign(uniform_sitting, sitting_uniforms_leather.leather_green);
             }
+            sitting_price = 50;
         }else if(document.getElementById("cloth").checked){
             if(document.getElementById("redSit").checked){
                 Object.assign(uniform_sitting, sitting_uniforms_cloth.cloth_red);
@@ -375,6 +380,7 @@ function changeTexture(stoolPart){
             }else if(document.getElementById("greenSit").checked){
                 Object.assign(uniform_sitting, sitting_uniforms_cloth.cloth_green);
             }
+            sitting_price = 30;
         }
     }else if (stoolPart==2){
         if(document.getElementById("metal").checked){
@@ -384,6 +390,7 @@ function changeTexture(stoolPart){
             document.getElementById("brownCStruc").style.display = 'none';
             document.getElementById("color_av").style.display = 'block';
             Object.assign(uniform_structure, structure_uniforms_metal.metal_fixed);
+            structure_price = 100;
         }else if(document.getElementById("plastic").checked){
             document.getElementById("redStruc").style.display = 'block';
             document.getElementById("blackStruc").style.display = 'block';
@@ -399,6 +406,7 @@ function changeTexture(stoolPart){
             }else if(document.getElementById("brownSStruc").checked){
                 Object.assign(uniform_structure, structure_uniforms_platic.plastic_brownS);
             }
+            structure_price = 80;
         }else if(document.getElementById("wood").checked){
             document.getElementById("redStruc").style.display = 'none';
             document.getElementById("blackStruc").style.display = 'none';
@@ -406,12 +414,21 @@ function changeTexture(stoolPart){
             document.getElementById("brownCStruc").style.display = 'block';
             document.getElementById("color_av").style.display = 'none';
             Object.assign(uniform_structure, structure_uniforms_wood.wood_brownC);
-
             if(document.getElementById("brownCStruc").checked){
                 Object.assign(uniform_structure, structure_uniforms_wood.wood_brownC);
             }else if(document.getElementById("brownSStruc").checked){
                 Object.assign(uniform_structure, structure_uniforms_wood.wood_brownS);
             }
+            structure_price = 130;
         }
     }
+    calcPrice();
+}
+
+
+function calcPrice(){
+    var option_qta = document.getElementById('options_qta');
+    var quantity= option_qta.options[option_qta.selectedIndex].value;
+    var n = ((sitting_price+structure_price)*quantity).toFixed(2);
+	document.getElementById("total_price").innerHTML = n + " &euro;";
 }
