@@ -64,7 +64,7 @@ function init(){
     var loader = new THREE.OBJLoader();
     loader.load( "models/SgabelloCompleto.obj", function ( obj ) {
         sgabello = obj;
-        
+
         
         obj.position.z = 0;
         obj.position.y = -1.5;
@@ -73,7 +73,7 @@ function init(){
             function (child){
                 if (child instanceof THREE.Mesh) {
                     if (child.name === "Seduta_Plane.001") sitting.push(child);
-                    if (child.name === "Sottocuscino_Plane.003") und_sit.push(child);
+                    if (child.name === "Sottocuscino_Plane.000") und_sit.push(child);
                     if (child.name === "Struttura_Plane.002") structure.push(child);
                 }
             }
