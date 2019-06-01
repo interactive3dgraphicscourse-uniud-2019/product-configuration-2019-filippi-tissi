@@ -67,6 +67,7 @@ function init(){
     loader.load( "models/SgabelloCompleto.obj", function ( obj ) {
         sgabello = obj;
         
+        
         obj.position.z = 0;
         obj.position.y = -1.5;
         obj.position.x = 0;
