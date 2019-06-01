@@ -1,4 +1,4 @@
-var canvas, container, scene, renderer;
+ var canvas, container, scene, renderer;
 var controls;
 var sitting = new Array();
 var und_sit = new Array();
