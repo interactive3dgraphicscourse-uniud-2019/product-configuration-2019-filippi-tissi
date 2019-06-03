@@ -73,7 +73,7 @@ function init(){
         obj.traverse( 
             function (child){
                 if (child instanceof THREE.Mesh) {
-                    if (child.name === "Seduta_Plane") sitting.push(child);
+                    if (child.name === "Seduta_Plane.003") sitting.push(child);
                     if (child.name === "Sottocuscino_Plane.002") und_sit.push(child);
                     if (child.name === "Struttura_Plane.001") structure.push(child);
                 }
@@ -228,7 +228,7 @@ function init(){
             roughnessMap: { type: "t", value: loadTexture(path2+"Wood/Wood_Roughness.jpg") },
             normalMap:  { type: "t", value: loadTexture(path2+"Wood/Wood_Normal.jpg") },
             aoMap:      { type: "t", value: loadTexture(path2+"Wood/Wood_AO.jpg") },
-            textureRepeat: { type: "v2", value: new THREE.Vector2(10.0, 8.0) } 
+            textureRepeat: { type: "v2", value: new THREE.Vector2(4.0, 4.0) } 
         },
         wood_brownS: {
             specularMap:    { type: "t", value: loadTexture(path2+"Wood/Wood_Specular.jpg") },
@@ -236,7 +236,7 @@ function init(){
             roughnessMap: { type: "t", value: loadTexture(path2+"Wood/Wood_Roughness.jpg") },
             normalMap:  { type: "t", value: loadTexture(path2+"Wood/Wood_Normal.jpg") },
             aoMap:      { type: "t", value: loadTexture(path2+"Wood/Wood_AO.jpg") },
-            textureRepeat: { type: "v2", value: new THREE.Vector2(10.0, 8.0) } 
+            textureRepeat: { type: "v2", value: new THREE.Vector2(4.0, 4.0) } 
         }
     }
 
@@ -254,6 +254,7 @@ function init(){
     }
 
     /************************** GESTIONE LUCI ****************************************/
+    //Alta
     var param_luce1 = { 
         red: 1.0, 
         green: 1.0, 
@@ -261,6 +262,8 @@ function init(){
         intensity: 1,    
         pos: [0, 5, 0] 
     };
+
+    //DX
     var param_luce2 = { 
         red: .2, 
         green: .2, 
@@ -268,6 +271,8 @@ function init(){
         intensity: 0.4,    
         pos: [5, 0, 2] 
     };
+
+    //SX
     var param_luce3 = { 
         red: 1.0, 
         green: 1.0, 
