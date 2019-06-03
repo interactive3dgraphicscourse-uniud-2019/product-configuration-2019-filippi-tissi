@@ -10,7 +10,6 @@ var sgabello;
 var structure_price = 80;
 var sitting_price = 50;
 
-
 function showDesc() {
     let popup = document.getElementById("myPopup");
     popup.classList.toggle("show");
