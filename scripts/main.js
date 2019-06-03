@@ -228,7 +228,7 @@ function init(){
             roughnessMap: { type: "t", value: loadTexture(path2+"Wood/Wood_Roughness.jpg") },
             normalMap:  { type: "t", value: loadTexture(path2+"Wood/Wood_Normal.jpg") },
             aoMap:      { type: "t", value: loadTexture(path2+"Wood/Wood_AO.jpg") },
-            textureRepeat: { type: "v2", value: new THREE.Vector2(4.0, 4.0) } 
+            textureRepeat: { type: "v2", value: new THREE.Vector2(1.0, 1.0) } 
         },
         wood_brownS: {
             specularMap:    { type: "t", value: loadTexture(path2+"Wood/Wood_Specular.jpg") },
@@ -236,7 +236,7 @@ function init(){
             roughnessMap: { type: "t", value: loadTexture(path2+"Wood/Wood_Roughness.jpg") },
             normalMap:  { type: "t", value: loadTexture(path2+"Wood/Wood_Normal.jpg") },
             aoMap:      { type: "t", value: loadTexture(path2+"Wood/Wood_AO.jpg") },
-            textureRepeat: { type: "v2", value: new THREE.Vector2(4.0, 4.0) } 
+            textureRepeat: { type: "v2", value: new THREE.Vector2(1.0, 1.0) } 
         }
     }
 
@@ -263,7 +263,7 @@ function init(){
         pos: [0, 5, 0] 
     };
 
-    //DX
+    //Dx
     var param_luce2 = { 
         red: .2, 
         green: .2, 
@@ -272,7 +272,7 @@ function init(){
         pos: [5, 0, 2] 
     };
 
-    //SX
+    //Sx
     var param_luce3 = { 
         red: 1.0, 
         green: 1.0, 
