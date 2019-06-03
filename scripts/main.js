@@ -10,6 +10,7 @@ var sgabello;
 var structure_price = 80;
 var sitting_price = 50;
 
+
 function showDesc() {
     let popup = document.getElementById("myPopup");
     popup.classList.toggle("show");
@@ -72,7 +73,7 @@ function init(){
         obj.traverse( 
             function (child){
                 if (child instanceof THREE.Mesh) {
-                    if (child.name === "Seduta_Plane") sitting.push(child);
+                    if (child.name === "Seduta_Plane.003") sitting.push(child);
                     if (child.name === "Sottocuscino_Plane.002") und_sit.push(child);
                     if (child.name === "Struttura_Plane.001") structure.push(child);
                 }
@@ -253,9 +254,9 @@ function init(){
             roughnessMap: { type: "t", value: loadTexture(path2+"Wood/Wood_Roughness.jpg") },
             normalMap:  { type: "t", value: loadTexture(path2+"Wood/Wood_Normal.jpg") },
             aoMap:      { type: "t", value: loadTexture(path2+"Wood/Wood_AO.jpg") },
-            textureRepeat: { type: "v2", value: new THREE.Vector2(10.0, 8.0) } ,
+            textureRepeat: { type: "v2", value: new THREE.Vector2(1.0, 1.0) },
             normalScale: {type: "v2", value: new THREE.Vector2(1,1)},
-			envMap:	{ type: "t", value: textureCube}, 
+			envMap:	{ type: "t", value: textureCube},
         },
         wood_brownS: {
             specularMap:    { type: "t", value: loadTexture(path2+"Wood/Wood_Specular.jpg") },
@@ -263,9 +264,9 @@ function init(){
             roughnessMap: { type: "t", value: loadTexture(path2+"Wood/Wood_Roughness.jpg") },
             normalMap:  { type: "t", value: loadTexture(path2+"Wood/Wood_Normal.jpg") },
             aoMap:      { type: "t", value: loadTexture(path2+"Wood/Wood_AO.jpg") },
-            textureRepeat: { type: "v2", value: new THREE.Vector2(10.0, 8.0) } ,
+            textureRepeat: { type: "v2", value: new THREE.Vector2(1.0, 1.0) }, 
             normalScale: {type: "v2", value: new THREE.Vector2(1,1)},
-			envMap:	{ type: "t", value: textureCube}, 
+			envMap:	{ type: "t", value: textureCube},
         }
     }
 
@@ -283,6 +284,7 @@ function init(){
     }
 
     /************************** GESTIONE LUCI ****************************************/
+    //Alta
     var param_luce1 = { 
         red: 1.0, 
         green: 1.0, 
@@ -290,6 +292,8 @@ function init(){
         intensity: 1,    
         pos: [0, 5, 0] 
     };
+
+    //Dx
     var param_luce2 = { 
         red: .2, 
         green: .2, 
@@ -297,6 +301,8 @@ function init(){
         intensity: 0.4,    
         pos: [5, 0, 2] 
     };
+
+    //Sx
     var param_luce3 = { 
         red: 1.0, 
         green: 1.0, 
