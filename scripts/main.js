@@ -109,7 +109,9 @@ function init(){
             roughnessMap: { type: "t", value: loadTexture(path+"Cloth/Carpet_Roughness.jpg") },
             normalMap:  { type: "t", value: loadTexture(path+"Cloth/Carpet_Normal.jpg") },
             aoMap:      { type: "t", value: loadTexture(path+"Cloth/Carpet_AO.jpg") },
-            textureRepeat: { type: "v2", value: new THREE.Vector2(4.0, 4.0) } 
+            textureRepeat: { type: "v2", value: new THREE.Vector2(4.0, 4.0) },
+            normalScale: {type: "v2", value: new THREE.Vector2(1,1)},
+			envMap:	{ type: "t", value: textureCube}, 
         },
         cloth_brown: {
             specularMap:    { type: "t", value: loadTexture(path+"Cloth/Carpet_Specular.jpg") },
@@ -117,7 +119,9 @@ function init(){
             roughnessMap: { type: "t", value: loadTexture(path+"Cloth/Carpet_Roughness.jpg") },
             normalMap:  { type: "t", value: loadTexture(path+"Cloth/Carpet_Normal.jpg") },
             aoMap:      { type: "t", value: loadTexture(path+"Cloth/Carpet_AO.jpg") },
-            textureRepeat: { type: "v2", value: new THREE.Vector2(4.0, 4.0) } 
+            textureRepeat: { type: "v2", value: new THREE.Vector2(4.0, 4.0) } ,
+            normalScale: {type: "v2", value: new THREE.Vector2(1,1)},
+			envMap:	{ type: "t", value: textureCube}, 
         },
         cloth_green: {
             specularMap:    { type: "t", value: loadTexture(path+"Cloth/Carpet_Specular.jpg") },
@@ -125,7 +129,9 @@ function init(){
             roughnessMap: { type: "t", value: loadTexture(path+"Cloth/Carpet_Roughness.jpg") },
             normalMap:  { type: "t", value: loadTexture(path+"Cloth/Carpet_Normal.jpg") },
             aoMap:      { type: "t", value: loadTexture(path+"Cloth/Carpet_AO.jpg") },
-            textureRepeat: { type: "v2", value: new THREE.Vector2(4.0, 4.0) } 
+            textureRepeat: { type: "v2", value: new THREE.Vector2(4.0, 4.0) } ,
+            normalScale: {type: "v2", value: new THREE.Vector2(1,1)},
+			envMap:	{ type: "t", value: textureCube}, 
         },
         cloth_red: {
             specularMap:    { type: "t", value: loadTexture(path+"Cloth/Carpet_Specular.jpg") },
@@ -133,7 +139,9 @@ function init(){
             roughnessMap: { type: "t", value: loadTexture(path+"Cloth/Carpet_Roughness.jpg") },
             normalMap:  { type: "t", value: loadTexture(path+"Cloth/Carpet_Normal.jpg") },
             aoMap:      { type: "t", value: loadTexture(path+"Cloth/Carpet_AO.jpg") },
-            textureRepeat: { type: "v2", value: new THREE.Vector2(4.0, 4.0) } 
+            textureRepeat: { type: "v2", value: new THREE.Vector2(4.0, 4.0) } ,
+            normalScale: {type: "v2", value: new THREE.Vector2(1,1)},
+			envMap:	{ type: "t", value: textureCube}, 
         }
     }
 
@@ -144,7 +152,9 @@ function init(){
             roughnessMap: { type: "t", value: loadTexture(path+"Leather/Leather_Roughness.jpg") },
             normalMap:  { type: "t", value: loadTexture(path+"Leather/Leather_Normal.jpg") },
             aoMap:      { type: "t", value: loadTexture(path+"Leather/Leather_AO.jpg") },
-            textureRepeat: { type: "v2", value: new THREE.Vector2(3.0, 3.0) } 
+            textureRepeat: { type: "v2", value: new THREE.Vector2(3.0, 3.0) } ,
+            normalScale: {type: "v2", value: new THREE.Vector2(1,1)},
+			envMap:	{ type: "t", value: textureCube}, 
         },
         leather_brown: {
             specularMap:    { type: "t", value: loadTexture(path+"Leather/Leather_Specular.jpg") },
@@ -152,7 +162,9 @@ function init(){
             roughnessMap: { type: "t", value: loadTexture(path+"Leather/Leather_Roughness.jpg") },
             normalMap:  { type: "t", value: loadTexture(path+"Leather/Leather_Normal.jpg") },
             aoMap:      { type: "t", value: loadTexture(path+"Leather/Leather_AO.jpg") },
-            textureRepeat: { type: "v2", value: new THREE.Vector2(3.0, 3.0) } 
+            textureRepeat: { type: "v2", value: new THREE.Vector2(3.0, 3.0) } ,
+            normalScale: {type: "v2", value: new THREE.Vector2(1,1)},
+			envMap:	{ type: "t", value: textureCube}, 
         },
         leather_green: {
             specularMap:    { type: "t", value: loadTexture(path+"Leather/Leather_Specular.jpg") },
@@ -160,7 +172,9 @@ function init(){
             roughnessMap: { type: "t", value: loadTexture(path+"Leather/Leather_Roughness.jpg") },
             normalMap:  { type: "t", value: loadTexture(path+"Leather/Leather_Normal.jpg") },
             aoMap:      { type: "t", value: loadTexture(path+"Leather/Leather_AO.jpg") },
-            textureRepeat: { type: "v2", value: new THREE.Vector2(3.0, 3.0) } 
+            textureRepeat: { type: "v2", value: new THREE.Vector2(3.0, 3.0) } ,
+            normalScale: {type: "v2", value: new THREE.Vector2(1,1)},
+			envMap:	{ type: "t", value: textureCube}, 
         },
         leather_red: {
             specularMap:    { type: "t", value: loadTexture(path+"Leather/Leather_Specular.jpg") },
@@ -168,7 +182,9 @@ function init(){
             roughnessMap: { type: "t", value: loadTexture(path+"Leather/Leather_Roughness.jpg") },
             normalMap:  { type: "t", value: loadTexture(path+"Leather/Leather_Normal.jpg") },
             aoMap:      { type: "t", value: loadTexture(path+"Leather/Leather_AO.jpg") },
-            textureRepeat: { type: "v2", value: new THREE.Vector2(3.0, 3.0) }  
+            textureRepeat: { type: "v2", value: new THREE.Vector2(3.0, 3.0) }  ,
+            normalScale: {type: "v2", value: new THREE.Vector2(1,1)},
+			envMap:	{ type: "t", value: textureCube}, 
         }
     }
 
@@ -181,7 +197,9 @@ function init(){
             roughnessMap: { type: "t", value: loadTexture(path2+"Metal/Metal_Roughness.jpg") },
             normalMap:  { type: "t", value: loadTexture(path2+"Metal/Metal_Normal.jpg") },
             aoMap:      { type: "t", value: loadTexture(path2+"Metal/Metal_AO.jpg") },
-            textureRepeat: { type: "v2", value: new THREE.Vector2(10.0, 10.0) } 
+            textureRepeat: { type: "v2", value: new THREE.Vector2(10.0, 10.0) } ,
+            normalScale: {type: "v2", value: new THREE.Vector2(1,1)},
+			envMap:	{ type: "t", value: textureCube}, 
         }
     }
 
@@ -192,7 +210,9 @@ function init(){
             roughnessMap: { type: "t", value: loadTexture(path2+"Plastic/Plastic_Roughness.jpg") },
             normalMap:  { type: "t", value: loadTexture(path2+"Plastic/Plastic_Normal.jpg") },
             aoMap:      { type: "t", value: loadTexture(path2+"Plastic/Plastic_AO.jpg") },
-            textureRepeat: { type: "v2", value: new THREE.Vector2(4.0, 4.0) } 
+            textureRepeat: { type: "v2", value: new THREE.Vector2(4.0, 4.0) } ,
+            normalScale: {type: "v2", value: new THREE.Vector2(1,1)},
+			envMap:	{ type: "t", value: textureCube}, 
         },
         plastic_brownC: {
             specularMap:    { type: "t", value: loadTexture(path2+"Plastic/Plastic_Specular.jpg") },
@@ -200,7 +220,9 @@ function init(){
             roughnessMap: { type: "t", value: loadTexture(path2+"Plastic/Plastic_Roughness.jpg") },
             normalMap:  { type: "t", value: loadTexture(path2+"Plastic/Plastic_Normal.jpg") },
             aoMap:      { type: "t", value: loadTexture(path2+"Plastic/Plastic_AO.jpg") },
-            textureRepeat: { type: "v2", value: new THREE.Vector2(4.0, 4.0) } 
+            textureRepeat: { type: "v2", value: new THREE.Vector2(4.0, 4.0) } ,
+            normalScale: {type: "v2", value: new THREE.Vector2(1,1)},
+			envMap:	{ type: "t", value: textureCube}, 
         },
         plastic_brownS: {
             specularMap:    { type: "t", value: loadTexture(path2+"Plastic/Plastic_Specular.jpg") },
@@ -208,7 +230,9 @@ function init(){
             roughnessMap: { type: "t", value: loadTexture(path2+"Plastic/Plastic_Roughness.jpg") },
             normalMap:  { type: "t", value: loadTexture(path2+"Plastic/Plastic_Normal.jpg") },
             aoMap:      { type: "t", value: loadTexture(path2+"Plastic/Plastic_AO.jpg") },
-            textureRepeat: { type: "v2", value: new THREE.Vector2(4.0, 4.0) } 
+            textureRepeat: { type: "v2", value: new THREE.Vector2(4.0, 4.0) } ,
+            normalScale: {type: "v2", value: new THREE.Vector2(1,1)},
+			envMap:	{ type: "t", value: textureCube}, 
         },
         plastic_red: {
             specularMap:    { type: "t", value: loadTexture(path2+"Plastic/Plastic_Specular.jpg") },
@@ -216,7 +240,9 @@ function init(){
             roughnessMap: { type: "t", value: loadTexture(path2+"Plastic/Plastic_Roughness.jpg") },
             normalMap:  { type: "t", value: loadTexture(path2+"Plastic/Plastic_Normal.jpg") },
             aoMap:      { type: "t", value: loadTexture(path2+"Plastic/Plastic_AO.jpg") },
-            textureRepeat: { type: "v2", value: new THREE.Vector2(4.0, 4.0) }  
+            textureRepeat: { type: "v2", value: new THREE.Vector2(4.0, 4.0) }  ,
+            normalScale: {type: "v2", value: new THREE.Vector2(1,1)},
+			envMap:	{ type: "t", value: textureCube}, 
         }
     }
 
@@ -227,7 +253,9 @@ function init(){
             roughnessMap: { type: "t", value: loadTexture(path2+"Wood/Wood_Roughness.jpg") },
             normalMap:  { type: "t", value: loadTexture(path2+"Wood/Wood_Normal.jpg") },
             aoMap:      { type: "t", value: loadTexture(path2+"Wood/Wood_AO.jpg") },
-            textureRepeat: { type: "v2", value: new THREE.Vector2(10.0, 8.0) } 
+            textureRepeat: { type: "v2", value: new THREE.Vector2(10.0, 8.0) } ,
+            normalScale: {type: "v2", value: new THREE.Vector2(1,1)},
+			envMap:	{ type: "t", value: textureCube}, 
         },
         wood_brownS: {
             specularMap:    { type: "t", value: loadTexture(path2+"Wood/Wood_Specular.jpg") },
@@ -235,7 +263,9 @@ function init(){
             roughnessMap: { type: "t", value: loadTexture(path2+"Wood/Wood_Roughness.jpg") },
             normalMap:  { type: "t", value: loadTexture(path2+"Wood/Wood_Normal.jpg") },
             aoMap:      { type: "t", value: loadTexture(path2+"Wood/Wood_AO.jpg") },
-            textureRepeat: { type: "v2", value: new THREE.Vector2(10.0, 8.0) } 
+            textureRepeat: { type: "v2", value: new THREE.Vector2(10.0, 8.0) } ,
+            normalScale: {type: "v2", value: new THREE.Vector2(1,1)},
+			envMap:	{ type: "t", value: textureCube}, 
         }
     }
 
