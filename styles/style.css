@@ -151,40 +151,40 @@ input::placeholder{
 }
 
 .radio_color .red:after {
-  background-color: red;
+  background-color: #e50000;
 }
 .radio_color .red:checked:after {
-  background-color: red;
+  background-color: #e50000;
 }
 .radio_color .brown:after {
-  background-color: brown;
+  background-color: #8B4513;
 }
 .radio_color .brown:checked:after {
-  background-color: brown;
+  background-color: #8B4513;
 }
 .radio_color .black:after {
-  background-color: black;
+  background-color: #050505;
 }
 .radio_color .black:checked:after {
-  background-color: black;
+  background-color: #050505;
 }
 .radio_color .green:after {
-  background-color: green;
+  background-color: #006600;
 }
 .radio_color .green:checked:after {
-  background-color: green;
+  background-color: #006600;
 }
 .radio_color .brownC:after {
-  background-color: orange;
+  background-color: #D2B48C;
 }
 .radio_color .brownC:checked:after {
-  background-color: orange;
+  background-color: #D2B48C;
 }
 .radio_color .brownS:after {
-  background-color: brown;
+  background-color: #a5682a;
 }
 .radio_color .brownS:checked:after {
-  background-color: brown;
+  background-color: #a5682a;
 }
 
 .radio_group{

@@ -49,9 +49,9 @@ function init(){
     scene = new THREE.Scene();
     canvas = document.getElementById("canvas_model");
     camera = new THREE.PerspectiveCamera( 30, canvas.clientWidth / canvas.clientHeight, 0.1, 1000 );
-    camera.position.z = 4;
+    camera.position.z = 6;
     camera.position.y = 3;
-    camera.position.x = -6;
+    camera.position.x = -4;
     renderer = new THREE.WebGLRenderer({canvas:canvas, antialias:true});
     renderer.setPixelRatio( canvas.devicePixelRatio );
     renderer.setSize( canvas.clientWidth, canvas.clientHeight );
@@ -66,8 +66,6 @@ function init(){
     var loader = new THREE.OBJLoader();
     loader.load( "models/SgabelloCompleto.obj", function ( obj ) {
         sgabello = obj;
-
-        
         obj.position.z = 0;
         obj.position.y = -1.5;
         obj.position.x = 0;
@@ -135,7 +133,7 @@ function init(){
             roughnessMap: { type: "t", value: loadTexture(path+"Cloth/Carpet_Roughness.jpg") },
             normalMap:  { type: "t", value: loadTexture(path+"Cloth/Carpet_Normal.jpg") },
             aoMap:      { type: "t", value: loadTexture(path+"Cloth/Carpet_AO.jpg") },
-            textureRepeat: { type: "v2", value: new THREE.Vector2(3.0, 3.0) } 
+            textureRepeat: { type: "v2", value: new THREE.Vector2(4.0, 4.0) } 
         }
     }
 
@@ -255,39 +253,62 @@ function init(){
     }
 
     /************************** GESTIONE LUCI ****************************************/
-    var param_luce1 = { red: 1.0, green: 1.0, blue: 1.0,    intensity: 1,    pos: [-5, 1, 0] };
-    var param_luce2 = { red: .2, green: .2, blue: .2,    intensity: 0.4,    pos: [10, -10, 0] };
+    var param_luce1 = { 
+        red: 1.0, 
+        green: 1.0, 
+        blue: 1.0,    
+        intensity: 1,    
+        pos: [0, 5, 0] 
+    };
+    var param_luce2 = { 
+        red: .2, 
+        green: .2, 
+        blue: .2,    
+        intensity: 0.4,    
+        pos: [5, 0, 2] 
+    };
+    var param_luce3 = { 
+        red: 1.0, 
+        green: 1.0, 
+        blue: 1.0,    
+        intensity: 1,    
+        pos: [-5, 0, 3] 
+    };
 
-    var ambientLightParams = { red: 0.2, green: 0.2, blue: 0.2, intensity: 1}
+    var ambientLightParams = { 
+        red: 0.2, 
+        green: 0.2, 
+        blue: 0.2, 
+        intensity: 1
+    };
 
-    if (param_luce1.intensity > 0) {
-        var sole1 = new THREE.Mesh( new THREE.SphereGeometry( 1, 16, 16), new THREE.MeshBasicMaterial ({color: 0xffff00, wireframe:true}));
-        sole1.position.set( param_luce1.pos[0], param_luce1.pos[1], param_luce1.pos[2] );
-        scene.add(sole1);
-        var raggio1 = new THREE.Vector3(sole1.position.x, sole1.position.y, sole1.position.z);
-    } else { var raggio1 = new THREE.Vector3(0,0,0); }
-    /*
-    if (param_luce2.intensity > 0) {
-        var sole2 = new THREE.Mesh( new THREE.SphereGeometry( 1, 16, 16), new THREE.MeshBasicMaterial ({color: 0xffff00, wireframe:true}));
-        sole2.position.set( param_luce2.pos[0], param_luce2.pos[1], param_luce2.pos[2] );
-        //scene.add(sole2);
-        var raggio2 = new THREE.Vector3(sole2.position.x, sole2.position.y, sole2.position.z)
-    }else { var raggio2 = new THREE.Vector3(0,0,0); }
-    */
+    var sole1 = new THREE.Mesh( new THREE.SphereGeometry( .5, 16, 16), new THREE.MeshBasicMaterial ({color: 0xffff00, wireframe:true}));
+    sole1.position.set( param_luce1.pos[0], param_luce1.pos[1], param_luce1.pos[2] );
+    scene.add(sole1);
+    var raggio1 = new THREE.Vector3(sole1.position.x, sole1.position.y, sole1.position.z);
 
+    var sole2 = new THREE.Mesh( new THREE.SphereGeometry( .5, 16, 16), new THREE.MeshBasicMaterial ({color: 0xffff00, wireframe:true}));
+    sole2.position.set( param_luce2.pos[0], param_luce2.pos[1], param_luce2.pos[2] );
+    scene.add(sole2);
+    var raggio2 = new THREE.Vector3(sole2.position.x, sole2.position.y, sole2.position.z)
+    
+    var sole3 = new THREE.Mesh( new THREE.SphereGeometry( .5, 16, 16), new THREE.MeshBasicMaterial ({color: 0xffff00, wireframe:true}));
+    sole3.position.set( param_luce3.pos[0], param_luce3.pos[1], param_luce3.pos[2] );
+    scene.add(sole3);
+    var raggio3 = new THREE.Vector3(sole3.position.x, sole3.position.y, sole3.position.z)
 
     /************************** UNIFORM CONDIVISI E DELLE SINGOLE PARTI ****************************************/
     unif_condivisi = {  
         pointLightPositions: {
-            type: "v3",
-            value: raggio1
+            type: "v3[]",
+            value: new Array(raggio1, raggio2, raggio3)
         },
         clights: {
-            type: "v3",
-            value: new THREE.Vector3(
-                    param_luce1.red * param_luce1.intensity,
-                    param_luce1.green * param_luce1.intensity,
-                    param_luce1.blue * param_luce1.intensity)
+            type: "v3[]",
+            value: new Array(new THREE.Vector3(param_luce1.red * param_luce1.intensity, param_luce1.green * param_luce1.intensity, param_luce1.blue * param_luce1.intensity),
+                            new THREE.Vector3(param_luce2.red * param_luce2.intensity, param_luce2.green * param_luce2.intensity, param_luce2.blue * param_luce2.intensity),
+                            new THREE.Vector3(param_luce3.red * param_luce3.intensity, param_luce3.green * param_luce3.intensity, param_luce3.blue * param_luce3.intensity)
+                            )
         },
         ambientLight: {
             type: "v3",
@@ -348,8 +369,13 @@ function firstStart(){
         Object.assign(uniform_sottocuscino, sottocuscino_uniforms_wood.wood_fixed);
         Object.assign(uniform_sottocuscino, unif_condivisi);
 
-        Object.assign(uniform_structure, structure_uniforms_platic.plastic_red);
+        Object.assign(uniform_structure, structure_uniforms_metal.metal_fixed);
         Object.assign(uniform_structure, unif_condivisi);
+        document.getElementById("redStruc").style.display = 'none';
+        document.getElementById("blackStruc").style.display = 'none';
+        document.getElementById("brownSStruc").style.display = 'none';
+        document.getElementById("brownCStruc").style.display = 'none';
+        document.getElementById("color_av").style.display = 'block';
         calcPrice();
     }else{
         requestAnimationFrame(firstStart);   
