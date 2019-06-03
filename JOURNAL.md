@@ -110,12 +110,11 @@ Dopodichè servendoci del sito ( https://matheowis.github.io/HDRI-to-CubeMap/ ) 
 * Codice del vertex shader e del fragment shader e decisione sui materiali da utilizzare.
 
 * TO DO:
-- scegliere tutte le texture
-- mettere le texture a tutti gli elementi
-- gestione dell'ambient light
-- gestione e aggiunta di nuove luci
-
-- implementare l'interattività al click
+  * scegliere tutte le texture
+  * mettere le texture a tutti gli elementi
+  * gestione dell'ambient light
+  * gestione e aggiunta di nuove luci
+  * implementare l'interattività al click
 
 
 Sitting: 2 materiali (tessuto e pelle) -> 4 colori uguali per entrambi (rosso, nero, marrone, verde)
@@ -136,7 +135,18 @@ TEXTURE CHE ABBIAMO PRONTE:
 
 * Modello funzionante con texture inserite, migliorare resa estetica e inserimento delle luci
 
-* Rimappatura del modello e 
+* Rimappatura del modello
+
+* Aggiunta interattività con l'ambiente
+
+
+# 3 giugno 2019
+
+* Aggiunta di 3 luci posizionali
+
+* TO DO:
+  * scegliere texture migliori
+  * posizionare luce ambientale
  
 
 
