@@ -147,6 +147,8 @@ TEXTURE CHE ABBIAMO PRONTE:
 * TO DO:
   * scegliere texture migliori
   * posizionare luce ambientale
+
+* NOTA: structure troppo "curvilinea", togliamo il legno come materiale?
  
 
 

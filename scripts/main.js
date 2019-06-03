@@ -248,7 +248,7 @@ function init(){
             roughnessMap: { type: "t", value: loadTexture(path3+"WoodU_Roughness.jpg") },
             normalMap:  { type: "t", value: loadTexture(path3+"WoodU_Normal.jpg") },
             aoMap:      { type: "t", value: loadTexture(path3+"WoodU_AO.jpg") },
-            textureRepeat: { type: "v2", value: new THREE.Vector2(4.0, 4.0) } 
+            textureRepeat: { type: "v2", value: new THREE.Vector2(6.0, 6.0) } 
         }
     }
 
