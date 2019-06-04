@@ -28,7 +28,9 @@ La cubemap, introdotta nel progetto, è stata volontariamente non resa visibile 
 
 # Metodo di lavoro 
 
-Abbiamo deciso di mantenere lo stesso metodo di lavoro che abbiamo seguito con lo sviluppo del primo progetto; il processo di creazione dell'elaborato finale aggiornato, di giorno in giorno, si trova nel file _Journal.md_. Per una migliore gestione del lavoro abbiamo deciso di servirci anche del programma _GitKraken_.
+Abbiamo deciso di mantenere lo stesso metodo di lavoro che abbiamo seguito con lo sviluppo del primo progetto; il processo di creazione dell'elaborato finale aggiornato, di giorno in giorno, si trova nel file _Journal.md_. 
+
+Per una migliore gestione del lavoro abbiamo deciso di servirci anche del programma _GitKraken_.
 
 # Presentazione della strutturazione delle cartelle
 
