@@ -58,6 +58,7 @@
 		uniform sampler2D diffuseMap;
 		uniform sampler2D roughnessMap;
 		uniform sampler2D normalMap;
+		uniform sampler2D aoMap;
 		varying vec3 vTangent;
 		varying vec3 vBitangent;
 		uniform vec2 normalScale;
@@ -124,7 +125,7 @@
 			}
 			//  + ambientLight*texture2D(aoMap, uVv).xyz;
 			// gamma encode the final value
-			outRadianceTot = outRadiance[0] + outRadiance[1] + outRadiance[2] + ambientLight*cdiff;
+			outRadianceTot = outRadiance[0] + outRadiance[1] + outRadiance[2] + ambientLight*cdiff*texture2D( aoMap, uVv * textureRepeat ).xyz;;
 			gl_FragColor = vec4(pow( outRadianceTot, vec3(1.0/2.2)), 1.0);
 		}
 	</script>
