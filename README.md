@@ -52,6 +52,8 @@ Di seguito presentiamo l'organizzazione che abbiamo scelto per le cartelle duran
 
 L'immagine che segue rappresenta l'elaborato finale del nostro lavoro.
 
+Commento sul legno (materiale forse non il piu adatto ma era per fornire una possibilità in più di scelta nella configurazione)
+
 <!-- 
 
 ![](JrnImages/Grafo.jpg) 
