@@ -109,6 +109,7 @@ function init(){
             diffuseMap:  { type: "t", value: loadTexture(path+"Cloth/diffuse/Carpet_diffuse_black.jpg") },
             roughnessMap: { type: "t", value: loadTexture(path+"Cloth/Carpet_Roughness.jpg") },
             normalMap:  { type: "t", value: loadTexture(path+"Cloth/Carpet_Normal.jpg") },
+            aoMap: {type: "t", value: loadTexture(path+"Cloth/Carpet_AO.jpg")},
             textureRepeat: { type: "v2", value: new THREE.Vector2(4.0, 4.0) },
             normalScale: {type: "v2", value: new THREE.Vector2(1,1)},
         },
@@ -117,6 +118,7 @@ function init(){
             diffuseMap:  { type: "t", value: loadTexture(path+"Cloth/diffuse/Carpet_diffuse_brown.jpg") },
             roughnessMap: { type: "t", value: loadTexture(path+"Cloth/Carpet_Roughness.jpg") },
             normalMap:  { type: "t", value: loadTexture(path+"Cloth/Carpet_Normal.jpg") },
+            aoMap: {type: "t", value: loadTexture(path+"Cloth/Carpet_AO.jpg")},
             textureRepeat: { type: "v2", value: new THREE.Vector2(4.0, 4.0) } ,
             normalScale: {type: "v2", value: new THREE.Vector2(1,1)},
         },
@@ -125,6 +127,7 @@ function init(){
             diffuseMap:  { type: "t", value: loadTexture(path+"Cloth/diffuse/Carpet_diffuse_green.jpg") },
             roughnessMap: { type: "t", value: loadTexture(path+"Cloth/Carpet_Roughness.jpg") },
             normalMap:  { type: "t", value: loadTexture(path+"Cloth/Carpet_Normal.jpg") },
+            aoMap: {type: "t", value: loadTexture(path+"Cloth/Carpet_AO.jpg")},
             textureRepeat: { type: "v2", value: new THREE.Vector2(4.0, 4.0) } ,
             normalScale: {type: "v2", value: new THREE.Vector2(1,1)},
         },
@@ -133,6 +136,7 @@ function init(){
             diffuseMap:  { type: "t", value: loadTexture(path+"Cloth/diffuse/Carpet_diffuse_red.jpg") },
             roughnessMap: { type: "t", value: loadTexture(path+"Cloth/Carpet_Roughness.jpg") },
             normalMap:  { type: "t", value: loadTexture(path+"Cloth/Carpet_Normal.jpg") },
+            aoMap: {type: "t", value: loadTexture(path+"Cloth/Carpet_AO.jpg")},
             textureRepeat: { type: "v2", value: new THREE.Vector2(4.0, 4.0) } ,
             normalScale: {type: "v2", value: new THREE.Vector2(1,1)}, 
         }
@@ -144,6 +148,7 @@ function init(){
             diffuseMap:  { type: "t", value: loadTexture(path+"Leather/diffuse/Leather_diffuse_black.jpg") },
             roughnessMap: { type: "t", value: loadTexture(path+"Leather/Leather_Roughness.jpg") },
             normalMap:  { type: "t", value: loadTexture(path+"Leather/Leather_Normal.jpg") },
+            aoMap: {type: "t", value: loadTexture(path+"Leather/Leather_AO.jpg")},
             textureRepeat: { type: "v2", value: new THREE.Vector2(3.0, 3.0) } ,
             normalScale: {type: "v2", value: new THREE.Vector2(1,1)}, 
         },
@@ -152,6 +157,7 @@ function init(){
             diffuseMap:  { type: "t", value: loadTexture(path+"Leather/diffuse/Leather_diffuse_brown.jpg") },
             roughnessMap: { type: "t", value: loadTexture(path+"Leather/Leather_Roughness.jpg") },
             normalMap:  { type: "t", value: loadTexture(path+"Leather/Leather_Normal.jpg") },
+            aoMap: {type: "t", value: loadTexture(path+"Leather/Leather_AO.jpg")},
             textureRepeat: { type: "v2", value: new THREE.Vector2(3.0, 3.0) } ,
             normalScale: {type: "v2", value: new THREE.Vector2(1,1)}, 
         },
@@ -160,6 +166,7 @@ function init(){
             diffuseMap:  { type: "t", value: loadTexture(path+"Leather/diffuse/Leather_diffuse_green.jpg") },
             roughnessMap: { type: "t", value: loadTexture(path+"Leather/Leather_Roughness.jpg") },
             normalMap:  { type: "t", value: loadTexture(path+"Leather/Leather_Normal.jpg") },
+            aoMap: {type: "t", value: loadTexture(path+"Leather/Leather_AO.jpg")},
             textureRepeat: { type: "v2", value: new THREE.Vector2(3.0, 3.0) } ,
             normalScale: {type: "v2", value: new THREE.Vector2(1,1)},
         },
@@ -168,6 +175,7 @@ function init(){
             diffuseMap:  { type: "t", value: loadTexture(path+"Leather/diffuse/Leather_diffuse_red.jpg") },
             roughnessMap: { type: "t", value: loadTexture(path+"Leather/Leather_Roughness.jpg") },
             normalMap:  { type: "t", value: loadTexture(path+"Leather/Leather_Normal.jpg") },
+            aoMap: {type: "t", value: loadTexture(path+"Leather/Leather_AO.jpg")},
             textureRepeat: { type: "v2", value: new THREE.Vector2(3.0, 3.0) }  ,
             normalScale: {type: "v2", value: new THREE.Vector2(1,1)},
         }
@@ -181,8 +189,9 @@ function init(){
             diffuseMap:  { type: "t", value: loadTexture(path2+"Metal/Metal_Diffuse.jpg") },
             roughnessMap: { type: "t", value: loadTexture(path2+"Metal/Metal_Roughness.jpg") },
             normalMap:  { type: "t", value: loadTexture(path2+"Metal/Metal_Normal.jpg") },
+            aoMap: {type: "t", value: loadTexture(path2+"Metal/Metal_AO.jpg")},
             textureRepeat: { type: "v2", value: new THREE.Vector2(10.0, 10.0) } ,
-            normalScale: {type: "v2", value: new THREE.Vector2(1,1)},
+            normalScale: {type: "v2", value: new THREE.Vector2(3,3)},
         }
     }
 
@@ -192,32 +201,36 @@ function init(){
             diffuseMap:  { type: "t", value: loadTexture(path2+"Plastic/diffuse/Plastic_diffuse_black.jpg") },
             roughnessMap: { type: "t", value: loadTexture(path2+"Plastic/Plastic_Roughness.jpg") },
             normalMap:  { type: "t", value: loadTexture(path2+"Plastic/Plastic_Normal.jpg") },
-            textureRepeat: { type: "v2", value: new THREE.Vector2(4.0, 4.0) } ,
-            normalScale: {type: "v2", value: new THREE.Vector2(1,1)},
+            aoMap: {type: "t", value: loadTexture(path2+"Plastic/Plastic_AO.jpg")},
+            textureRepeat: { type: "v2", value: new THREE.Vector2(1.0, 1.0) } ,
+            normalScale: {type: "v2", value: new THREE.Vector2(10,10)},
         },
         plastic_brownC: {
             specularMap:    { type: "t", value: loadTexture(path2+"Plastic/Plastic_Specular.jpg") },
             diffuseMap:  { type: "t", value: loadTexture(path2+"Plastic/diffuse/Plastic_diffuse_brownC.jpg") },
             roughnessMap: { type: "t", value: loadTexture(path2+"Plastic/Plastic_Roughness.jpg") },
             normalMap:  { type: "t", value: loadTexture(path2+"Plastic/Plastic_Normal.jpg") },
+            aoMap: {type: "t", value: loadTexture(path2+"Plastic/Plastic_AO.jpg")},
             textureRepeat: { type: "v2", value: new THREE.Vector2(4.0, 4.0) } ,
-            normalScale: {type: "v2", value: new THREE.Vector2(1,1)}, 
+            normalScale: {type: "v2", value: new THREE.Vector2(3,3)}, 
         },
         plastic_brownS: {
             specularMap:    { type: "t", value: loadTexture(path2+"Plastic/Plastic_Specular.jpg") },
             diffuseMap:  { type: "t", value: loadTexture(path2+"Plastic/diffuse/Plastic_diffuse_brownS.jpg") },
             roughnessMap: { type: "t", value: loadTexture(path2+"Plastic/Plastic_Roughness.jpg") },
             normalMap:  { type: "t", value: loadTexture(path2+"Plastic/Plastic_Normal.jpg") },
+            aoMap: {type: "t", value: loadTexture(path2+"Plastic/Plastic_AO.jpg")},
             textureRepeat: { type: "v2", value: new THREE.Vector2(4.0, 4.0) } ,
-            normalScale: {type: "v2", value: new THREE.Vector2(1,1)},
+            normalScale: {type: "v2", value: new THREE.Vector2(3,3)},
         },
         plastic_red: {
             specularMap:    { type: "t", value: loadTexture(path2+"Plastic/Plastic_Specular.jpg") },
             diffuseMap:  { type: "t", value: loadTexture(path2+"Plastic/diffuse/Plastic_diffuse_red.jpg") },
             roughnessMap: { type: "t", value: loadTexture(path2+"Plastic/Plastic_Roughness.jpg") },
             normalMap:  { type: "t", value: loadTexture(path2+"Plastic/Plastic_Normal.jpg") },
+            aoMap: {type: "t", value: loadTexture(path2+"Plastic/Plastic_AO.jpg")},
             textureRepeat: { type: "v2", value: new THREE.Vector2(4.0, 4.0) }  ,
-            normalScale: {type: "v2", value: new THREE.Vector2(1,1)}, 
+            normalScale: {type: "v2", value: new THREE.Vector2(3,3)}, 
         }
     }
 
@@ -227,16 +240,18 @@ function init(){
             diffuseMap:  { type: "t", value: loadTexture(path2+"Wood/diffuse/Wood_diffuse_brownC.jpg") },
             roughnessMap: { type: "t", value: loadTexture(path2+"Wood/Wood_Roughness.jpg") },
             normalMap:  { type: "t", value: loadTexture(path2+"Wood/Wood_Normal.jpg") },
+            aoMap: {type: "t", value: loadTexture(path2+"Wood/Wood_AO.jpg")},
             textureRepeat: { type: "v2", value: new THREE.Vector2(1.0, 1.0) },
-            normalScale: {type: "v2", value: new THREE.Vector2(1,1)},
+            normalScale: {type: "v2", value: new THREE.Vector2(3,3)},
         },
         wood_brownS: {
             specularMap:    { type: "t", value: loadTexture(path2+"Wood/Wood_Specular.jpg") },
             diffuseMap:  { type: "t", value: loadTexture(path2+"Wood/diffuse/Wood_diffuse_brownS.jpg") },
             roughnessMap: { type: "t", value: loadTexture(path2+"Wood/Wood_Roughness.jpg") },
             normalMap:  { type: "t", value: loadTexture(path2+"Wood/Wood_Normal.jpg") },
+            aoMap: {type: "t", value: loadTexture(path2+"Wood/Wood_AO.jpg")},
             textureRepeat: { type: "v2", value: new THREE.Vector2(1.0, 1.0) }, 
-            normalScale: {type: "v2", value: new THREE.Vector2(1,1)},
+            normalScale: {type: "v2", value: new THREE.Vector2(3,3)},
         }
     }
 
@@ -248,7 +263,9 @@ function init(){
             diffuseMap:  { type: "t", value: loadTexture(path3+"WoodU_Diffuse.jpg") },
             roughnessMap: { type: "t", value: loadTexture(path3+"WoodU_Roughness.jpg") },
             normalMap:  { type: "t", value: loadTexture(path3+"WoodU_Normal.jpg") },
-            textureRepeat: { type: "v2", value: new THREE.Vector2(6.0, 6.0) } 
+            aoMap: {type: "t", value: loadTexture(path3+"WoodU_AO.jpg")},
+            textureRepeat: { type: "v2", value: new THREE.Vector2(6.0, 6.0) },
+            normalScale: {type: "v2", value: new THREE.Vector2(3,3)}, 
         }
     }
 
@@ -258,17 +275,17 @@ function init(){
         red: 1.0, 
         green: 1.0, 
         blue: 1.0,    
-        intensity: 1,    
-        pos: [0, 5, 0] 
+        intensity: .2,    
+        pos: [0, 5, -1] 
     };
 
     //Dx
     var param_luce2 = { 
-        red: .2, 
-        green: .2, 
-        blue: .2,    
-        intensity: 0.4,    
-        pos: [5, 0, 2] 
+        red: 1.0, 
+        green: 1.0, 
+        blue: 1.0,    
+        intensity: .2,    
+        pos: [4, 5, 2] 
     };
 
     //Sx
@@ -276,14 +293,14 @@ function init(){
         red: 1.0, 
         green: 1.0, 
         blue: 1.0,    
-        intensity: 1,    
-        pos: [-5, 0, 3] 
+        intensity: .2,    
+        pos: [-5, 5, 2] 
     };
 
     var ambientLightParams = { 
-        red: 0.2, 
-        green: 0.2, 
-        blue: 0.2, 
+        red: .2, 
+        green: .2, 
+        blue: .2, 
         intensity: 1
     };
 
@@ -295,12 +312,12 @@ function init(){
     var sole2 = new THREE.Mesh( new THREE.SphereGeometry( .5, 16, 16), new THREE.MeshBasicMaterial ({color: 0xffff00, wireframe:true}));
     sole2.position.set( param_luce2.pos[0], param_luce2.pos[1], param_luce2.pos[2] );
     scene.add(sole2);
-    var raggio2 = new THREE.Vector3(sole2.position.x, sole2.position.y, sole2.position.z)
+    var raggio2 = new THREE.Vector3(sole2.position.x, sole2.position.y, sole2.position.z);
     
     var sole3 = new THREE.Mesh( new THREE.SphereGeometry( .5, 16, 16), new THREE.MeshBasicMaterial ({color: 0xffff00, wireframe:true}));
     sole3.position.set( param_luce3.pos[0], param_luce3.pos[1], param_luce3.pos[2] );
     scene.add(sole3);
-    var raggio3 = new THREE.Vector3(sole3.position.x, sole3.position.y, sole3.position.z)
+    var raggio3 = new THREE.Vector3(sole3.position.x, sole3.position.y, sole3.position.z);
 
     /************************** UNIFORM CONDIVISI E DELLE SINGOLE PARTI ****************************************/
     unif_condivisi = {  
@@ -318,9 +335,9 @@ function init(){
         ambientLight: {
             type: "v3",
             value: new THREE.Vector3(
-                ambientLightParams.red,
-                ambientLightParams.green,
-                ambientLightParams.blue)
+                ambientLightParams.red*ambientLightParams.intensity,
+                ambientLightParams.green*ambientLightParams.intensity,
+                ambientLightParams.blue*ambientLightParams.intensity)
         }
     }
     materialExtensions = {
@@ -462,5 +479,5 @@ function calcPrice(){
     var option_qta = document.getElementById('options_qta');
     var quantity= option_qta.options[option_qta.selectedIndex].value;
     var n = ((sitting_price+structure_price)*quantity).toFixed(2);
-	document.getElementById("total_price").innerHTML = n + " &euro;";
+	document.getElementById("total_price").innerHTML = "&euro; " + n;
 }
