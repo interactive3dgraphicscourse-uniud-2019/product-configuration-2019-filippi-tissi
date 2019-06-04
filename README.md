@@ -1,11 +1,12 @@
 # Report Filippi - Tissi
 
-Il progetto ha lo scopo di rappresentare un configuratore online interattivo per un sito di e-commerce commissionato dall'azienda "ACME". L'oggetto preos in considerazione in questo lavoro è uno sgabello.
+Il progetto ha lo scopo di rappresentare un configuratore online interattivo per un sito di e-commerce commissionato dall'azienda "ACME". L'oggetto preso in considerazione in questo lavoro sarà uno sgabello.
 
 Ci siamo prefissati di realizzare un sito web _professionale_, facendo attenzione alla scelta dei colori e uniformandoci al design dei siti web specializzati nel campo dell'arredamento; per renderlo il più universale possibile abbiamo utilizzato l'inglese come lingua di navigazione.
-Nel footer della pagina abbiamo inserito degli spazi destinati ai social per la condivisione e la promozione della pagina da parte dei possibili clienti che la visiteranno. Osservando i maggiori siti web abbiamo notato che era importante introdurre un pulsante _i_ che fornisce all'utente informazioni sul prodotto che sta visualizzando per favorirne l'eventuale acquisto.
 
-La decisione sulla scelta del modello è ricaduta su uno sgabello in quanto soddisfava le limitazioni inserite nella consegna (low-poly), si prestava bene a una scomposizione in più parti e ci dava la possibilità di introdurre vari materiali. 
+Nel footer della pagina abbiamo inserito degli spazi destinati ai social per la condivisione e la promozione da parte dei possibili utenti che la visiteranno. Osservando i maggiori siti web abbiamo notato che era importante introdurre un pulsante _i_ che fornisce all'utente informazioni sul prodotto che sta visualizzando per favorirne l'eventuale acquisto.
+
+La decisione sulla scelta del modello è ricaduta su uno sgabello che soddisfava le limitazioni inserite nella consegna (low-poly); inoltre si prestava bene a una scomposizione in più parti e ci dava la possibilità di introdurre vari materiali. 
 Il modello dello sgabello è stato modificato con il programma "Blender"; la mappatura delle varie parti è stata fatta da noi. Abbiamo rimosso la mappatura di tipo "unwrapped" e abbiamo introdotto la "Cube_projection".
 
 Di seguito illustreremo la personalizzazione che abbiamo deciso di offire ai fruitori del sito:
