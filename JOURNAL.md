@@ -149,6 +149,9 @@ TEXTURE CHE ABBIAMO PRONTE:
   * posizionare luce ambientale
 
 * NOTA: structure troppo "curvilinea", togliamo il legno come materiale?
+  
+
+  IMPORTANTE, METTERE L'EURO DAVANTI AL PREZZO E NON DIETRO
  
 
 
