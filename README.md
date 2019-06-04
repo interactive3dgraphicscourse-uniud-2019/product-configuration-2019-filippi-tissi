@@ -51,3 +51,9 @@ BRDF utilizzata?
 # Risultato finale
 
 L'immagine che segue rappresenta l'elaborato finale del nostro lavoro.
+
+<!-- 
+
+![](JrnImages/Grafo.jpg) 
+
+-->
