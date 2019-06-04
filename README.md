@@ -21,4 +21,29 @@ Si è deciso di introdurre 3 luci di scena che illuminano l'oggetto; durante la 
 
 ENV LIGHT ?
 
-La cubemap introdotta nel progetto è stata volontariamente non resa visibile nel visualizzatore; osservando il codice è possibile notare il commento alla riga di codice che ne permetterebbe la visibilità. Tuttavia, con i materiali che consentono una buona riflessione, è possibile percepire alcune sfumature modificando la posizione del modello.
+La cubemap, introdotta nel progetto, è stata volontariamente non resa visibile nel visualizzatore; esaminando il codice è possibile notare il commento alla riga che ne permetterebbe la visibilità. Tuttavia, con i materiali che consentono una buona riflessione, è possibile notarne la presenza.
+
+
+# Metodo di lavoro 
+
+Abbiamo deciso di mantenere lo stesso metodo di lavoro che abbiamo seguito con lo sviluppo del primo progetto; il processo di creazione dell'elaborato finale aggiornato, di giorno in giorno, si trova nel file _Journal.md_. Per una migliore gestione del lavoro abbiamo deciso di servirci anche del programma _GitKraken_.
+
+# Presentazione della strutturazione delle cartelle
+
+Il progetto ha avuto inizio a partire dal codice visto in classe durante gli esempi (contenuto nelle slides).
+
+Di seguito presentiamo l'organizzazione che abbiamo scelto per le cartelle durante il progetto:
+
+* Il file denomianato _index.html_ contiene il vertex shader, il fragment shader e il codice html usato per lo sviluppo del sito.
+* La cartella _styles_ contiene il file _style.css_ che abbiamo usato per personalizzare lo stile del sito web (TOGLIAMO L'ALTRO FILE?)
+* La cartella _scripts_ contiene il file _main.js_ che contiene tutte le funzioni che abbiamo implementato per permettere la personalizzazione dei materali e del (TUTTO INSOMMA)
+* La cartella _models_ contiene due file: il primo è denominato _SgabelloSeparato.blend_ con il quale abbiamo modificato, mappato il modello e generato il secondo file denominato _SgabelloCompleto.obj_ utilizzato per caricare il modello.
+* La cartella _textures_ contiene la cubemap uttilizzata e la cartella con tutti i materiali introdotti nel progetto. (DICIAMO COME ABBIAMO GENERATO I VARI MATERIALI? OPPURE DELLA SPECULAR MAP?)
+
+
+AMBIENT occlusion per ombreggiatura?
+BRDF utilizzata?
+
+# Risultato finale
+
+L'immagine che segue rappresenta l'elaborato finale del nostro lavoro.

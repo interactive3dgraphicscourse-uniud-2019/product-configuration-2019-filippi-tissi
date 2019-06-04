@@ -151,7 +151,13 @@ TEXTURE CHE ABBIAMO PRONTE:
 * NOTA: structure troppo "curvilinea", togliamo il legno come materiale?
   
 
+  dobbiamo aggiungere gli stats? (per il frame rate? ho visto che altri li avevano.. lei no)
+
   IMPORTANTE, METTERE L'EURO DAVANTI AL PREZZO E NON DIETRO
+
+  Eventuale plastica trovata
+
+https://share.substance3d.com/libraries?by_category_id=26
  
 
 
