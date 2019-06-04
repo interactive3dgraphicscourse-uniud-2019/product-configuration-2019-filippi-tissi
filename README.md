@@ -2,7 +2,7 @@
 
 Il progetto ha lo scopo di rappresentare un configuratore online interattivo per un sito di e-commerce commissionato dall'azienda "ACME". L'oggetto preos in considerazione in questo lavoro è uno sgabello.
 
-Ci siamo prefissati di realizzare un sito web _professionale_, facendo attenzione alla scelta dei colori e uniformandoci al design dei siti web specializzati nel campo dell'arredamento; per renderlo più universale possibile abbiamo utilizzato l'inglese come lingua di navigazione.
+Ci siamo prefissati di realizzare un sito web _professionale_, facendo attenzione alla scelta dei colori e uniformandoci al design dei siti web specializzati nel campo dell'arredamento; per renderlo il più universale possibile abbiamo utilizzato l'inglese come lingua di navigazione.
 Nel footer della pagina abbiamo inserito degli spazi destinati ai social per la condivisione e la promozione della pagina da parte dei possibili clienti che la visiteranno. Osservando i maggiori siti web abbiamo notato che era importante introdurre un pulsante _i_ che fornisce all'utente informazioni sul prodotto che sta visualizzando per favorirne l'eventuale acquisto.
 
 La decisione sulla scelta del modello è ricaduta su uno sgabello in quanto soddisfava le limitazioni inserite nella consegna (low-poly), si prestava bene a una scomposizione in più parti e ci dava la possibilità di introdurre vari materiali. 
