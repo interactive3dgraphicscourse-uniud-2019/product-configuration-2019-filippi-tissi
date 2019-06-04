@@ -285,7 +285,7 @@ function init(){
         green: 1.0, 
         blue: 1.0,    
         intensity: .2,    
-        pos: [4, 0, 4] 
+        pos: [4, 5, 2] 
     };
 
     //Sx
@@ -294,14 +294,14 @@ function init(){
         green: 1.0, 
         blue: 1.0,    
         intensity: .2,    
-        pos: [-5, 0, 8] 
+        pos: [-5, 5, 2] 
     };
 
     var ambientLightParams = { 
         red: .2, 
         green: .2, 
         blue: .2, 
-        intensity: 0.3
+        intensity: 0
     };
 
     var sole1 = new THREE.Mesh( new THREE.SphereGeometry( .5, 16, 16), new THREE.MeshBasicMaterial ({color: 0xffff00, wireframe:true}));
