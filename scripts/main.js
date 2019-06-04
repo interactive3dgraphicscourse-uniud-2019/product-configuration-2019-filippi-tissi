@@ -285,7 +285,7 @@ function init(){
         green: 1.0, 
         blue: 1.0,    
         intensity: .2,    
-        pos: [4, 5, 2] 
+        pos: [4, 0, 2] 
     };
 
     //Sx
@@ -294,7 +294,7 @@ function init(){
         green: 1.0, 
         blue: 1.0,    
         intensity: .2,    
-        pos: [-5, 5, 2] 
+        pos: [-5, 0, 2] 
     };
 
     var ambientLightParams = { 
