@@ -191,7 +191,7 @@ function init(){
             normalMap:  { type: "t", value: loadTexture(path2+"Metal/Metal_Normal.jpg") },
             aoMap: {type: "t", value: loadTexture(path2+"Metal/Metal_AO.jpg")},
             textureRepeat: { type: "v2", value: new THREE.Vector2(10.0, 10.0) } ,
-            normalScale: {type: "v2", value: new THREE.Vector2(1,1)},
+            normalScale: {type: "v2", value: new THREE.Vector2(3,3)},
         }
     }
 
@@ -202,8 +202,8 @@ function init(){
             roughnessMap: { type: "t", value: loadTexture(path2+"Plastic/Plastic_Roughness.jpg") },
             normalMap:  { type: "t", value: loadTexture(path2+"Plastic/Plastic_Normal.jpg") },
             aoMap: {type: "t", value: loadTexture(path2+"Plastic/Plastic_AO.jpg")},
-            textureRepeat: { type: "v2", value: new THREE.Vector2(4.0, 4.0) } ,
-            normalScale: {type: "v2", value: new THREE.Vector2(1,1)},
+            textureRepeat: { type: "v2", value: new THREE.Vector2(1.0, 1.0) } ,
+            normalScale: {type: "v2", value: new THREE.Vector2(10,10)},
         },
         plastic_brownC: {
             specularMap:    { type: "t", value: loadTexture(path2+"Plastic/Plastic_Specular.jpg") },
@@ -212,7 +212,7 @@ function init(){
             normalMap:  { type: "t", value: loadTexture(path2+"Plastic/Plastic_Normal.jpg") },
             aoMap: {type: "t", value: loadTexture(path2+"Plastic/Plastic_AO.jpg")},
             textureRepeat: { type: "v2", value: new THREE.Vector2(4.0, 4.0) } ,
-            normalScale: {type: "v2", value: new THREE.Vector2(1,1)}, 
+            normalScale: {type: "v2", value: new THREE.Vector2(3,3)}, 
         },
         plastic_brownS: {
             specularMap:    { type: "t", value: loadTexture(path2+"Plastic/Plastic_Specular.jpg") },
@@ -221,7 +221,7 @@ function init(){
             normalMap:  { type: "t", value: loadTexture(path2+"Plastic/Plastic_Normal.jpg") },
             aoMap: {type: "t", value: loadTexture(path2+"Plastic/Plastic_AO.jpg")},
             textureRepeat: { type: "v2", value: new THREE.Vector2(4.0, 4.0) } ,
-            normalScale: {type: "v2", value: new THREE.Vector2(1,1)},
+            normalScale: {type: "v2", value: new THREE.Vector2(3,3)},
         },
         plastic_red: {
             specularMap:    { type: "t", value: loadTexture(path2+"Plastic/Plastic_Specular.jpg") },
@@ -230,7 +230,7 @@ function init(){
             normalMap:  { type: "t", value: loadTexture(path2+"Plastic/Plastic_Normal.jpg") },
             aoMap: {type: "t", value: loadTexture(path2+"Plastic/Plastic_AO.jpg")},
             textureRepeat: { type: "v2", value: new THREE.Vector2(4.0, 4.0) }  ,
-            normalScale: {type: "v2", value: new THREE.Vector2(1,1)}, 
+            normalScale: {type: "v2", value: new THREE.Vector2(3,3)}, 
         }
     }
 
@@ -242,7 +242,7 @@ function init(){
             normalMap:  { type: "t", value: loadTexture(path2+"Wood/Wood_Normal.jpg") },
             aoMap: {type: "t", value: loadTexture(path2+"Wood/Wood_AO.jpg")},
             textureRepeat: { type: "v2", value: new THREE.Vector2(1.0, 1.0) },
-            normalScale: {type: "v2", value: new THREE.Vector2(1,1)},
+            normalScale: {type: "v2", value: new THREE.Vector2(3,3)},
         },
         wood_brownS: {
             specularMap:    { type: "t", value: loadTexture(path2+"Wood/Wood_Specular.jpg") },
@@ -251,7 +251,7 @@ function init(){
             normalMap:  { type: "t", value: loadTexture(path2+"Wood/Wood_Normal.jpg") },
             aoMap: {type: "t", value: loadTexture(path2+"Wood/Wood_AO.jpg")},
             textureRepeat: { type: "v2", value: new THREE.Vector2(1.0, 1.0) }, 
-            normalScale: {type: "v2", value: new THREE.Vector2(1,1)},
+            normalScale: {type: "v2", value: new THREE.Vector2(3,3)},
         }
     }
 
@@ -263,8 +263,9 @@ function init(){
             diffuseMap:  { type: "t", value: loadTexture(path3+"WoodU_Diffuse.jpg") },
             roughnessMap: { type: "t", value: loadTexture(path3+"WoodU_Roughness.jpg") },
             normalMap:  { type: "t", value: loadTexture(path3+"WoodU_Normal.jpg") },
-            aoMap: {type: "t", value: loadTexture(path3+"WoodU/WoodU_AO.jpg")},
-            textureRepeat: { type: "v2", value: new THREE.Vector2(6.0, 6.0) } 
+            aoMap: {type: "t", value: loadTexture(path3+"WoodU_AO.jpg")},
+            textureRepeat: { type: "v2", value: new THREE.Vector2(6.0, 6.0) },
+            normalScale: {type: "v2", value: new THREE.Vector2(3,3)}, 
         }
     }
 
@@ -274,17 +275,17 @@ function init(){
         red: 1.0, 
         green: 1.0, 
         blue: 1.0,    
-        intensity: .5,    
-        pos: [0, 5, 0] 
+        intensity: .2,    
+        pos: [0, 5, -1] 
     };
 
     //Dx
     var param_luce2 = { 
-        red: .2, 
-        green: .2, 
-        blue: .2,    
-        intensity: 0.5,    
-        pos: [2, 0, 4] 
+        red: 1.0, 
+        green: 1.0, 
+        blue: 1.0,    
+        intensity: .2,    
+        pos: [4, 0, 4] 
     };
 
     //Sx
@@ -292,15 +293,15 @@ function init(){
         red: 1.0, 
         green: 1.0, 
         blue: 1.0,    
-        intensity: .5,    
-        pos: [-5, 0, 3] 
+        intensity: .2,    
+        pos: [-5, 0, 8] 
     };
 
     var ambientLightParams = { 
-        red: 0.2, 
-        green: 0.2, 
-        blue: 0.2, 
-        intensity: 1
+        red: .2, 
+        green: .2, 
+        blue: .2, 
+        intensity: 0.3
     };
 
     var sole1 = new THREE.Mesh( new THREE.SphereGeometry( .5, 16, 16), new THREE.MeshBasicMaterial ({color: 0xffff00, wireframe:true}));
@@ -311,12 +312,12 @@ function init(){
     var sole2 = new THREE.Mesh( new THREE.SphereGeometry( .5, 16, 16), new THREE.MeshBasicMaterial ({color: 0xffff00, wireframe:true}));
     sole2.position.set( param_luce2.pos[0], param_luce2.pos[1], param_luce2.pos[2] );
     scene.add(sole2);
-    var raggio2 = new THREE.Vector3(sole2.position.x, sole2.position.y, sole2.position.z)
+    var raggio2 = new THREE.Vector3(sole2.position.x, sole2.position.y, sole2.position.z);
     
     var sole3 = new THREE.Mesh( new THREE.SphereGeometry( .5, 16, 16), new THREE.MeshBasicMaterial ({color: 0xffff00, wireframe:true}));
     sole3.position.set( param_luce3.pos[0], param_luce3.pos[1], param_luce3.pos[2] );
     scene.add(sole3);
-    var raggio3 = new THREE.Vector3(sole3.position.x, sole3.position.y, sole3.position.z)
+    var raggio3 = new THREE.Vector3(sole3.position.x, sole3.position.y, sole3.position.z);
 
     /************************** UNIFORM CONDIVISI E DELLE SINGOLE PARTI ****************************************/
     unif_condivisi = {  
@@ -334,9 +335,9 @@ function init(){
         ambientLight: {
             type: "v3",
             value: new THREE.Vector3(
-                ambientLightParams.red,
-                ambientLightParams.green,
-                ambientLightParams.blue)
+                ambientLightParams.red*ambientLightParams.intensity,
+                ambientLightParams.green*ambientLightParams.intensity,
+                ambientLightParams.blue*ambientLightParams.intensity)
         }
     }
     materialExtensions = {
