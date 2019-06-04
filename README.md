@@ -44,8 +44,9 @@ Di seguito presentiamo l'organizzazione che abbiamo scelto per le cartelle duran
 * La cartella _models_ contiene due file: il primo è denominato _SgabelloSeparato.blend_ con il quale abbiamo modificato, mappato il modello e generato il secondo file denominato _SgabelloCompleto.obj_ utilizzato per caricare il modello.
 * La cartella _textures_ contiene la cubemap uttilizzata e la cartella con tutti i materiali introdotti nel progetto. (DICIAMO COME ABBIAMO GENERATO I VARI MATERIALI? OPPURE DELLA SPECULAR MAP?)
 
-AMBIENT occlusion per ombreggiatura?
-BRDF utilizzata?
+* AMBIENT occlusion per ombreggiatura? si usata
+
+* Per quantto riguarda le BRDF caso b . non serve riportare le formule in quanto abbiamo esteso quelle viste in classe.
 
 # Risultato finale
 
