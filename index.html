@@ -124,7 +124,7 @@
 			}
 			//  + ambientLight*texture2D(aoMap, uVv).xyz;
 			// gamma encode the final value
-			outRadianceTot = outRadiance[0] + outRadiance[1] + outRadiance[2];
+			outRadianceTot = outRadiance[0] + outRadiance[1] + outRadiance[2] + ambientLight*cdiff;
 			gl_FragColor = vec4(pow( outRadianceTot, vec3(1.0/2.2)), 1.0);
 		}
 	</script>
