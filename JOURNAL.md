@@ -159,9 +159,9 @@ TEXTURE CHE ABBIAMO PRONTE:
 Modifica della mappaura
 
 TO DO OGGI:
- - cambiare le texture della plastica
- - posizionare le luci
- - envMap
+  - cambiare le texture della plastica
+  - posizionare le luci
+  - envMap
 
 
 
