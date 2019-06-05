@@ -32,6 +32,8 @@ Abbiamo deciso di mantenere lo stesso metodo di lavoro che abbiamo seguito con l
 
 Per una migliore gestione del lavoro abbiamo deciso di servirci anche del programma _GitKraken_.
 
+Abbiamo utilizzato il metodo _perturbNormal2Arb_ utilizzato nel file _l16_NormalMapping.html_ presente nel repository del 2018: questo perchè il calcolo delle normali di quest'anno ci creava problemi su dispositivi diversi.
+
 # Presentazione della strutturazione delle cartelle
 
 Il progetto ha avuto inizio a partire dal codice visto in classe durante gli esempi (contenuto nelle slides).
