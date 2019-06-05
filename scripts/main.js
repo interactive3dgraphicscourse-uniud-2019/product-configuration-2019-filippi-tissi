@@ -275,7 +275,7 @@ function init(){
         red: 1.0, 
         green: 1.0, 
         blue: 1.0,    
-        intensity: .2,    
+        intensity: 0,    
         pos: [0, 5, -1] 
     };
 
@@ -284,8 +284,8 @@ function init(){
         red: 1.0, 
         green: 1.0, 
         blue: 1.0,    
-        intensity: .2,    
-        pos: [0, 0, 1] 
+        intensity: 0,    
+        pos: [4, 0, 2] 
     };
 
     //Sx
@@ -293,7 +293,7 @@ function init(){
         red: 1.0, 
         green: 1.0, 
         blue: 1.0,    
-        intensity: .2,    
+        intensity: 0,    
         pos: [-5, 0, 2] 
     };
 
@@ -303,6 +303,7 @@ function init(){
         blue: .2, 
         intensity: 1
     };
+    
 
     var sole1 = new THREE.Mesh( new THREE.SphereGeometry( .5, 16, 16), new THREE.MeshBasicMaterial ({color: 0xffff00, wireframe:true}));
     sole1.position.set( param_luce1.pos[0], param_luce1.pos[1], param_luce1.pos[2] );
