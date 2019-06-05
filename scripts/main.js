@@ -285,7 +285,7 @@ function init(){
         green: 1.0, 
         blue: 1.0,    
         intensity: .2,    
-        pos: [4, 0, 2] 
+        pos: [0, 0, 1] 
     };
 
     //Sx
