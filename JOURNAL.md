@@ -76,13 +76,14 @@
 
  * Generazione della palette dei colori presentata nella figura successiva.
 
-   ![](JrnImages/palettecolors.png)
+   ![](JrnImages/palettecolors.jpg)
 
  * Costruzione di un documento parallelo dove viene visualizzato il modello 3D dello sgabello.
 
  * Continuazione dello sviluppo del sito seguendo i principi definiti nella figura iniziale. Di seguito si riporta quanto svolto fino ad oggi.
 
   ![](JrnImages/sitomed.jpg)
+
 
 # 22 maggio 2019
 
@@ -139,7 +140,6 @@ TEXTURE CHE ABBIAMO PRONTE:
 
 * Aggiunta interattività con l'ambiente
 
-
 # 3 giugno 2019
 
 * Aggiunta di 3 luci posizionali
@@ -150,15 +150,17 @@ TEXTURE CHE ABBIAMO PRONTE:
 
 * NOTA: structure troppo "curvilinea", togliamo il legno come materiale?
   
-
-  dobbiamo aggiungere gli stats? (per il frame rate? ho visto che altri li avevano.. lei no)
-
-  IMPORTANTE, METTERE L'EURO DAVANTI AL PREZZO E NON DIETRO
-
-  Eventuale plastica trovata
-
-https://share.substance3d.com/libraries?by_category_id=26
+  - Serve aggiungere gli stats? NO 
+  - Mettere il simbolo dell'euro davanti alla cifra e non dietro
  
+# 4 giugno 2019
+
+Modifica della mappaura
+
+TO DO OGGI:
+  - cambiare le texture della plastica
+  - posizionare le luci
+  - envMap
 
 
 
