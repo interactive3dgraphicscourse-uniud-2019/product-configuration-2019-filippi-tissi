@@ -46,7 +46,7 @@ Di seguito presentiamo l'organizzazione che abbiamo scelto per le cartelle duran
 
 * AMBIENT occlusion per ombreggiatura? si usata
 
-* Per quantto riguarda le BRDF caso b . non serve riportare le formule in quanto abbiamo esteso quelle viste in classe.
+* Per quanto riguarda le BRDF caso b. non serve riportare le formule in quanto abbiamo esteso quelle viste in classe.
 
 # Risultato finale
 
