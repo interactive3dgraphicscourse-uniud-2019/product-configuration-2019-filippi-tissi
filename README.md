@@ -56,9 +56,9 @@ L'immagine che segue rappresenta l'elaborato finale del nostro lavoro.
 
 Commento sul legno (materiale forse non il piu adatto ma era per fornire una possibilità in più di scelta nella configurazione)
 
-![](RmeImages/final_res.png) 
-
 ![](RmeImages/final_res2.png) 
+
+![](RmeImages/final_res.png) 
 
 Alcuni esempi di configurazioni possibili:
 
