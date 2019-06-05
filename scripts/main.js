@@ -190,7 +190,7 @@ function init(){
             roughnessMap: { type: "t", value: loadTexture(path2+"Metal/Metal_Roughness.jpg") },
             normalMap:  { type: "t", value: loadTexture(path2+"Metal/Metal_Normal.jpg") },
             aoMap: {type: "t", value: loadTexture(path2+"Metal/Metal_AO.jpg")},
-            textureRepeat: { type: "v2", value: new THREE.Vector2(10.0, 10.0) } ,
+            textureRepeat: { type: "v2", value: new THREE.Vector2(9.0, 9.0) } ,
             normalScale: {type: "v2", value: new THREE.Vector2(3,3)},
         }
     }
@@ -202,7 +202,7 @@ function init(){
             roughnessMap: { type: "t", value: loadTexture(path2+"Plastic/Plastic_Roughness.jpg") },
             normalMap:  { type: "t", value: loadTexture(path2+"Plastic/Plastic_Normal.jpg") },
             aoMap: {type: "t", value: loadTexture(path2+"Plastic/Plastic_AO.jpg")},
-            textureRepeat: { type: "v2", value: new THREE.Vector2(4.0, 4.0) } ,
+            textureRepeat: { type: "v2", value: new THREE.Vector2(10.0, 10.0) } ,
             normalScale: {type: "v2", value: new THREE.Vector2(3,3)}
         },
         plastic_brownC: {
@@ -211,7 +211,7 @@ function init(){
             roughnessMap: { type: "t", value: loadTexture(path2+"Plastic/Plastic_Roughness.jpg") },
             normalMap:  { type: "t", value: loadTexture(path2+"Plastic/Plastic_Normal.jpg") },
             aoMap: {type: "t", value: loadTexture(path2+"Plastic/Plastic_AO.jpg")},
-            textureRepeat: { type: "v2", value: new THREE.Vector2(4.0, 4.0) } ,
+            textureRepeat: { type: "v2", value: new THREE.Vector2(10.0, 10.0) } ,
             normalScale: {type: "v2", value: new THREE.Vector2(3,3)}, 
         },
         plastic_brownS: {
@@ -220,7 +220,7 @@ function init(){
             roughnessMap: { type: "t", value: loadTexture(path2+"Plastic/Plastic_Roughness.jpg") },
             normalMap:  { type: "t", value: loadTexture(path2+"Plastic/Plastic_Normal.jpg") },
             aoMap: {type: "t", value: loadTexture(path2+"Plastic/Plastic_AO.jpg")},
-            textureRepeat: { type: "v2", value: new THREE.Vector2(4.0, 4.0) } ,
+            textureRepeat: { type: "v2", value: new THREE.Vector2(10.0, 10.0) } ,
             normalScale: {type: "v2", value: new THREE.Vector2(3,3)},
         },
         plastic_red: {
@@ -229,7 +229,7 @@ function init(){
             roughnessMap: { type: "t", value: loadTexture(path2+"Plastic/Plastic_Roughness.jpg") },
             normalMap:  { type: "t", value: loadTexture(path2+"Plastic/Plastic_Normal.jpg") },
             aoMap: {type: "t", value: loadTexture(path2+"Plastic/Plastic_AO.jpg")},
-            textureRepeat: { type: "v2", value: new THREE.Vector2(4.0, 4.0) }  ,
+            textureRepeat: { type: "v2", value: new THREE.Vector2(3.0, 3.0) }  ,
             normalScale: {type: "v2", value: new THREE.Vector2(3,3)}, 
         }
     }
@@ -272,35 +272,35 @@ function init(){
     /************************** GESTIONE LUCI ***************************************/
     //Alta
     var param_luce1 = { 
-        red: 1.0, 
-        green: 1.0, 
-        blue: 1.0,    
-        intensity: 0.2,    
-        pos: [0, 5, -1] 
+        red: 0.5, 
+        green: 0.5, 
+        blue: 0.5,    
+        intensity: 0.7,    
+        pos: [0, 5, 0] 
     };
 
     //Dx
     var param_luce2 = { 
-        red: 1.0, 
-        green: 1.0, 
-        blue: 1.0,    
-        intensity: 0.2,    
-        pos: [4, 0, 2] 
+        red: 0.2, 
+        green: 0.2, 
+        blue: 0.2,    
+        intensity: 0.7,     
+        pos: [4, 4, 2] 
     };
 
     //Sx
     var param_luce3 = { 
-        red: 1.0, 
-        green: 1.0, 
-        blue: 1.0,    
-        intensity: 0.2,    
-        pos: [-5, 0, 2] 
+        red: 0.6, 
+        green: 0.6, 
+        blue: 0.6,    
+        intensity: 0.7,     
+        pos: [-5, -4, -2] 
     };
 
     var ambientLightParams = { 
-        red: .2, 
-        green: .2, 
-        blue: .2, 
+        red: .5, 
+        green: .5, 
+        blue: .5, 
         intensity: 1
     };
 
