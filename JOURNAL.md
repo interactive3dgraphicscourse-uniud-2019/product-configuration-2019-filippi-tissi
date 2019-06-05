@@ -76,7 +76,7 @@
 
  * Generazione della palette dei colori presentata nella figura successiva.
 
-   ![](JrnImages/palettecolors.png)
+   ![](JrnImages/palettecolors.jpg)
 
  * Costruzione di un documento parallelo dove viene visualizzato il modello 3D dello sgabello.
 
