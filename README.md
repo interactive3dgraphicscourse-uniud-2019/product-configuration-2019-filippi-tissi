@@ -39,7 +39,7 @@ Il progetto ha avuto inizio a partire dal codice visto in classe durante gli ese
 Di seguito presentiamo l'organizzazione che abbiamo scelto per le cartelle durante il progetto:
 
 * Il file denomianato _index.html_ contiene il vertex shader, il fragment shader e il codice html usato per lo sviluppo del sito.
-* La cartella _styles_ contiene il file _style.css_ che abbiamo usato per personalizzare lo stile del sito web (TOGLIAMO L'ALTRO FILE?)
+* La cartella _styles_ contiene il file _style.css_ che abbiamo usato per personalizzare lo stile del sito web e il file _w3css.css_.
 * La cartella _scripts_ contiene il file _main.js_ che contiene tutte le funzioni che abbiamo implementato per permettere la personalizzazione dei materali e del (TUTTO INSOMMA)
 * La cartella _models_ contiene due file: il primo è denominato _SgabelloSeparato.blend_ con il quale abbiamo modificato, mappato il modello e generato il secondo file denominato _SgabelloCompleto.obj_ utilizzato per caricare il modello.
 * La cartella _textures_ contiene la cubemap uttilizzata e la cartella con tutti i materiali introdotti nel progetto. (DICIAMO COME ABBIAMO GENERATO I VARI MATERIALI? OPPURE DELLA SPECULAR MAP?)
