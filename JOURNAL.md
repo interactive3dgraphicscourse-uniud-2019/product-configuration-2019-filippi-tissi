@@ -160,7 +160,16 @@ Modifica della mappaura
 TO DO OGGI:
   - cambiare le texture della plastica
   - posizionare le luci
-  - envMap
+  - envMap (inserita e poi rimossa)
 
+# 5 giugno 2019
 
+* Revisione del Journal trascritto la giornata precedente.
 
+* Esecuzione delle tre idee segnate il giorno precedente.
+
+* Risoluzione del problema con la plastica
+
+* Progetto concluso
+
+* READ.ME
