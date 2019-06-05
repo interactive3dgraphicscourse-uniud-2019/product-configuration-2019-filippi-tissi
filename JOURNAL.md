@@ -140,7 +140,6 @@ TEXTURE CHE ABBIAMO PRONTE:
 
 * Aggiunta interattività con l'ambiente
 
-
 # 3 giugno 2019
 
 * Aggiunta di 3 luci posizionali
