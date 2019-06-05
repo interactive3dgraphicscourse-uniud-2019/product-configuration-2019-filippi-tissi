@@ -151,21 +151,16 @@ TEXTURE CHE ABBIAMO PRONTE:
 
 * NOTA: structure troppo "curvilinea", togliamo il legno come materiale?
   
+  Serve aggiungere gli stats? NO
 
-  dobbiamo aggiungere gli stats? NO
-
-  IMPORTANTE, METTERE L'EURO DAVANTI AL PREZZO E NON DIETRO
-
-  Eventuale plastica trovata
-
-https://share.substance3d.com/libraries?by_category_id=26
+  IMPORTANTE 
+  - METTERE L'EURO DAVANTI AL PREZZO E NON DIETRO
  
 # 4 giugno 2019
- lavoro per domani
-
- cambiare le texture della plastica
- posizionare le luci
- envMap
+TO DO OGGI:
+ - cambiare le texture della plastica
+ - posizionare le luci
+ - envMap
 
 
 
