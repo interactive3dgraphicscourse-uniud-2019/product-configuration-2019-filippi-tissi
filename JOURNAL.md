@@ -152,7 +152,7 @@ TEXTURE CHE ABBIAMO PRONTE:
 * NOTA: structure troppo "curvilinea", togliamo il legno come materiale?
   
 
-  dobbiamo aggiungere gli stats? (per il frame rate? ho visto che altri li avevano.. lei no)
+  dobbiamo aggiungere gli stats? NO
 
   IMPORTANTE, METTERE L'EURO DAVANTI AL PREZZO E NON DIETRO
 
@@ -162,6 +162,7 @@ https://share.substance3d.com/libraries?by_category_id=26
  
 # 4 giugno 2019
  lavoro per domani
+ 
  cambiare le texture della plastica
  posizionare le luci
  envMap
