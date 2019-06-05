@@ -151,12 +151,13 @@ TEXTURE CHE ABBIAMO PRONTE:
 
 * NOTA: structure troppo "curvilinea", togliamo il legno come materiale?
   
-  Serve aggiungere gli stats? NO
-
-  IMPORTANTE 
-  - METTERE L'EURO DAVANTI AL PREZZO E NON DIETRO
+  - Serve aggiungere gli stats? NO 
+  - Mettere il simbolo dell'euro davanti alla cifra e non dietro
  
 # 4 giugno 2019
+
+Modifica della mappaura
+
 TO DO OGGI:
  - cambiare le texture della plastica
  - posizionare le luci
