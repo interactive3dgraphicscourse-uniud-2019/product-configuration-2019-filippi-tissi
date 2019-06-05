@@ -162,11 +162,10 @@ https://share.substance3d.com/libraries?by_category_id=26
  
 # 4 giugno 2019
  lavoro per domani
- 
+
  cambiare le texture della plastica
  posizionare le luci
  envMap
-
 
 
 
