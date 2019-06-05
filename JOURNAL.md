@@ -84,6 +84,7 @@
 
   ![](JrnImages/sitomed.jpg)
 
+
 # 22 maggio 2019
 
 * Revisione del Journal trascritto la giornata precedente.
