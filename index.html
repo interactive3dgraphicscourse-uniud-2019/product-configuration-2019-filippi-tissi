@@ -277,11 +277,11 @@
 						<div class="w3-container w3-third w3-row" id="qta">
 							<div class="w3-half quantity" style="font-size: 12px; font-weight: 500; margin-right: 10px">Q.ty</div>
 							<select class="w3-half w3-select quantity" id="options_qta" name="option" onchange="calcPrice()">
-								<option value="1" selected>1</option>
-								<option value="2">2</option>
-								<option value="3">3</option>
-								<option value="4">4</option>
-								<option value="5">5</option>
+								<script>
+									for(var i=1;i<=10;i++) {
+										document.write("<option value=&quot;"+i+"&quot;>"+i+"</option>");
+									}
+								</script>
 							</select>
 						</div>
 						<div class="w3-container w3-twothird w3-row" style="font-size: 14px; font-weight: 600;" id="price">
