@@ -51,8 +51,8 @@
 		varying vec3 vNormal;
 		varying vec3 vPosition;
 		varying vec2 uVv;
-		uniform vec3 pointLightPositions[3]; // in world space
-		uniform vec3 clights[3];
+		uniform vec3 pointLightPositions[4]; // in world space
+		uniform vec3 clights[4];
 		uniform vec3 ambientLight;
 		uniform sampler2D specularMap;
 		uniform sampler2D diffuseMap;
@@ -115,7 +115,7 @@
 			// texture in sRGB, linearize
 			cspec = pow( cspec, vec3(2.2));
 			roughness = texture2D( roughnessMap, uVv*textureRepeat).r; // no need to linearize roughness map
-			for(int i=0; i<3; i++){
+			for(int i=0; i<4; i++){
 				vec4 lPosition = viewMatrix * vec4( pointLightPositions[i], 1.0 );
 				vec3 l = normalize(lPosition.xyz - vPosition.xyz);
 				vec3 n = perturbNormal2Arb( vPosition, normalize( vNormal ));
@@ -132,8 +132,6 @@
 					(4.0*nDotl*nDotv);
 				outRadiance[i] = PI* clights[i] * nDotl * BRDF;
 			}
-			//  + ambientLight*texture2D(aoMap, uVv).xyz;
-			// gamma encode the final value
 			outRadianceTot = outRadiance[0] + outRadiance[1] + outRadiance[2] + ambientLight*cdiff*texture2D( aoMap, uVv * textureRepeat ).xyz;;
 			gl_FragColor = vec4(pow( outRadianceTot, vec3(1.0/2.2)), 1.0);
 		}

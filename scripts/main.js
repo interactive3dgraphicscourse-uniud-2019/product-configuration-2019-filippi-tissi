@@ -275,8 +275,8 @@ function init(){
         red: 0.5, 
         green: 0.5, 
         blue: 0.5,    
-        intensity: 0.7,    
-        pos: [0, 5, 0] 
+        intensity: 0.6,    
+        position: [0, 3, 1] 
     };
 
     //Dx
@@ -284,8 +284,8 @@ function init(){
         red: 0.2, 
         green: 0.2, 
         blue: 0.2,    
-        intensity: 0.7,     
-        pos: [4, 4, 2] 
+        intensity: 0.6,     
+        position: [2, 1, 1] 
     };
 
     //Sx
@@ -293,44 +293,59 @@ function init(){
         red: 0.6, 
         green: 0.6, 
         blue: 0.6,    
-        intensity: 0.7,     
-        pos: [-5, -4, -2] 
+        intensity: 0.6,     
+        position: [-2, 1, 1] 
+    };
+
+    //Dietro
+    var param_luce4 = { 
+        red: 0.6, 
+        green: 0.6, 
+        blue: 0.6,    
+        intensity: 0.4,     
+        position: [0, -0.5, -2] 
     };
 
     var ambientLightParams = { 
-        red: .5, 
-        green: .5, 
-        blue: .5, 
-        intensity: 1
+        red: 0.5, 
+        green: 0.5, 
+        blue: 0.5, 
+        intensity: 0.8
     };
 
 
     var sole1 = new THREE.Mesh( new THREE.SphereGeometry( .5, 16, 16), new THREE.MeshBasicMaterial ({color: 0xffff00, wireframe:true}));
-    sole1.position.set( param_luce1.pos[0], param_luce1.pos[1], param_luce1.pos[2] );
-    scene.add(sole1);
+    sole1.position.set( param_luce1.position[0], param_luce1.position[1], param_luce1.position[2] );
+    //scene.add(sole1);
     var raggio1 = new THREE.Vector3(sole1.position.x, sole1.position.y, sole1.position.z);
 
     var sole2 = new THREE.Mesh( new THREE.SphereGeometry( .5, 16, 16), new THREE.MeshBasicMaterial ({color: 0xffff00, wireframe:true}));
-    sole2.position.set( param_luce2.pos[0], param_luce2.pos[1], param_luce2.pos[2] );
-    scene.add(sole2);
+    sole2.position.set( param_luce2.position[0], param_luce2.position[1], param_luce2.position[2] );
+    //scene.add(sole2);
     var raggio2 = new THREE.Vector3(sole2.position.x, sole2.position.y, sole2.position.z);
     
     var sole3 = new THREE.Mesh( new THREE.SphereGeometry( .5, 16, 16), new THREE.MeshBasicMaterial ({color: 0xffff00, wireframe:true}));
-    sole3.position.set( param_luce3.pos[0], param_luce3.pos[1], param_luce3.pos[2] );
-    scene.add(sole3);
+    sole3.position.set( param_luce3.position[0], param_luce3.position[1], param_luce3.position[2] );
+    //scene.add(sole3);
     var raggio3 = new THREE.Vector3(sole3.position.x, sole3.position.y, sole3.position.z);
+
+    var sole4 = new THREE.Mesh( new THREE.SphereGeometry( .5, 16, 16), new THREE.MeshBasicMaterial ({color: 0xffff00, wireframe:true}));
+    sole4.position.set( param_luce4.position[0], param_luce4.position[1], param_luce4.position[2] );
+    //scene.add(sole4);
+    var raggio4 = new THREE.Vector3(sole4.position.x, sole4.position.y, sole4.position.z);
 
     /************************** UNIFORM CONDIVISI E DELLE SINGOLE PARTI ****************************************/
     unif_condivisi = {  
         pointLightPositions: {
             type: "v3[]",
-            value: new Array(raggio1, raggio2, raggio3)
+            value: new Array(raggio1, raggio2, raggio3, raggio4)
         },
         clights: {
             type: "v3[]",
             value: new Array(new THREE.Vector3(param_luce1.red * param_luce1.intensity, param_luce1.green * param_luce1.intensity, param_luce1.blue * param_luce1.intensity),
                             new THREE.Vector3(param_luce2.red * param_luce2.intensity, param_luce2.green * param_luce2.intensity, param_luce2.blue * param_luce2.intensity),
-                            new THREE.Vector3(param_luce3.red * param_luce3.intensity, param_luce3.green * param_luce3.intensity, param_luce3.blue * param_luce3.intensity)
+                            new THREE.Vector3(param_luce3.red * param_luce3.intensity, param_luce3.green * param_luce3.intensity, param_luce3.blue * param_luce3.intensity),
+                            new THREE.Vector3(param_luce4.red * param_luce4.intensity, param_luce4.green * param_luce4.intensity, param_luce4.blue * param_luce4.intensity)
                             )
         },
         ambientLight: {
@@ -388,7 +403,6 @@ function firstStart(){
         requestAnimationFrame(update);
         Object.assign(uniform_sitting, sitting_uniforms_leather.leather_red);
         Object.assign(uniform_sitting, unif_condivisi);
-        console.log(uniform_sitting);
 
         Object.assign(uniform_sottocuscino, sottocuscino_uniforms_wood.wood_fixed);
         Object.assign(uniform_sottocuscino, unif_condivisi);
