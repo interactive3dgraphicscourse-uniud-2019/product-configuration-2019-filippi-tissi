@@ -21,9 +21,9 @@ la plastica e il legno: per quanto riguarda la prima è possibile esprimere una 
 
 Si è deciso di introdurre 3 luci di scena che illuminano l'oggetto; durante la fase di progettazione esse sono state mantenute visibili, mentre abbiamo deciso di commentare la riga nella quale venivano introdotte nella scena.
 
-ENV LIGHT ?
+Inoltre è stata introdotta anche una _ambient light_
 
-La cubemap, introdotta nel progetto, è stata volontariamente non resa visibile nel visualizzatore; esaminando il codice è possibile notare il commento alla riga che ne permetterebbe la visibilità. Tuttavia, con i materiali che consentono una buona riflessione, è possibile notarne la presenza.
+La cubemap, introdotta nel progetto, è stata volontariamente non resa visibile nel visualizzatore; esaminando il codice è possibile notare il commento alla riga che ne permetterebbe la visibilità.
 
 
 # Metodo di lavoro 
