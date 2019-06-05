@@ -62,3 +62,6 @@ Commento sul legno (materiale forse non il piu adatto ma era per fornire una pos
 
 Alcuni esempi di configurazioni possibili:
 
+![](RmeImages/sedute.PNG) 
+
+![](RmeImages/strutture.PNG) 
