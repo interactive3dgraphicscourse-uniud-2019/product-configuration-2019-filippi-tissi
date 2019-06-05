@@ -202,8 +202,8 @@ function init(){
             roughnessMap: { type: "t", value: loadTexture(path2+"Plastic/Plastic_Roughness.jpg") },
             normalMap:  { type: "t", value: loadTexture(path2+"Plastic/Plastic_Normal.jpg") },
             aoMap: {type: "t", value: loadTexture(path2+"Plastic/Plastic_AO.jpg")},
-            textureRepeat: { type: "v2", value: new THREE.Vector2(1.0, 1.0) } ,
-            normalScale: {type: "v2", value: new THREE.Vector2(10,10)},
+            textureRepeat: { type: "v2", value: new THREE.Vector2(4.0, 4.0) } ,
+            normalScale: {type: "v2", value: new THREE.Vector2(3,3)}
         },
         plastic_brownC: {
             specularMap:    { type: "t", value: loadTexture(path2+"Plastic/Plastic_Specular.jpg") },
