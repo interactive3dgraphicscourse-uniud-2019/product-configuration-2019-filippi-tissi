@@ -172,4 +172,4 @@ TO DO OGGI:
 
 * Progetto concluso
 
-* READ.ME
+* READ.ME con foto dei risultati finali
