@@ -4,7 +4,7 @@ Il progetto ha lo scopo di rappresentare un configuratore online interattivo per
 
 Ci siamo prefissati di realizzare un sito web _professionale_, facendo attenzione alla scelta dei colori e uniformandoci al design dei siti web specializzati nel campo dell'arredamento; per renderlo il più universale possibile abbiamo utilizzato l'inglese come lingua di navigazione.
 
-Nel footer della pagina abbiamo inserito degli spazi destinati ai social per la condivisione e la promozione da parte dei possibili utenti che la visiteranno. Osservando i maggiori siti web abbiamo notato che era importante introdurre un pulsante _i_ che fornisce all'utente informazioni sul prodotto che sta visualizzando per favorirne l'eventuale acquisto.
+Nel footer della pagina abbiamo inserito degli spazi destinati ai social per permettere all'utente di visitare le varie pagine dell'azienda. Abbiamo inoltre introdotto un pulsante _i_ che fornisce all'utente informazioni sul prodotto che sta visualizzando per favorirne l'eventuale acquisto.
 
 La decisione sulla scelta del modello è ricaduta su uno sgabello che soddisfava le limitazioni inserite nella consegna (low-poly); inoltre si prestava bene a una scomposizione in più parti e ci dava la possibilità di introdurre vari materiali. 
 
@@ -16,15 +16,11 @@ Di seguito illustreremo la personalizzazione che abbiamo deciso di offire ai fru
 
 * **Sottocuscino**: non è personalizzabile e viene inserito di default. Abbiamo preso questa decisione poichè abbiamo notato che l'eventuale scelta non avrebbe condizionato e portato modifiche di rilievo al progetto.
 
-* **Struttura**: può essere in metallo, in plastica oppure in legno. Per quanto riguarda il metallo i creatori hanno deciso di non permettere all'utente di scegliere un'eventuale personalizzazione poichè ritengono la scelta fatta coerente con il modello. Discorso diverso per   
-la plastica e il legno: per quanto riguarda la prima è possibile esprimere una preferenza sulla colorazione tra 4 colori, mentre sono disponibili due diversi tipi di legno (uno più chiaro e uno più scuro)
+* **Struttura**: può essere in metallo, in plastica oppure in legno. Per quanto riguarda il metallo abbiamo deciso di non permettere all'utente di scegliere un'eventuale personalizzazione del colore, in quanto abbiamo scelto il metallo come materiale "elegante" e altri colori non ci sembravano adatti. Discorso diverso per la plastica e il legno: per quanto riguarda la prima è possibile esprimere una preferenza sulla colorazione tra 4 colori, mentre sono disponibili due diversi tipi di legno (uno più chiaro e uno più scuro).
 
-Si è deciso di introdurre 3 luci di scena che illuminano l'oggetto; durante la fase di progettazione esse sono state mantenute visibili, mentre abbiamo deciso di commentare la riga nella quale venivano introdotte nella scena.
+Si è deciso di introdurre 4 luci puntuali che illuminano l'oggetto; durante la fase di progettazione esse sono state mantenute visibili, mentre abbiamo deciso di commentare la riga nella quale venivano introdotte nella scena.
 
-Inoltre è stata introdotta anche una _ambient light_
-
-La cubemap, introdotta nel progetto, è stata volontariamente non resa visibile nel visualizzatore; esaminando il codice è possibile notare il commento alla riga che ne permetterebbe la visibilità.
-
+Inoltre è stata introdotta anche una _ambient light_ con l'AO map.
 
 # Metodo di lavoro 
 
@@ -32,7 +28,7 @@ Abbiamo deciso di mantenere lo stesso metodo di lavoro che abbiamo seguito con l
 
 Per una migliore gestione del lavoro abbiamo deciso di servirci anche del programma _GitKraken_.
 
-Abbiamo utilizzato il metodo _perturbNormal2Arb_ utilizzato nel file _l16_NormalMapping.html_ presente nel repository del 2018: questo perchè il calcolo delle normali di quest'anno ci creava problemi su dispositivi diversi.
+Abbiamo utilizzato il metodo _perturbNormal2Arb_ utilizzato nel file _l16_NormalMapping.html_ presente nel repository del 2018: questo perchè il calcolo delle normali di quest'anno ci creava problemi su dispositivi diversi in quanto ci forniva delle visualizzazioni diverse tra loro.
 
 # Presentazione della strutturazione delle cartelle
 
@@ -41,20 +37,16 @@ Il progetto ha avuto inizio a partire dal codice visto in classe durante gli ese
 Di seguito presentiamo l'organizzazione che abbiamo scelto per le cartelle durante il progetto:
 
 * Il file denomianato _index.html_ contiene il vertex shader, il fragment shader e il codice html usato per lo sviluppo del sito.
-* La cartella _styles_ contiene il file _style.css_ che abbiamo usato per personalizzare lo stile del sito web e il file _w3css.css_.
-* La cartella _scripts_ contiene il file _main.js_ che contiene tutte le funzioni che abbiamo implementato per permettere la personalizzazione dei materali e del (TUTTO INSOMMA)
+* La cartella _styles_ contiene il file _style.css_ che abbiamo usato per personalizzare lo stile del sito web e il file _w3css.css_, framework del w3c reperibile al link https://www.w3schools.com/w3css/.
+* La cartella _scripts_ contiene il file _main.js_ che contiene tutti gli uniform per i materiali e varie funzioni, come calcPrice() per calcolare il prezzo finale del prodotto.
 * La cartella _models_ contiene due file: il primo è denominato _SgabelloSeparato.blend_ con il quale abbiamo modificato, mappato il modello e generato il secondo file denominato _SgabelloCompleto.obj_ utilizzato per caricare il modello.
-* La cartella _textures_ contiene la cubemap uttilizzata e la cartella con tutti i materiali introdotti nel progetto. (DICIAMO COME ABBIAMO GENERATO I VARI MATERIALI? OPPURE DELLA SPECULAR MAP?)
+* La cartella _textures_ contiene la cubeMap (Che non è stata inserita nel progetto) e la cartella con tutti i materiali introdotti nel progetto. Le varie texture sono state create a partire dalle sostanze disponibili sul sito https://www.cc0textures.com utilizzando il programma fornito da Allegorithmic. Sono state usate: normalMap, roughnessMap, specularMap, diffuseMap e aoMap.
 
-* Ambient occlusion per ombreggiatura? si usata
-
-* Per quanto riguarda le BRDF caso (b). non serve riportare le formule in quanto abbiamo esteso quelle viste in classe.
+* La BRDF utilizzata è quella speculare. Il codice è stato scritto partendo da quello presente nel file __l17-shadingWithAO.html__, è stato poi riadattato per permettere l'uso di più luci puntuali. 
 
 # Risultato finale
 
 L'immagine che segue rappresenta l'elaborato finale del nostro lavoro.
-
-Commento sul legno (materiale forse non il piu adatto ma era per fornire una possibilità in più di scelta nella configurazione)
 
 ![](RmeImages/final_res2.png) 
 
