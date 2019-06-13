@@ -405,7 +405,6 @@ select.quantity option:hover{
   * html .clearfix             { zoom: 1; } /* IE6 */
   *:first-child+html .clearfix { zoom: 1; } /* IE7 */
 
-  /* Breadcrumb */
   ul.breadcrumb {
     list-style: none;
     background-color: inherit;
@@ -413,26 +412,22 @@ select.quantity option:hover{
     margin: 2px;
   }
   
-  /* Display list items side by side */
   ul.breadcrumb li {
     display: inline;
     font-size: 13px;
     font-weight: 200;
   }
   
-  /* Add a slash symbol (/) before/behind each list item */
   ul.breadcrumb li+li:before {
     color: #474448;
     content: ">\00a0";
   }
   
-  /* Add a color to all links inside the list */
   ul.breadcrumb li a {
     text-decoration: none;
     color: #474448;
   }
   
-  /* Add a color on mouse-over */
   ul.breadcrumb li a:hover {
     color: #e0bb7d;
     text-decoration: underline;
@@ -457,7 +452,7 @@ select.quantity option:hover{
     position:relative; 
     height: 640px; 
     width: 75%;
-} /* Make this a positioned parent */
+} 
 #measure{ 
   position:absolute;  
   color: #010400; 
@@ -481,7 +476,6 @@ select.quantity option:hover{
   border-radius: 50%;
   text-align: center;
 }
-/* Popup container - can be anything you want */
 .popup {
   position: absolute;
   display: inline-block;
@@ -496,7 +490,6 @@ select.quantity option:hover{
   
 }
 
-/* The actual popup */
 .popup .popuptext {
   visibility: hidden;
   width: 300px;
@@ -531,7 +524,6 @@ select.quantity option:hover{
   from {opacity: 0;}
   to {opacity:1 ;}
 }
-/* Toggle this class - hide and show the popup */
 .popup .show {
   visibility: visible;
   -webkit-animation: fadeIn 1s;

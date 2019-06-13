@@ -23,18 +23,15 @@ function onResize() {
 
 function update() {
     requestAnimationFrame( update );
-    //stats.update();
     render();
 }
 
 function render() {
-    //updateUniforms();
     renderer.render( scene, camera );
 }
 
 function loadTexture(file) {
     var texture = new THREE.TextureLoader().load( file , function ( texture ) {
-
         texture.minFilter = THREE.LinearMipMapLinearFilter;
         texture.anisotropy = renderer.capabilities.getMaxAnisotropy();
         texture.wrapS = texture.wrapT = THREE.RepeatWrapping;
@@ -56,14 +53,11 @@ function init(){
     renderer = new THREE.WebGLRenderer({canvas:canvas, antialias:true});
     renderer.setPixelRatio( canvas.devicePixelRatio );
     renderer.setSize( canvas.clientWidth, canvas.clientHeight );
-
-    
     canvas.addEventListener( 'resize', onResize, false );
     renderer.setClearColor( 0xd8d8d8 );
-    //document.body.appendChild( renderer.domElement );
     
-    // ------------------- CARICAMENTO DEL MODELLO OBJ DELLO SGABELLO -------------------
 
+    // ------------------- CARICAMENTO DEL MODELLO OBJ DELLO SGABELLO -------------------
     var loader = new THREE.OBJLoader();
     loader.load( "models/SgabelloCompleto.obj", function ( obj ) {
         sgabello = obj;
@@ -82,27 +76,26 @@ function init(){
         upload = true;
     });
 
-    // ------------------- CARICAMENTO DELLA CUBEMAP --------------------
-
+    // ------------------- CARICAMENTO DELLA CUBEMAP - NON UTILIZZATA --------------------
+    /*
     var loader = new THREE.CubeTextureLoader();
     loader.setPath( 'textures/cubemapDEF/' );
-    
     var textureCube;
     textureCube = loader.load([
         'px.png', 'nx.png',
         'py.png', 'ny.png',
         'pz.png', 'nz.png'
-
         ] );
-
-   //scene.background = textureCube;    //se lo si decommenta aggiungo il background alla scena ma a noi non serve
-            textureCube.minFilter = THREE.LinearMipMapLinearFilter;
-            
+    //scene.background = textureCube; 
+    textureCube.minFilter = THREE.LinearMipMapLinearFilter;      
     // ----------------------------------------------------------------------------      
-    
+    */
+
+
     var path="textures/MATERIALS/SITTING/";
     /************************* MATERIAL UNIFORMS **********************/
     //SITTING
+    //Cloth
     sitting_uniforms_cloth={
         cloth_black: {
             specularMap:    { type: "t", value: loadTexture(path+"Cloth/Carpet_Specular.jpg") },
@@ -141,7 +134,7 @@ function init(){
             normalScale: {type: "v2", value: new THREE.Vector2(1,1)}, 
         }
     }
-
+    //Leather
     sitting_uniforms_leather={
         leather_black: {
             specularMap:    { type: "t", value: loadTexture(path+"Leather/Leather_Specular.jpg") },
@@ -182,6 +175,7 @@ function init(){
     }
 
     //STRUCTURE
+    //Metal
     var path2="textures/MATERIALS/STRUCTURE/";
     structure_uniforms_metal={
         metal_fixed: {
@@ -195,6 +189,7 @@ function init(){
         }
     }
 
+    //Plastic
     structure_uniforms_platic={
         plastic_black: {
             specularMap:    { type: "t", value: loadTexture(path2+"Plastic/Plastic_Specular.jpg") },
@@ -234,6 +229,7 @@ function init(){
         }
     }
 
+    //Wood
     structure_uniforms_wood={
         wood_brownC: {
             specularMap:    { type: "t", value: loadTexture(path2+"Wood/Wood_Specular.jpg") },
@@ -255,7 +251,7 @@ function init(){
         }
     }
 
-    //SOTTOCUSCINO
+    //SOTTOCUSCINO - Wood
     var path3="textures/MATERIALS/SOTTOCUSCINO/";
     sottocuscino_uniforms_wood={
         wood_fixed: {
@@ -363,9 +359,9 @@ function init(){
     uniform_sitting = {};
     uniform_sottocuscino = {};
     uniform_structure = {};
-    //Coordinates.drawAllAxes(); //disegna gli assi
 
     controls = new THREE.OrbitControls( camera, renderer.domElement );
+    //Set min e max distance for product navigation
     controls.minDistance = 4;
     controls.maxDistance = 11;
     controls.enablePan = false;
@@ -373,7 +369,7 @@ function init(){
     firstStart();
 }
 
-
+//Function for the first Start, so we have a model with standard texture
 function firstStart(){
     if(upload){
         vs = document.getElementById("vertex").textContent;
@@ -420,7 +416,7 @@ function firstStart(){
     }
 }
 
-
+//Function for change texture by click on color/material
 function changeTexture(stoolPart){
     if(stoolPart==1){
         if(document.getElementById("leather").checked){
@@ -489,7 +485,7 @@ function changeTexture(stoolPart){
     calcPrice();
 }
 
-
+//Function for price calculation based on material and quantity
 function calcPrice(){
     var option_qta = document.getElementById('options_qta');
     var quantity= option_qta.options[option_qta.selectedIndex].text;
