@@ -2,7 +2,15 @@
 
 Il progetto ha lo scopo di rappresentare un configuratore online interattivo per un sito di e-commerce commissionato dall'azienda "ACME". L'oggetto preso in considerazione in questo lavoro sarà uno sgabello.
 
-Ci siamo prefissati di realizzare un sito web _professionale_, facendo attenzione alla scelta dei colori e uniformandoci al design dei siti web specializzati nel campo dell'arredamento; per renderlo il più universale possibile abbiamo utilizzato l'inglese come lingua di navigazione.
+Ci siamo prefissati di realizzare un sito web _professionale_, facendo attenzione alla scelta dei colori e uniformandoci al design dei siti web specializzati nel campo dell'arredamento; per renderlo il più universale possibile abbiamo utilizzato l'inglese come lingua di navigazione. Abbiamo innanzitutto creato un wireframe su carta del sito web nwel quale abbiamo inserito gli elementi più importanti. Di seguito forniamo il risultato:
+
+![](RmeImages/sito2.jpg) 
+
+Dopodichè siamo passati alla scelta dei colori. Per fare ciò abbiamo utilizzato il generatore di palette offerto dal sito _coolors.co_. Abbiamo deciso di aggiungere un ulteriore colore ai cinque generati dal sito. Di seguito forniamo la palette utilizzata:
+
+![](RmeImages/palettecolors.jpg) 
+
+La scelta è ricaduta su questi colori poichè l'idea era quella di ricreare un sito elegante e facilmente usabile.
 
 Nel footer della pagina abbiamo inserito degli spazi destinati ai social per permettere all'utente di visitare le varie pagine dell'azienda. Abbiamo inoltre introdotto un pulsante _i_ che fornisce all'utente informazioni sul prodotto che sta visualizzando per favorirne l'eventuale acquisto.
 
