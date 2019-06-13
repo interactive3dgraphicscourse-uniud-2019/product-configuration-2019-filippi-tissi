@@ -51,6 +51,7 @@ Di seguito presentiamo l'organizzazione che abbiamo scelto per le cartelle duran
 * La cartella _scripts_ contiene il file _main.js_ che contiene tutti gli uniform per i materiali e varie funzioni, come calcPrice() per calcolare il prezzo finale del prodotto.
 * La cartella _models_ contiene due file: il primo è denominato _SgabelloSeparato.blend_ con il quale abbiamo modificato, mappato il modello e generato il secondo file denominato _SgabelloCompleto.obj_ utilizzato per caricare il modello.
 * La cartella _textures_ contiene la cubeMap (Che non è stata inserita nel progetto) e la cartella con tutti i materiali introdotti nel progetto. Le varie texture sono state create a partire dalle sostanze disponibili sul sito https://www.cc0textures.com utilizzando il programma fornito da Allegorithmic che genera texture con una dimensione adatta alla visualizzazione sul web. Sono state usate: normalMap, roughnessMap, specularMap, diffuseMap e aoMap.
+Per facilitarci il lavoro, abbiamo deciso di caricare tutte le texture allo stesso momento all'avvio del sito, tuttavia siamo consapevoli che ciò è poco efficiente e la soluzione migliore sarebbe quella di caricarle solo una volta richieste.
 
 * La BRDF utilizzata è quella speculare. Il codice è stato scritto partendo da quello presente nel file __l17-shadingWithAO.html__, è stato poi riadattato per permettere l'uso di più luci puntuali. 
 
