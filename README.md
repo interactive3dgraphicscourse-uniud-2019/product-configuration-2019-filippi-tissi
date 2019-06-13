@@ -28,6 +28,8 @@ Di seguito illustreremo la personalizzazione che abbiamo deciso di offire ai fru
 
 Si è deciso di introdurre 4 luci puntuali che illuminano l'oggetto; durante la fase di progettazione esse sono state mantenute visibili, mentre abbiamo deciso di commentare la riga nella quale venivano introdotte nella scena.
 
+Sono state posizionate prendendo spunto sia da immagini presenti su Google nelle quali veniva messa in evidenza la posizione della luce rispetto al prodotto, sia per far sì che forme, colori e materiali rendessero al meglio.
+
 Inoltre è stata introdotta anche una _ambient light_ con l'AO map.
 
 # Metodo di lavoro 
@@ -48,7 +50,7 @@ Di seguito presentiamo l'organizzazione che abbiamo scelto per le cartelle duran
 * La cartella _styles_ contiene il file _style.css_ che abbiamo usato per personalizzare lo stile del sito web e il file _w3css.css_, framework del w3c reperibile al link https://www.w3schools.com/w3css/.
 * La cartella _scripts_ contiene il file _main.js_ che contiene tutti gli uniform per i materiali e varie funzioni, come calcPrice() per calcolare il prezzo finale del prodotto.
 * La cartella _models_ contiene due file: il primo è denominato _SgabelloSeparato.blend_ con il quale abbiamo modificato, mappato il modello e generato il secondo file denominato _SgabelloCompleto.obj_ utilizzato per caricare il modello.
-* La cartella _textures_ contiene la cubeMap (Che non è stata inserita nel progetto) e la cartella con tutti i materiali introdotti nel progetto. Le varie texture sono state create a partire dalle sostanze disponibili sul sito https://www.cc0textures.com utilizzando il programma fornito da Allegorithmic. Sono state usate: normalMap, roughnessMap, specularMap, diffuseMap e aoMap.
+* La cartella _textures_ contiene la cubeMap (Che non è stata inserita nel progetto) e la cartella con tutti i materiali introdotti nel progetto. Le varie texture sono state create a partire dalle sostanze disponibili sul sito https://www.cc0textures.com utilizzando il programma fornito da Allegorithmic che genera texture con una dimensione adatta alla visualizzazione sul web. Sono state usate: normalMap, roughnessMap, specularMap, diffuseMap e aoMap.
 
 * La BRDF utilizzata è quella speculare. Il codice è stato scritto partendo da quello presente nel file __l17-shadingWithAO.html__, è stato poi riadattato per permettere l'uso di più luci puntuali. 
 
