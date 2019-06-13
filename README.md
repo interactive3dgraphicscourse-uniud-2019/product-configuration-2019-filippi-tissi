@@ -10,7 +10,9 @@ Dopodichè siamo passati alla scelta dei colori. Per fare ciò abbiamo utilizzat
 
 ![](RmeImages/palettecolors.jpg) 
 
-La scelta è ricaduta su questi colori poichè l'idea era quella di ricreare un sito elegante e facilmente usabile.
+La scelta è ricaduta su questi colori poichè l'idea era quella di ricreare un sito elegante e facilmente usabile. 
+
+Siamo poi passati alla scelta del font. Dato che le quantità di testo sono ridotte e abbiamo principalmente titoli abbiamo scelto un font che si adattasse a questo uso e la scelta è ricaduta su _Poppins_ con diversi pesi.
 
 Nel footer della pagina abbiamo inserito degli spazi destinati ai social per permettere all'utente di visitare le varie pagine dell'azienda. Abbiamo inoltre introdotto un pulsante _i_ che fornisce all'utente informazioni sul prodotto che sta visualizzando per favorirne l'eventuale acquisto.
 
